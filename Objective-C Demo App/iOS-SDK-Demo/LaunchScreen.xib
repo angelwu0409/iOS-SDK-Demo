@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" generatesPrototypingConstraints="YES" useTraitCollections="YES" colorMatched="NO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <development version="7000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqL-nm-86X">
+                    <rect key="frame" x="150" y="116" width="180" height="248"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="OAm-DU-bW8">
+                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="180" id="0cs-K4-5j6"/>
+                                <constraint firstAttribute="width" secondItem="OAm-DU-bW8" secondAttribute="height" multiplier="1:1" id="oLU-uY-1Hd"/>
+                                <constraint firstAttribute="width" constant="180" id="uhf-dP-hWC"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7Q-sx-Nvy">
+                            <rect key="frame" x="0.0" y="180" width="180" height="29"/>
+                            <attributedString key="attributedText">
+                                <fragment content="App">
+                                    <attributes>
+                                        <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <font key="NSFont" size="24" name="HelveticaNeue-Bold"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="Lovin">
+                                    <attributes>
+                                        <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SDK Demo App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIl-8b-j8K">
+                            <rect key="frame" x="0.0" y="219" width="180" height="29"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="eIl-8b-j8K" firstAttribute="leading" secondItem="hqL-nm-86X" secondAttribute="leading" id="3ZU-nr-IF3"/>
+                        <constraint firstAttribute="trailing" secondItem="eIl-8b-j8K" secondAttribute="trailing" id="HhV-eM-O94"/>
+                        <constraint firstItem="B7Q-sx-Nvy" firstAttribute="top" secondItem="OAm-DU-bW8" secondAttribute="bottom" id="LL1-CP-Gde"/>
+                        <constraint firstAttribute="trailing" secondItem="B7Q-sx-Nvy" secondAttribute="trailing" id="TN6-bg-9Km"/>
+                        <constraint firstAttribute="trailing" secondItem="OAm-DU-bW8" secondAttribute="trailing" id="agP-pk-Qob"/>
+                        <constraint firstAttribute="bottom" secondItem="eIl-8b-j8K" secondAttribute="bottom" id="cD3-wb-d1j"/>
+                        <constraint firstItem="B7Q-sx-Nvy" firstAttribute="leading" secondItem="hqL-nm-86X" secondAttribute="leading" id="lgy-uz-tgP"/>
+                        <constraint firstItem="OAm-DU-bW8" firstAttribute="top" secondItem="hqL-nm-86X" secondAttribute="top" id="t4d-7F-ro3"/>
+                        <constraint firstItem="OAm-DU-bW8" firstAttribute="leading" secondItem="hqL-nm-86X" secondAttribute="leading" id="vMK-Qn-1Da"/>
+                        <constraint firstItem="eIl-8b-j8K" firstAttribute="top" secondItem="B7Q-sx-Nvy" secondAttribute="bottom" constant="10" id="yKa-nf-cGz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.039215686270000001" green="0.51372549020000002" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="hqL-nm-86X" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OwR-pD-hRV"/>
+                <constraint firstItem="hqL-nm-86X" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YUn-Gz-Fr6"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="548" y="455"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo.png" width="180" height="180"/>
+    </resources>
+</document>
