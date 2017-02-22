@@ -13,6 +13,14 @@ import UIKit
 //
 class ALDemoRewardedVideosViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdRewardDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate
 {
+    override func viewDidLoad()
+    {
+        super.viewDidLoad();
+        
+        // Set an optional user identifier used for S2S callbacks
+        ALIncentivizedInterstitialAd.setUserIdentifier("DEMO_USER_IDENTIFIER");
+    }
+    
     @IBAction func showRewardedVideo(_ sender: AnyObject!)
     {
         // Unlike interstitials, you need to preload each rewarded video before it can be displayed.
@@ -103,6 +111,8 @@ class ALDemoRewardedVideosViewController: ALDemoBaseViewController, ALAdLoadDele
         {
             // Indicates that you called for a rewarded video before one was available.
         }
+        
+        self.log("Reward validation request failed with error code \(responseCode)")
     }
     
     func rewardValidationRequest(for ad: ALAd, didExceedQuotaWithResponse response: [AnyHashable: Any])
@@ -110,6 +120,7 @@ class ALDemoRewardedVideosViewController: ALDemoBaseViewController, ALAdLoadDele
         // Your user has already earned the max amount you allowed for the day at this point, so
         // don't give them any more money. By default we'll show them a UIAlertView explaining this,
         // though you can change that from the Manage Apps UI.
+        self.log("Reward validation request did exceed quota with response: \(response)")
     }
     
     func rewardValidationRequest(for ad: ALAd, wasRejectedWithResponse response: [AnyHashable: Any])
@@ -117,6 +128,12 @@ class ALDemoRewardedVideosViewController: ALDemoBaseViewController, ALAdLoadDele
         // Your user couldn't be granted a reward for this view. This could happen if you've blacklisted
         // them, for example. Don't grant them any currency. By default we'll show them a UIAlertView explaining this,
         // though you can change that from the Manage Apps UI.
+        self.log("Reward validation request was rejected with response: \(response)")
+    }
+    
+    func userDeclined(toViewAd ad: ALAd)
+    {
+        self.log("User declined to view ad")
     }
     
     // MARK: Ad Display Delegate

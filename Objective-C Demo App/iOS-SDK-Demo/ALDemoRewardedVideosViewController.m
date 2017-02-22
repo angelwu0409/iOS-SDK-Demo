@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
     
+    // Set an optional user identifier used for S2S callbacks
+    [ALIncentivizedInterstitialAd setUserIdentifier: @"DEMO_USER_IDENTIFIER"];
+    
     self.incentivizedInterstitial = [[ALIncentivizedInterstitialAd alloc] initWithSdk: [ALSdk shared]];
 }
 
@@ -62,7 +65,7 @@
 - (IBAction)preloadRewardedVideo:(id)sender
 {
     [self log: @"Preloading..."];
-
+    
     [self.incentivizedInterstitial preloadAndNotify: self];
 }
 
@@ -75,7 +78,7 @@
 
 - (void)adService:(ALAdService *)adService didFailToLoadAdWithError:(int)code
 {
-     [self log: [NSString stringWithFormat: @"Rewarded video failed to load with error code %d", code]];
+    [self log: [NSString stringWithFormat: @"Rewarded video failed to load with error code %d", code]];
 }
 
 #pragma mark - Ad Reward Delegate
@@ -119,6 +122,8 @@
     {
         // Indicates that the developer called for a rewarded video before one was available.
     }
+    
+    [self log: @"Reward validation request for ad failed with error code: %ld", responseCode];
 }
 
 - (void)rewardValidationRequestForAd:(ALAd *)ad didExceedQuotaWithResponse:(NSDictionary *)response
@@ -126,6 +131,7 @@
     // Your user has already earned the max amount you allowed for the day at this point, so
     // don't give them any more money. By default we'll show them a UIAlertView explaining this,
     // though you can change that from the Manage Apps UI.
+    [self log: @"Reward validation request for ad did exceed quota with response: %@", response];
 }
 
 - (void)rewardValidationRequestForAd:(ALAd *)ad wasRejectedWithResponse:(NSDictionary *)response
@@ -133,6 +139,12 @@
     // Your user couldn't be granted a reward for this view. This could happen if you've blacklisted
     // them, for example. Don't grant them any currency. By default we'll show them a UIAlertView explaining this,
     // though you can change that from the Manage Apps UI.
+    [self log: @"Reward validation request was rejected with response: %@", response];
+}
+
+- (void)userDeclinedToViewAd:(ALAd *)ad
+{
+    [self log: @"User declined to view ad"];
 }
 
 #pragma mark - Ad Display Delegate
