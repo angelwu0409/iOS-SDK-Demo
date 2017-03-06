@@ -55,6 +55,10 @@
 		1D7221391BB61B0100FE1B91 /* ALDemoRewardedVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7221381BB61B0100FE1B91 /* ALDemoRewardedVideosViewController.swift */; };
 		1D7221581BB61F8C00FE1B91 /* ALDemoNativeAdProgrammaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7221571BB61F8C00FE1B91 /* ALDemoNativeAdProgrammaticViewController.swift */; };
 		1D72215A1BB6285800FE1B91 /* ALDemoNativeAdFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7221591BB6285800FE1B91 /* ALDemoNativeAdFeedTableViewController.swift */; };
+		1DA2DE0F1E6D698C00FCC9B1 /* ALDemoProgrammaticBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DE0E1E6D698C00FCC9B1 /* ALDemoProgrammaticBannerViewController.swift */; };
+		1DA2DE111E6D699B00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DE101E6D699B00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.swift */; };
+		1DA2DE141E6D69AE00FCC9B1 /* ALDemoProgrammaticMRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DE131E6D69AE00FCC9B1 /* ALDemoProgrammaticMRecViewController.swift */; };
+		1DA2DE161E6D69BB00FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DE151E6D69BB00FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.swift */; };
 		1DCFE4A41BBA14220022ACD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7220931BB6086100FE1B91 /* LaunchScreen.storyboard */; };
 		1DDB3A071BF5815D002561A0 /* ALCarouselMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A061BF5815D002561A0 /* ALCarouselMediaView.m */; };
 		1DDB3A0D1BF58272002561A0 /* ALDemoRSSFeedRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A0A1BF58272002561A0 /* ALDemoRSSFeedRetriever.m */; };
@@ -126,6 +130,10 @@
 		1D7221381BB61B0100FE1B91 /* ALDemoRewardedVideosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoRewardedVideosViewController.swift; sourceTree = "<group>"; };
 		1D7221571BB61F8C00FE1B91 /* ALDemoNativeAdProgrammaticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoNativeAdProgrammaticViewController.swift; sourceTree = "<group>"; };
 		1D7221591BB6285800FE1B91 /* ALDemoNativeAdFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoNativeAdFeedTableViewController.swift; sourceTree = "<group>"; };
+		1DA2DE0E1E6D698C00FCC9B1 /* ALDemoProgrammaticBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoProgrammaticBannerViewController.swift; sourceTree = "<group>"; };
+		1DA2DE101E6D699B00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoInterfaceBuilderBannerViewController.swift; sourceTree = "<group>"; };
+		1DA2DE131E6D69AE00FCC9B1 /* ALDemoProgrammaticMRecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoProgrammaticMRecViewController.swift; sourceTree = "<group>"; };
+		1DA2DE151E6D69BB00FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoInterfaceBuilderMRecViewController.swift; sourceTree = "<group>"; };
 		1DDB3A051BF5815D002561A0 /* ALCarouselMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCarouselMediaView.h; sourceTree = "<group>"; };
 		1DDB3A061BF5815D002561A0 /* ALCarouselMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCarouselMediaView.m; sourceTree = "<group>"; };
 		1DDB3A091BF58272002561A0 /* ALDemoRSSFeedRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoRSSFeedRetriever.h; sourceTree = "<group>"; };
@@ -159,8 +167,8 @@
 		1D72207E1BB6086100FE1B91 = {
 			isa = PBXGroup;
 			children = (
-				1D72212A1BB60CF000FE1B91 /* Frameworks */,
 				1D7220891BB6086100FE1B91 /* iOS-SDK-Demo */,
+				1D72212A1BB60CF000FE1B91 /* Frameworks */,
 				1D7220881BB6086100FE1B91 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -197,6 +205,8 @@
 		1D7220A11BB608BE00FE1B91 /* SDK Integration Examples */ = {
 			isa = PBXGroup;
 			children = (
+				1DA2DE121E6D699F00FCC9B1 /* MRecs */,
+				1DA2DE051E6D644000FCC9B1 /* Banners */,
 				1D7220CB1BB60BF200FE1B91 /* Interstitials */,
 				1D7220CD1BB60C0100FE1B91 /* Native */,
 				1D7220CC1BB60BF800FE1B91 /* Rewarded/Incentivized Videos */,
@@ -373,6 +383,24 @@
 			name = "Manual Loading";
 			sourceTree = "<group>";
 		};
+		1DA2DE051E6D644000FCC9B1 /* Banners */ = {
+			isa = PBXGroup;
+			children = (
+				1DA2DE0E1E6D698C00FCC9B1 /* ALDemoProgrammaticBannerViewController.swift */,
+				1DA2DE101E6D699B00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.swift */,
+			);
+			name = Banners;
+			sourceTree = "<group>";
+		};
+		1DA2DE121E6D699F00FCC9B1 /* MRecs */ = {
+			isa = PBXGroup;
+			children = (
+				1DA2DE131E6D69AE00FCC9B1 /* ALDemoProgrammaticMRecViewController.swift */,
+				1DA2DE151E6D69BB00FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.swift */,
+			);
+			name = MRecs;
+			sourceTree = "<group>";
+		};
 		1DA5821A1BB9BF6A00497A94 /* Customizable SETTINGS */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DA2DE0F1E6D698C00FCC9B1 /* ALDemoProgrammaticBannerViewController.swift in Sources */,
 				1D72210A1BB60C4F00FE1B91 /* ALCarouselCardView.m in Sources */,
 				1D72212C1BB60D5500FE1B91 /* ALDemoRootViewController.swift in Sources */,
 				1D7220DB1BB60C3000FE1B91 /* ALCarouselCardState.m in Sources */,
@@ -495,12 +524,15 @@
 				1D7221121BB60C5700FE1B91 /* UIView+ALActivityIndicator.m in Sources */,
 				1DDB3A0E1BF58272002561A0 /* ALDemoArticle.m in Sources */,
 				1D72208B1BB6086100FE1B91 /* AppDelegate.swift in Sources */,
+				1DA2DE111E6D699B00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.swift in Sources */,
 				1D7221581BB61F8C00FE1B91 /* ALDemoNativeAdProgrammaticViewController.swift in Sources */,
 				1D7221341BB6198700FE1B91 /* ALDemoInterstitialSharerdInstanceViewController.swift in Sources */,
 				1D72210D1BB60C4F00FE1B91 /* ALCarouselView.m in Sources */,
 				1D72210E1BB60C4F00FE1B91 /* ALNativeAdVideoView.m in Sources */,
+				1DA2DE141E6D69AE00FCC9B1 /* ALDemoProgrammaticMRecViewController.swift in Sources */,
 				1D72215A1BB6285800FE1B91 /* ALDemoNativeAdFeedTableViewController.swift in Sources */,
 				1D7221391BB61B0100FE1B91 /* ALDemoRewardedVideosViewController.swift in Sources */,
+				1DA2DE161E6D69BB00FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.swift in Sources */,
 				1D7220DA1BB60C3000FE1B91 /* ALNativeAdVideoPlayer.m in Sources */,
 				1D7221311BB6176000FE1B91 /* ALDemoInterstitialSingleInstanceViewController.swift in Sources */,
 			);
@@ -618,6 +650,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/iOS-SDK-Demo",
 				);
 				INFOPLIST_FILE = "iOS-SDK-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -649,6 +682,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/iOS-SDK-Demo",
 				);
 				INFOPLIST_FILE = "iOS-SDK-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

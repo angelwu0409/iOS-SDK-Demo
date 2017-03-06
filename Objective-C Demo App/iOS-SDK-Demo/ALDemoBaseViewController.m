@@ -15,7 +15,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear: animated];
-    [self.navigationController setToolbarHidden: NO animated: YES];
+    [self.navigationController setToolbarHidden: self.hidesBottomBarWhenPushed animated: YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -24,17 +24,22 @@
     [super viewWillDisappear: animated];
 }
 
-
 #pragma mark - Logging
 
-- (void)log:(NSString *)message
+- (void)log:(NSString *)format, ...
 {
+    va_list valist;
+    va_start(valist, format);
+    NSString *message = [[NSString alloc] initWithFormat: format arguments: valist];
+    va_end(valist);
+    
     dispatch_async(dispatch_get_main_queue(), ^{
+        
         if ( self.adStatusLabel )
         {
             self.adStatusLabel.text = message;
         }
-        ALLog(@"[%@] : %@", NSStringFromClass([self class]), message);        
+        ALLog(@"[%@] : %@", NSStringFromClass([self class]), message);
     });
 }
 

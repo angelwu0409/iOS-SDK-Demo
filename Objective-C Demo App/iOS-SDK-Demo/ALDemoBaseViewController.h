@@ -12,6 +12,6 @@
 
 @property (nonatomic, strong) IBOutlet UILabel *adStatusLabel;
 
-- (void)log:(NSString *)message;
+- (void)log:(NSString *)format, ...;
 
 @end

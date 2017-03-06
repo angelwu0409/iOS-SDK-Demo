@@ -52,6 +52,10 @@
 		1D79132A1BB4A837006C6C60 /* applovin_card_replay.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D79131A1BB4A837006C6C60 /* applovin_card_replay.png */; };
 		1D79132B1BB4A837006C6C60 /* applovin_card_unmuted.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D79131B1BB4A837006C6C60 /* applovin_card_unmuted.png */; };
 		1D79132E1BB4A8FA006C6C60 /* ALDemoBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D79132D1BB4A8FA006C6C60 /* ALDemoBaseTableViewController.m */; };
+		1DA2DE001E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DDFF1E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.m */; };
+		1DA2DE031E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DE021E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.m */; };
+		1DA2DE081E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DE071E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.m */; };
+		1DA2DE0B1E6D649500FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DE0A1E6D649500FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.m */; };
 		1DC3E98D1BB321660093EF2A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DC3E98C1BB321660093EF2A /* LaunchScreen.xib */; };
 		1DDB39AC1BF56181002561A0 /* ALDemoArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB39AB1BF56181002561A0 /* ALDemoArticle.m */; };
 		1DDD51AB1DDA62FD00A00A26 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDD51AA1DDA62FD00A00A26 /* WebKit.framework */; };
@@ -131,6 +135,14 @@
 		1D79131B1BB4A837006C6C60 /* applovin_card_unmuted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applovin_card_unmuted.png; sourceTree = "<group>"; };
 		1D79132C1BB4A8FA006C6C60 /* ALDemoBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoBaseTableViewController.h; sourceTree = "<group>"; };
 		1D79132D1BB4A8FA006C6C60 /* ALDemoBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoBaseTableViewController.m; sourceTree = "<group>"; };
+		1DA2DDFE1E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoProgrammaticBannerViewController.h; sourceTree = "<group>"; };
+		1DA2DDFF1E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoProgrammaticBannerViewController.m; sourceTree = "<group>"; };
+		1DA2DE011E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoInterfaceBuilderBannerViewController.h; sourceTree = "<group>"; };
+		1DA2DE021E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoInterfaceBuilderBannerViewController.m; sourceTree = "<group>"; };
+		1DA2DE061E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoProgrammaticMRecViewController.h; sourceTree = "<group>"; };
+		1DA2DE071E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoProgrammaticMRecViewController.m; sourceTree = "<group>"; };
+		1DA2DE091E6D649500FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoInterfaceBuilderMRecViewController.h; sourceTree = "<group>"; };
+		1DA2DE0A1E6D649500FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoInterfaceBuilderMRecViewController.m; sourceTree = "<group>"; };
 		1DC3E98C1BB321660093EF2A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		1DDB39AA1BF56181002561A0 /* ALDemoArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoArticle.h; sourceTree = "<group>"; };
 		1DDB39AB1BF56181002561A0 /* ALDemoArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoArticle.m; sourceTree = "<group>"; };
@@ -304,6 +316,28 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		1DA2DDFD1E6D497000FCC9B1 /* Banners */ = {
+			isa = PBXGroup;
+			children = (
+				1DA2DDFE1E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.h */,
+				1DA2DDFF1E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.m */,
+				1DA2DE011E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.h */,
+				1DA2DE021E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.m */,
+			);
+			name = Banners;
+			sourceTree = "<group>";
+		};
+		1DA2DE041E6D63E800FCC9B1 /* Mrecs */ = {
+			isa = PBXGroup;
+			children = (
+				1DA2DE061E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.h */,
+				1DA2DE071E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.m */,
+				1DA2DE091E6D649500FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.h */,
+				1DA2DE0A1E6D649500FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.m */,
+			);
+			name = Mrecs;
+			sourceTree = "<group>";
+		};
 		1DA582191BB9BF4E00497A94 /* Customizable SETTINGS */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +429,8 @@
 		277F7B1C18EDDE27001F2E1F /* SDK Integration Examples */ = {
 			isa = PBXGroup;
 			children = (
+				1DA2DE041E6D63E800FCC9B1 /* Mrecs */,
+				1DA2DDFD1E6D497000FCC9B1 /* Banners */,
 				1D568BB01BB3790400DB4849 /* Interstitials */,
 				1D568BBE1BB392C200DB4849 /* Rewarded/Incentivized Videos */,
 				1D568BBF1BB392EA00DB4849 /* Native */,
@@ -513,13 +549,16 @@
 				1D568BB31BB3792800DB4849 /* ALDemoBaseViewController.m in Sources */,
 				1D7912EE1BB4813D006C6C60 /* ALNativeAdVideoPlayer.m in Sources */,
 				1D7912EF1BB4813D006C6C60 /* ALNativeAdVideoView.m in Sources */,
+				1DA2DE031E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.m in Sources */,
 				1DDB39AC1BF56181002561A0 /* ALDemoArticle.m in Sources */,
 				2713D01E18EDDD0C006218B2 /* ALDemoAppDelegate.m in Sources */,
 				1D7913011BB48173006C6C60 /* ALCarouselCardView.m in Sources */,
 				1D5D968B1BB34EB700F296B0 /* ALDemoInterstitialSingleInstanceViewController.m in Sources */,
 				1D7498A01BF52A1E00FB14B2 /* ALDemoRSSFeedRetriever.m in Sources */,
 				1D7912F11BB4813D006C6C60 /* ALCarouselViewModel.m in Sources */,
+				1DA2DE0B1E6D649500FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.m in Sources */,
 				2713D01A18EDDD0C006218B2 /* main.m in Sources */,
+				1DA2DE001E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.m in Sources */,
 				1DFA1BEE1BB4AF9900CA13C2 /* ALDemoNativeAdProgrammaticViewController.m in Sources */,
 				1D5D968E1BB34F9F00F296B0 /* ALDemoInterstitialSharerdInstanceViewController.m in Sources */,
 				1D568BBD1BB388F500DB4849 /* ALDemoRootViewController.m in Sources */,
@@ -529,6 +568,7 @@
 				1D79132E1BB4A8FA006C6C60 /* ALDemoBaseTableViewController.m in Sources */,
 				1D7913021BB48173006C6C60 /* ALCarouselMediaView.m in Sources */,
 				1D09FCB01BB5DCDC00001083 /* ALDemoInterstitialManualLoadingViewController.m in Sources */,
+				1DA2DE081E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,11 +680,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = X8JXXK4FF5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/iOS-SDK-Demo",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS-SDK-Demo/iOS-SDK-Demo-ObjC-Prefix.pch";
@@ -668,11 +710,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = X8JXXK4FF5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/iOS-SDK-Demo",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS-SDK-Demo/iOS-SDK-Demo-ObjC-Prefix.pch";

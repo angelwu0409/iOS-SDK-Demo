@@ -58,11 +58,6 @@ static NSUInteger const kCellTagDescriptionLabel = 4;
 
 #pragma mark - Table View Data Source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.articles.count;
