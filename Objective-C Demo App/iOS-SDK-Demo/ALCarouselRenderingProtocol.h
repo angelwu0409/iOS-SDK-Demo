@@ -6,9 +6,14 @@
 //
 //
 
-@import AppLovinSDK;
 #import <Foundation/Foundation.h>
 #import "ALCarouselCardState.h"
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALNativeAd.h"
+#endif
 
 @protocol ALCarouselRenderingProtocol <NSObject>
 

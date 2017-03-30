@@ -6,12 +6,20 @@
 //
 //
 
-@import AppLovinSDK;
 #import "ALCarouselCardView.h"
 #import "ALCarouselCardState.h"
 #import "UIView+ALActivityIndicator.h"
 #import "ALCarouselViewSettings.h"
 #import "ALDebugLog.h"
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALSdk.h"
+    #import "ALNativeAd.h"
+    #import "ALNativeAdLoadDelegate.h"
+    #import "ALNativeAdPrecacheDelegate.h"
+#endif
 
 @interface ALCarouselCardView()
 

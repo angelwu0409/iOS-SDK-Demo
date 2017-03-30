@@ -7,7 +7,12 @@
 //
 
 #import "ALDemoProgrammaticMRecViewController.h"
-@import AppLovinSDK;
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALAdView.h"
+#endif
 
 @interface ALDemoProgrammaticMRecViewController () <ALAdLoadDelegate, ALAdDisplayDelegate>
 

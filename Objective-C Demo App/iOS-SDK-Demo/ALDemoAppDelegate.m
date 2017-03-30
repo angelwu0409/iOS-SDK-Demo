@@ -6,8 +6,13 @@
 //  Copyright (c) 2016 AppLovin. All rights reserved.
 //
 
-@import AppLovinSDK;
 #import "ALDemoAppDelegate.h"
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALSdk.h"
+#endif
 
 @implementation ALDemoAppDelegate
 

@@ -6,8 +6,14 @@
 //  Copyright © 2015 AppLovin. All rights reserved.
 //
 
-@import AppLovinSDK;
 #import "ALDemoRewardedVideosViewController.h"
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALIncentivizedInterstitialAd.h"
+    #import "ALErrorCodes.h"
+#endif
 
 @interface ALDemoRewardedVideosViewController ()<ALAdLoadDelegate, ALAdRewardDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate>
 

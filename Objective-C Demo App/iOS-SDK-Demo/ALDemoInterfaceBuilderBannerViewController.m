@@ -7,7 +7,13 @@
 //
 
 #import "ALDemoInterfaceBuilderBannerViewController.h"
-@import AppLovinSDK;
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALAdService.h"
+    #import "ALAdView.h"
+#endif
 
 @interface ALDemoInterfaceBuilderBannerViewController () <ALAdLoadDelegate, ALAdDisplayDelegate>
 @property (nonatomic, strong) IBOutlet ALAdView *adView;

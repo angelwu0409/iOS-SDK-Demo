@@ -7,7 +7,12 @@
 //
 
 #import "ALDemoInterstitialSingleInstanceViewController.h"
-@import AppLovinSDK;
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALInterstitialAd.h"
+#endif
 
 @interface ALDemoInterstitialSingleInstanceViewController ()<ALAdLoadDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate>
 @property (nonatomic, strong) ALInterstitialAd *interstitial;

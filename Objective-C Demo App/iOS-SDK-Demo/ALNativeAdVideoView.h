@@ -6,8 +6,6 @@
 //
 //
 
-@import AppLovinSDK;
-
 @import AVFoundation;
 @import CoreMedia;
 

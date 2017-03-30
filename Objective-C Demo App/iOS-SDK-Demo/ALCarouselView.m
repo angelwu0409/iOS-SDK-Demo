@@ -5,7 +5,6 @@
 //  Copyright (c) 2015, AppLovin Corporation. All rights reserved.
 //
 
-@import AppLovinSDK;
 #import "ALCarouselView.h"
 #import "ALCarouselView+Internal.h"
 #import "UIView+ALActivityIndicator.h"
@@ -14,6 +13,15 @@
 #import "ALCarouselViewModel.h"
 #import "ALCarouselViewSettings.h"
 #import "ALDebugLog.h"
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALSdk.h"
+    #import "ALNativeAd.h"
+    #import "ALNativeAdLoadDelegate.h"
+    #import "ALNativeAdPrecacheDelegate.h"
+#endif
 
 @class ALCarouselView;
 

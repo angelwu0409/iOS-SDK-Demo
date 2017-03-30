@@ -6,8 +6,16 @@
 //  Copyright © 2015 AppLovin. All rights reserved.
 //
 
-@import AppLovinSDK;
 #import "ALDemoNativeAdProgrammaticViewController.h"
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALSdk.h"
+    #import "ALNativeAd.h"
+    #import "ALNativeAdLoadDelegate.h"
+    #import "ALNativeAdPrecacheDelegate.h"
+#endif
 
 @interface ALDemoNativeAdProgrammaticViewController ()<ALNativeAdLoadDelegate, ALNativeAdPrecacheDelegate, ALPostbackDelegate>
 @property (nonatomic, strong) ALNativeAd *nativeAd;

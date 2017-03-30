@@ -6,7 +6,12 @@
 //  Copyright © 2015 AppLovin. All rights reserved.
 //
 
-@import AppLovinSDK;
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALSdk.h"
+#endif
+
 #import "ALDemoRootViewController.h"
 #import <MessageUI/MFMailComposeViewController.h>
 #import <SafariServices/SafariServices.h>

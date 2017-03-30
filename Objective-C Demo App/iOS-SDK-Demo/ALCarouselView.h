@@ -7,7 +7,12 @@
 
 #import <UIKit/UIKit.h>
 
-@import AppLovinSDK;
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALSdk.h"
+    #import "ALNativeAdLoadDelegate.h"
+#endif
 
 /**
  *  This class is used to display native ads to the user.

@@ -6,8 +6,13 @@
 //  Copyright © 2015 AppLovin. All rights reserved.
 //
 
-@import AppLovinSDK;
 #import "ALDemoInterstitialManualLoadingViewController.h"
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALInterstitialAd.h"
+#endif
 
 @interface ALDemoInterstitialManualLoadingViewController()<ALAdLoadDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate>
 @property (nonatomic, strong) ALAd *ad;

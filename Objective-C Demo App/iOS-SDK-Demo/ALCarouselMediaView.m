@@ -6,7 +6,6 @@
 //
 //
 
-@import AppLovinSDK;
 #import "ALCarouselMediaView.h"
 #import "ALCarouselCardState.h"
 #import "ALCarouselReplayOverlayView.h"
@@ -15,6 +14,12 @@
 #import "ALDebugLog.h"
 #import "ALNativeAdVideoPlayer.h"
 #import "ALNativeAdVideoView.h"
+
+#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
+    #import <AppLovinSDK/AppLovinSDK.h>
+#else
+    #import "ALSdk.h"
+#endif
 
 @interface ALCarouselMediaView()
 
