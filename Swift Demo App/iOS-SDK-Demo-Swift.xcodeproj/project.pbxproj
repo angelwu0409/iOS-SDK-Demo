@@ -454,6 +454,11 @@
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = X8JXXK4FF5;
 						LastSwiftMigration = 0810;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};

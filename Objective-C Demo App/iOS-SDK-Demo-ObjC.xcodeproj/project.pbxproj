@@ -486,6 +486,11 @@
 				TargetAttributes = {
 					2713D00918EDDD0C006218B2 = {
 						DevelopmentTeam = X8JXXK4FF5;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
