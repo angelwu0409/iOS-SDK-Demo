@@ -1326,7 +1326,7 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Interface Builder Banners" id="P2b-tT-scs" userLabel="Interface Builder MRecs"/>
+                    <navigationItem key="navigationItem" title="Interface Builder MRecs" id="P2b-tT-scs" userLabel="Interface Builder MRecs"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="adStatusLabel" destination="T8Z-oc-9sB" id="2kE-ho-RDC"/>

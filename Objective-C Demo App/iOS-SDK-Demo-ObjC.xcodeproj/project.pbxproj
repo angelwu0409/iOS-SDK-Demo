@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D02380B1E92D329002CC1F9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D02380A1E92D329002CC1F9 /* StoreKit.framework */; };
 		1D09FCB01BB5DCDC00001083 /* ALDemoInterstitialManualLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D09FCAF1BB5DCDC00001083 /* ALDemoInterstitialManualLoadingViewController.m */; };
 		1D09FCBC1BB5F21B00001083 /* nav_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D09FCBB1BB5F21B00001083 /* nav_logo@2x.png */; };
 		1D18615E1E11025200ED8F11 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1861561E11025200ED8F11 /* AdSupport.framework */; };
@@ -14,7 +15,6 @@
 		1D1861601E11025200ED8F11 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1861581E11025200ED8F11 /* CoreGraphics.framework */; };
 		1D1861611E11025200ED8F11 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1861591E11025200ED8F11 /* CoreMedia.framework */; };
 		1D1861621E11025200ED8F11 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D18615A1E11025200ED8F11 /* CoreTelephony.framework */; };
-		1D1861631E11025200ED8F11 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D18615B1E11025200ED8F11 /* StoreKit.framework */; };
 		1D1861641E11025200ED8F11 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D18615C1E11025200ED8F11 /* SystemConfiguration.framework */; };
 		1D1861651E11025200ED8F11 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D18615D1E11025200ED8F11 /* UIKit.framework */; };
 		1D568BB31BB3792800DB4849 /* ALDemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D568BB21BB3792800DB4849 /* ALDemoBaseViewController.m */; };
@@ -68,6 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D02380A1E92D329002CC1F9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1D09FCAE1BB5DCDC00001083 /* ALDemoInterstitialManualLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoInterstitialManualLoadingViewController.h; sourceTree = "<group>"; };
 		1D09FCAF1BB5DCDC00001083 /* ALDemoInterstitialManualLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoInterstitialManualLoadingViewController.m; sourceTree = "<group>"; };
 		1D09FCBB1BB5F21B00001083 /* nav_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_logo@2x.png"; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		1D1861581E11025200ED8F11 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1D1861591E11025200ED8F11 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		1D18615A1E11025200ED8F11 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		1D18615B1E11025200ED8F11 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1D18615C1E11025200ED8F11 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1D18615D1E11025200ED8F11 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1D47D8E01BB32A4500F33ADA /* ALDebugLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDebugLog.h; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 				1D1861621E11025200ED8F11 /* CoreTelephony.framework in Frameworks */,
 				1D79130A1BB49C45006C6C60 /* MessageUI.framework in Frameworks */,
 				1D72215C1BB7771800FE1B91 /* SafariServices.framework in Frameworks */,
-				1D1861631E11025200ED8F11 /* StoreKit.framework in Frameworks */,
+				1D02380B1E92D329002CC1F9 /* StoreKit.framework in Frameworks */,
 				1D1861641E11025200ED8F11 /* SystemConfiguration.framework in Frameworks */,
 				1D1861651E11025200ED8F11 /* UIKit.framework in Frameworks */,
 				1DDD51AB1DDA62FD00A00A26 /* WebKit.framework in Frameworks */,
@@ -386,12 +386,12 @@
 		2713D00C18EDDD0C006218B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D02380A1E92D329002CC1F9 /* StoreKit.framework */,
 				1D1861561E11025200ED8F11 /* AdSupport.framework */,
 				1D1861571E11025200ED8F11 /* AVFoundation.framework */,
 				1D1861581E11025200ED8F11 /* CoreGraphics.framework */,
 				1D1861591E11025200ED8F11 /* CoreMedia.framework */,
 				1D18615A1E11025200ED8F11 /* CoreTelephony.framework */,
-				1D18615B1E11025200ED8F11 /* StoreKit.framework */,
 				1D18615C1E11025200ED8F11 /* SystemConfiguration.framework */,
 				1D18615D1E11025200ED8F11 /* UIKit.framework */,
 				1DDD51AA1DDA62FD00A00A26 /* WebKit.framework */,
