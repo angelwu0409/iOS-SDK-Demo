@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xGH-dd-nBf">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xGH-dd-nBf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -167,8 +167,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                    <rect key="frame" x="15" y="25" width="219" height="14"/>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="300x250 Rectangular ads typically used in-content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7eR-hy-tdW">
+                                                    <rect key="frame" x="15" y="25" width="269" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -674,7 +674,7 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1OU-Ua-YSs" id="Ma7-UO-RcD">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="140"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="139"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="HHh-vd-vq5">
@@ -743,7 +743,7 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
                                 <rect key="frame" x="0.0" y="168" width="375" height="361"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="83G-Ox-aoz" id="nQg-uu-JRg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="361"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="360"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLY-7r-HwN" customClass="ALCarouselView">
@@ -1215,33 +1215,6 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
                                             <segue destination="bDb-jO-IMe" kind="show" id="fXt-f6-ZyB"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rootPrototype" textLabel="eEL-5d-Tfw" detailTextLabel="nyF-y3-XKK" style="IBUITableViewCellStyleSubtitle" id="j1h-YG-mdv">
-                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j1h-YG-mdv" id="nIY-fy-9EY">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Using Interface Builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eEL-5d-Tfw">
-                                                    <rect key="frame" x="15" y="5" width="166" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Create a banner using interface builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nyF-y3-XKK">
-                                                    <rect key="frame" x="15" y="25" width="205" height="14"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="JvO-0Z-lea" kind="show" id="tlW-jQ-90d"/>
-                                        </connections>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -1288,54 +1261,6 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Spa-5h-Dqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1380" y="1255"/>
-        </scene>
-        <!--Interface Builder MRecs-->
-        <scene sceneID="3ge-gX-0W3">
-            <objects>
-                <viewController title="Interface Builder MRecs" hidesBottomBarWhenPushed="YES" id="JvO-0Z-lea" customClass="ALDemoInterfaceBuilderMRecViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3Xx-1J-gKg"/>
-                        <viewControllerLayoutGuide type="bottom" id="Gox-lv-SU8"/>
-                    </layoutGuides>
-                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="1At-4C-O1Y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to load ads." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8Z-oc-9sB">
-                                <rect key="frame" x="101" y="563" width="173" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XF5-Zd-d7w" customClass="ALAdView">
-                                <rect key="frame" x="27.5" y="208.5" width="320" height="250"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="1MX-8e-YGP"/>
-                                    <constraint firstAttribute="height" constant="250" id="3fK-92-rxZ"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="T8Z-oc-9sB" firstAttribute="centerX" secondItem="1At-4C-O1Y" secondAttribute="centerX" id="6cV-bg-FXh"/>
-                            <constraint firstItem="Gox-lv-SU8" firstAttribute="top" secondItem="T8Z-oc-9sB" secondAttribute="bottom" constant="80" id="XlI-Jv-Hr3"/>
-                            <constraint firstItem="XF5-Zd-d7w" firstAttribute="centerY" secondItem="1At-4C-O1Y" secondAttribute="centerY" id="bAN-I8-52P"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="T8Z-oc-9sB" secondAttribute="trailing" id="ia6-zE-HbJ"/>
-                            <constraint firstItem="XF5-Zd-d7w" firstAttribute="centerX" secondItem="1At-4C-O1Y" secondAttribute="centerX" id="qfv-LU-0gk"/>
-                            <constraint firstItem="T8Z-oc-9sB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1At-4C-O1Y" secondAttribute="leadingMargin" id="vu0-93-l0i"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Interface Builder MRecs" id="P2b-tT-scs" userLabel="Interface Builder MRecs"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="adStatusLabel" destination="T8Z-oc-9sB" id="2kE-ho-RDC"/>
-                        <outlet property="adView" destination="XF5-Zd-d7w" id="uxV-YZ-dLf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uZF-Yl-95P" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2057" y="1255"/>
         </scene>
     </scenes>
     <resources>

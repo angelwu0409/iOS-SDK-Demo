@@ -55,7 +55,6 @@
 		1DA2DE001E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DDFF1E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.m */; };
 		1DA2DE031E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DE021E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.m */; };
 		1DA2DE081E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DE071E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.m */; };
-		1DA2DE0B1E6D649500FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DE0A1E6D649500FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.m */; };
 		1DC3E98D1BB321660093EF2A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DC3E98C1BB321660093EF2A /* LaunchScreen.xib */; };
 		1DDB39AC1BF56181002561A0 /* ALDemoArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB39AB1BF56181002561A0 /* ALDemoArticle.m */; };
 		1DDD51AB1DDA62FD00A00A26 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDD51AA1DDA62FD00A00A26 /* WebKit.framework */; };
@@ -141,8 +140,6 @@
 		1DA2DE021E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoInterfaceBuilderBannerViewController.m; sourceTree = "<group>"; };
 		1DA2DE061E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoProgrammaticMRecViewController.h; sourceTree = "<group>"; };
 		1DA2DE071E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoProgrammaticMRecViewController.m; sourceTree = "<group>"; };
-		1DA2DE091E6D649500FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoInterfaceBuilderMRecViewController.h; sourceTree = "<group>"; };
-		1DA2DE0A1E6D649500FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoInterfaceBuilderMRecViewController.m; sourceTree = "<group>"; };
 		1DC3E98C1BB321660093EF2A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		1DDB39AA1BF56181002561A0 /* ALDemoArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoArticle.h; sourceTree = "<group>"; };
 		1DDB39AB1BF56181002561A0 /* ALDemoArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoArticle.m; sourceTree = "<group>"; };
@@ -332,8 +329,6 @@
 			children = (
 				1DA2DE061E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.h */,
 				1DA2DE071E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.m */,
-				1DA2DE091E6D649500FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.h */,
-				1DA2DE0A1E6D649500FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.m */,
 			);
 			name = Mrecs;
 			sourceTree = "<group>";
@@ -561,7 +556,6 @@
 				1D5D968B1BB34EB700F296B0 /* ALDemoInterstitialSingleInstanceViewController.m in Sources */,
 				1D7498A01BF52A1E00FB14B2 /* ALDemoRSSFeedRetriever.m in Sources */,
 				1D7912F11BB4813D006C6C60 /* ALCarouselViewModel.m in Sources */,
-				1DA2DE0B1E6D649500FCC9B1 /* ALDemoInterfaceBuilderMRecViewController.m in Sources */,
 				2713D01A18EDDD0C006218B2 /* main.m in Sources */,
 				1DA2DE001E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.m in Sources */,
 				1DFA1BEE1BB4AF9900CA13C2 /* ALDemoNativeAdProgrammaticViewController.m in Sources */,
