@@ -20,7 +20,7 @@
 
 @implementation ALDemoProgrammaticMRecViewController
 static const CGFloat kMRecHeight = 250.0f;
-static const CGFloat kMRecWidth = 320.0f;
+static const CGFloat kMRecWidth = 300.0f;
 
 #pragma mark - View Lifecycle
 

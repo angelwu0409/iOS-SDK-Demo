@@ -12,7 +12,7 @@ import AppLovinSDK
 class ALDemoProgrammaticMRecViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate
 {
     let kMRecHeight: CGFloat = 250
-    let kMRecWidth: CGFloat = 320
+    let kMRecWidth: CGFloat = 300
     
     // MARK: View Lifecycle
     
