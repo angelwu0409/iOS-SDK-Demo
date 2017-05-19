@@ -24,7 +24,6 @@
 @interface ALCarouselCardView()
 
 @property (weak,   nonatomic) ALSdk*                    sdk;
-@property (weak,   nonatomic) ALPostbackService*        postbackService;
 
 @property (strong, nonatomic) ALCarouselCardState*      cardState;
 @property (strong, nonatomic) ALNativeAd*               ad;
@@ -78,8 +77,7 @@ static NSString * const TAG = @"ALCarouselCardView";
 
 -(void) baseInitWithSdk: (ALSdk*) sdk
 {
-    self.sdk    = sdk;
-    self.postbackService = sdk.postbackService;
+    self.sdk = sdk;
     
     self.backgroundColor = [UIColor clearColor];
     
@@ -329,7 +327,7 @@ static NSString * const TAG = @"ALCarouselCardView";
         {
             self.cardState.impressionTracked = YES;
             ALLog(@"Tracking impression for ad (%@)", self.ad.adIdNumber.stringValue);
-            [self.postbackService dispatchPostbackAsync: self.ad.impressionTrackingURL andNotify: nil];
+            [self.ad trackImpression];
         }
     }
     else

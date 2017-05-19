@@ -109,7 +109,7 @@ class ALDemoNativeAdProgrammaticViewController: ALDemoBaseViewController, ALNati
     {
         // Callbacks may not happen on main queue
         DispatchQueue.main.async {
-            ALSdk.shared()?.postbackService.dispatchPostbackAsync(ad.impressionTrackingURL, andNotify: self)
+            ad.trackImpressionAndNotify(self)
         }
     }
     

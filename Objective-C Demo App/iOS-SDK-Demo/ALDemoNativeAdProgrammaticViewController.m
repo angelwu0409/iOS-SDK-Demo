@@ -80,7 +80,7 @@
     [self setUIElementsHidden: NO];
     
     //
-    // You are responsible for firing all necessary postback URLs
+    // You are responsible for firing impressions
     //
     [self trackImpression: self.nativeAd];
     
@@ -99,8 +99,9 @@
     // Callbacks may not happen on main queue
     dispatch_async(dispatch_get_main_queue(), ^{
         self.impressionStatusLabel.text = @"Tracking impression...";
-        [[ALSdk shared].postbackService dispatchPostbackAsync: ad.impressionTrackingURL andNotify: self];
     });
+    
+    [ad trackImpressionAndNotify: self];
 }
 
 - (void)postbackService:(nonnull ALPostbackService *)postbackService didExecutePostback:(nonnull NSURL *)postbackURL
