@@ -40,7 +40,18 @@ class ALDemoRootViewController: UITableViewController, MFMailComposeViewControll
         super.viewWillAppear(animated)
         
         // Re-set status bar style after returning from SFSafariViewController
-        UIApplication.shared.setStatusBarStyle(.lightContent, animated: false)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let sdkKey = Bundle.main.infoDictionary!["AppLovinSdkKey"] as! String
+        if sdkKey == "YOUR_SDK_KEY"
+        {
+            let alertVC = UIAlertController(title: "ERROR", message: "Please update the `AppLovinSdkKey` row in your Info.plist file with your SDK key.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .cancel)
+            alertVC.addAction(okAction)
+            self.present(alertVC, animated: true, completion: nil)
+        }
     }
     
     // MARK: Table View Delegate
@@ -85,7 +96,7 @@ class ALDemoRootViewController: UITableViewController, MFMailComposeViewControll
     {
         let safariController = SFSafariViewController(url: URL(string: kSupportLink)!, entersReaderIfAvailable: true)
         self.present(safariController, animated: true, completion: {
-            UIApplication.shared.setStatusBarStyle(.default, animated: false)
+            UIApplication.shared.statusBarStyle = .default
         })
     }
     
@@ -101,13 +112,16 @@ class ALDemoRootViewController: UITableViewController, MFMailComposeViewControll
             mailController.navigationBar.tintColor = UIColor.white
             
             self.present(mailController, animated: true, completion: {
-                UIApplication.shared.setStatusBarStyle(.lightContent, animated: false)
+                UIApplication.shared.statusBarStyle = .lightContent
             })
         }
         else
         {
             let message = "Your device is not configured for sending emails.\n\nPlease send emails to \(kSupportEmail)"
-            UIAlertView(title: "Email Unavailable", message: message, delegate: nil, cancelButtonTitle: "OK").show()
+            let alertVC = UIAlertController(title: "Email Unavaliable", message: message, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .cancel)
+            alertVC.addAction(okAction)
+            self.present(alertVC, animated: true, completion: nil)
         }
     }
     
@@ -116,7 +130,10 @@ class ALDemoRootViewController: UITableViewController, MFMailComposeViewControll
         switch ( result.rawValue )
         {
         case ( MFMailComposeResult.sent.rawValue ):
-            UIAlertView(title: "Email Sent", message: "Thank you for your email, we will process it as soon as possible.", delegate: nil, cancelButtonTitle: "OK").show()
+            let alertVC = UIAlertController(title: "Email Sent", message: "Thank you for your email, we will process it as soon as possible.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .cancel)
+            alertVC.addAction(okAction)
+            self.present(alertVC, animated: true, completion: nil)
         default:
             break
         }

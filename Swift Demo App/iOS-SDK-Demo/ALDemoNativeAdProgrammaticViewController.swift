@@ -81,7 +81,7 @@ class ALDemoNativeAdProgrammaticViewController: ALDemoBaseViewController, ALNati
             self.descriptionLabel.text = ad.descriptionText
             self.ctaButton.setTitle(ad.ctaText, for: .normal)
             
-            let starFilename = "Star_Sprite_\(ad.starRating?.stringValue)"
+            let starFilename = "Star_Sprite_\(String(describing: ad.starRating?.stringValue))"
             self.rating.image = UIImage(named: starFilename)
             
             // NOTE - Videos have aspect ratio of 1:1.85

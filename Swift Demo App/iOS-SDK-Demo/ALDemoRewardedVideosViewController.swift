@@ -85,7 +85,7 @@ class ALDemoRewardedVideosViewController: ALDemoBaseViewController, ALAdLoadDele
             
             // Do something with this information.
             // MYCurrencyManagerClass.updateUserCurrency(currencyName withChange: amountGiven)
-            self.log("Rewarded \(amountGiven) \(currencyName)")
+            self.log("Rewarded \(amountGiven) \(String(describing: currencyName))")
         }
  
         // By default we'll show a UIAlertView informing your user of the currency & amount earned.
