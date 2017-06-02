@@ -54,6 +54,25 @@ static NSString *const kSupportLink = @"https://support.applovin.com/support/hom
 #pragma GCC diagnostic pop
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear: animated];
+    NSString *sdkKey = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"AppLovinSdkKey"];
+    if ( [sdkKey isEqualToString: @"YOUR_SDK_KEY"] )
+    {
+        UIAlertController * alertVC = [UIAlertController
+                                     alertControllerWithTitle:@"ERROR"
+                                     message:@"Please update the `AppLovinSdkKey` row in your Info.plist file with your SDK key."
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* okAction = [UIAlertAction
+                                    actionWithTitle:@"OK"
+                                    style:UIAlertActionStyleCancel
+                                    handler:nil];
+        [alertVC addAction:okAction];
+        [self presentViewController:alertVC animated:YES completion:nil];
+    }
+}
+
 #pragma mark - Table View Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
