@@ -44,6 +44,7 @@ class ALDemoRootViewController: UITableViewController, MFMailComposeViewControll
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         let sdkKey = Bundle.main.infoDictionary!["AppLovinSdkKey"] as! String
         if sdkKey == "YOUR_SDK_KEY"
         {
