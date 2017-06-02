@@ -28,16 +28,6 @@
     [[UINavigationBar appearance] setTitleTextAttributes: @{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     [[UINavigationBar appearance] setTintColor: [UIColor whiteColor]];
     
-    NSString *sdkKey = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"AppLovinSdkKey"];
-    if ( [sdkKey isEqualToString: @"YOUR_SDK_KEY"] )
-    {
-        [[[UIAlertView alloc] initWithTitle: @"ERROR"
-                                    message: @"Please update the `AppLovinSdkKey` row in your Info.plist file with your SDK key."
-                                   delegate: nil
-                          cancelButtonTitle: @"OK"
-                          otherButtonTitles: nil, nil] show];
-    }
-    
     return YES;
 }
 
