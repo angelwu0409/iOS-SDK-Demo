@@ -17,6 +17,8 @@ class ALDemoAppDelegate: UIResponder, UIApplicationDelegate {
     {
         // Initializing our SDK at launch is very important as it'll start preloading ads in the background.        
         ALSdk.initializeSdk()
+        
+        ALSdk.shared()?.settings.isTestAdsEnabled = true
 
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barTintColor = UIColor(red: 10.0/255.0, green: 131.0/255.0, blue: 170.0/255.0, alpha: 1.0)
