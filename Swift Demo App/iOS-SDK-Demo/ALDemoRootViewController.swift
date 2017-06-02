@@ -119,7 +119,7 @@ class ALDemoRootViewController: UITableViewController, MFMailComposeViewControll
         else
         {
             let message = "Your device is not configured for sending emails.\n\nPlease send emails to \(kSupportEmail)"
-            let alertVC = UIAlertController(title: "Email Unavaliable", message: message, preferredStyle: .alert)
+            let alertVC = UIAlertController(title: "Email Unavailable", message: message, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .cancel)
             alertVC.addAction(okAction)
             self.present(alertVC, animated: true, completion: nil)
