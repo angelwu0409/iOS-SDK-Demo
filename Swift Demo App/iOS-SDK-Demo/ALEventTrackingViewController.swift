@@ -2,7 +2,7 @@
 //  ALEventTrackingViewController.swift
 //  iOS-SDK-Demo-Swift
 //
-//  Created by Monica on 6/5/17.
+//  Created by Monica Ong on 6/5/17.
 //  Copyright © 2017 AppLovin. All rights reserved.
 //
 

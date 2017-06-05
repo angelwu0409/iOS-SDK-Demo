@@ -16,7 +16,7 @@
                 <navigationController definesPresentationContext="YES" hidesBottomBarWhenPushed="YES" toolbarHidden="NO" id="xGH-dd-nBf" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sWn-VO-OLG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sWn-VO-OLG">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
