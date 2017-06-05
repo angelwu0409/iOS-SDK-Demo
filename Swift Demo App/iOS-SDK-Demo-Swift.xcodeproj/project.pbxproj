@@ -62,6 +62,8 @@
 		1DDB3A071BF5815D002561A0 /* ALCarouselMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A061BF5815D002561A0 /* ALCarouselMediaView.m */; };
 		1DDB3A0D1BF58272002561A0 /* ALDemoRSSFeedRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A0A1BF58272002561A0 /* ALDemoRSSFeedRetriever.m */; };
 		1DDB3A0E1BF58272002561A0 /* ALDemoArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A0C1BF58272002561A0 /* ALDemoArticle.m */; };
+		DD3DFC0A1EE0DEF100454221 /* AppLovinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3DFC091EE0DEF100454221 /* AppLovinSDK.framework */; };
+		DDDBAD0A1EE5CE2B00666518 /* ALEventTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBAD091EE5CE2B00666518 /* ALEventTrackingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +140,8 @@
 		1DDB3A0A1BF58272002561A0 /* ALDemoRSSFeedRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoRSSFeedRetriever.m; sourceTree = "<group>"; };
 		1DDB3A0B1BF58272002561A0 /* ALDemoArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoArticle.h; sourceTree = "<group>"; };
 		1DDB3A0C1BF58272002561A0 /* ALDemoArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoArticle.m; sourceTree = "<group>"; };
+		DD3DFC091EE0DEF100454221 /* AppLovinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppLovinSDK.framework; sourceTree = "<group>"; };
+		DDDBAD091EE5CE2B00666518 /* ALEventTrackingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALEventTrackingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 				1D7221261BB60CB500FE1B91 /* MessageUI.framework in Frameworks */,
 				1D1BB7501DDFE81000E61729 /* SafariServices.framework in Frameworks */,
 				1D0238171E943B4D002CC1F9 /* StoreKit.framework in Frameworks */,
+				DD3DFC0A1EE0DEF100454221 /* AppLovinSDK.framework in Frameworks */,
 				1D1861541E1101E100ED8F11 /* SystemConfiguration.framework in Frameworks */,
 				1D1861551E1101E100ED8F11 /* UIKit.framework in Frameworks */,
 				1D1BB7521DDFE81300E61729 /* WebKit.framework in Frameworks */,
@@ -203,6 +208,7 @@
 		1D7220A11BB608BE00FE1B91 /* SDK Integration Examples */ = {
 			isa = PBXGroup;
 			children = (
+				DDDBAD081EE5CCB900666518 /* Event Tracking */,
 				1DA2DE121E6D699F00FCC9B1 /* MRecs */,
 				1DA2DE051E6D644000FCC9B1 /* Banners */,
 				1D7220CB1BB60BF200FE1B91 /* Interstitials */,
@@ -342,6 +348,7 @@
 		1D72212A1BB60CF000FE1B91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD3DFC091EE0DEF100454221 /* AppLovinSDK.framework */,
 				1D0238161E943B4D002CC1F9 /* StoreKit.framework */,
 				1D1861481E1101E100ED8F11 /* AVFoundation.framework */,
 				1D1861491E1101E100ED8F11 /* CoreGraphics.framework */,
@@ -415,6 +422,14 @@
 				1DDB3A0C1BF58272002561A0 /* ALDemoArticle.m */,
 			);
 			name = "RSS Feed Parsing";
+			sourceTree = "<group>";
+		};
+		DDDBAD081EE5CCB900666518 /* Event Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				DDDBAD091EE5CE2B00666518 /* ALEventTrackingViewController.swift */,
+			);
+			name = "Event Tracking";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,6 +541,7 @@
 				1D7221121BB60C5700FE1B91 /* UIView+ALActivityIndicator.m in Sources */,
 				1DDB3A0E1BF58272002561A0 /* ALDemoArticle.m in Sources */,
 				1D72208B1BB6086100FE1B91 /* AppDelegate.swift in Sources */,
+				DDDBAD0A1EE5CE2B00666518 /* ALEventTrackingViewController.swift in Sources */,
 				1DA2DE111E6D699B00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.swift in Sources */,
 				1D7221581BB61F8C00FE1B91 /* ALDemoNativeAdProgrammaticViewController.swift in Sources */,
 				1D7221341BB6198700FE1B91 /* ALDemoInterstitialSharerdInstanceViewController.swift in Sources */,
