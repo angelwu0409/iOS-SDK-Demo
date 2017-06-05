@@ -26,25 +26,25 @@ class ALEventTrackingViewController: ALDemoBaseTableViewController
             title = "User began checkout"
             eventService.trackEvent(kALEventTypeUserBeganCheckOut,
                                     parameters: [kALEventParameterProductIdentifierKey : "PRODUCT SKU OR ID",
-                                                 kALEventParameterRevenueAmountKey      : "PRICE OF ITEM",
-                                                 kALEventParameterRevenueCurrencyKey    :  "3-LETTER CURRENCY CODE"])
+                                                 kALEventParameterRevenueAmountKey     : "PRICE OF ITEM",
+                                                 kALEventParameterRevenueCurrencyKey   :  "3-LETTER CURRENCY CODE"])
         case 1:
             title = "User added item to cart"
             eventService.trackEvent(kALEventTypeUserAddedItemToCart,
                                     parameters: [kALEventParameterProductIdentifierKey : "PRODUCT SKU OR ID"])
-
+            
         case 2:
             title = "User completed achievement"
             eventService.trackEvent(kALEventTypeUserCompletedAchievement,
                                     parameters: [kALEventParameterCompletedAchievementKey : "ACHIEVEMENT NAME OR ID"])
-
+            
         case 3:
             title = "User completed checkout"
-            /*eventService.trackEvent(kALEventTypeUserCompletedCheckOut,
+            eventService.trackEvent(kALEventTypeUserCompletedCheckOut,
                                     parameters: [kALEventParameterCheckoutTransactionIdentifierKey : "UNIQUE TRANSACTION ID",
-                                                 kALEventParameterCheckoutTransactionIdentifierKey  : "PRODUCT SKU OR ID",
-                                                 kALEventParameterRevenueAmountKey                  : "AMOUNT OF MONEY SPENT",
-                                                 kALEventParameterRevenueCurrencyKey                : "3-LETTER CURRENCY CODE"])*/
+                                                 kALEventParameterProductIdentifierKey             : "PRODUCT SKU OR ID",
+                                                 kALEventParameterRevenueAmountKey                 : "AMOUNT OF MONEY SPENT",
+                                                 kALEventParameterRevenueCurrencyKey               : "3-LETTER CURRENCY CODE"])
         case 4:
             title = "User completed level"
             eventService.trackEvent(kALEventTypeUserCompletedLevel,
@@ -53,14 +53,14 @@ class ALEventTrackingViewController: ALDemoBaseTableViewController
             title = "User created reservation"
             eventService.trackEvent(kALEventTypeUserCreatedReservation,
                                     parameters: [kALEventParameterProductIdentifierKey    : "PRODUCT SKU OR ID",
-                                                 kALEventParameterReservationStartDateKey  : "START NSDATE",
-                                                 kALEventParameterReservationEndDateKey    : "END NSDATE"])
+                                                 kALEventParameterReservationStartDateKey : "START NSDATE",
+                                                 kALEventParameterReservationEndDateKey   : "END NSDATE"])
         case 6:
             title = "Tracking in app purchase"
-            /*eventService.trackInAppPurchase(withTransactionIdentifier: transaction.transactionIdentifier!,
-                                            parameters: [kALEventParameterRevenueAmountKey    : "AMOUNT OF MONEY SPENT",
+            eventService.trackInAppPurchase(withTransactionIdentifier: "transaction.transactionIdentifier",
+                                            parameters: [kALEventParameterRevenueAmountKey     : "AMOUNT OF MONEY SPENT",
                                                          kALEventParameterRevenueCurrencyKey   : "3-LETTER CURRENCY CODE",
-                                                         kALEventParameterProductIdentifierKey : product.productIdentifier])*/
+                                                         kALEventParameterProductIdentifierKey : "product.productIdentifier"])
         case 7:
             title = "User logged in"
             eventService.trackEvent(kALEventTypeUserLoggedIn,
@@ -68,12 +68,12 @@ class ALEventTrackingViewController: ALDemoBaseTableViewController
         case 8:
             title = "User provided payment information"
             eventService.trackEvent(kALEventTypeUserProvidedPaymentInformation)
-
+            
         case 9:
             title = "User created account"
             eventService.trackEvent(kALEventTypeUserCreatedAccount,
                                     parameters: [kALEventParameterUserAccountIdentifierKey : "USERNAME"])
-
+            
         case 10:
             title = "User executed search"
             eventService.trackEvent(kALEventTypeUserExecutedSearch,
@@ -109,5 +109,5 @@ class ALEventTrackingViewController: ALDemoBaseTableViewController
         }
         
     }
-
+    
 }
