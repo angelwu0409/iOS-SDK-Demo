@@ -55,15 +55,12 @@ class ALEventTrackingViewController: ALDemoBaseTableViewController
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "rootPrototype")
-        if(cell == nil){
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "rootPrototype")
-        }
+        var cell = tableView.dequeueReusableCell(withIdentifier: "rootPrototype", for: indexPath)
         
-        cell?.textLabel?.text = events[indexPath.row].name
-        cell?.detailTextLabel?.text = events[indexPath.row].purpose
+        cell.textLabel?.text = events[indexPath.row].name
+        cell.detailTextLabel?.text = events[indexPath.row].purpose
         
-        return cell!
+        return cell
     }
     
     // MARK: Table View Delegate
@@ -72,7 +69,10 @@ class ALEventTrackingViewController: ALDemoBaseTableViewController
     {
         super.tableView(tableView, didSelectRowAt: indexPath)
         
-        let eventService: ALEventService = (ALSdk.shared()?.eventService)!
+        guard let eventService: ALEventService = ALSdk.shared()?.eventService else {
+            title = "Unable to track events because eventService is nil"
+            return
+        }
 
         switch indexPath.row {
         case 0:
