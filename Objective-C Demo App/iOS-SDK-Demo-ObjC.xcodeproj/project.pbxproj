@@ -64,6 +64,8 @@
 		2713D01E18EDDD0C006218B2 /* ALDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2713D01D18EDDD0C006218B2 /* ALDemoAppDelegate.m */; };
 		2713D02118EDDD0C006218B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2713D01F18EDDD0C006218B2 /* Main.storyboard */; };
 		2713D02618EDDD0C006218B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2713D02518EDDD0C006218B2 /* Images.xcassets */; };
+		DD3DFC081EE0DEDE00454221 /* AppLovinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3DFC071EE0DEDE00454221 /* AppLovinSDK.framework */; };
+		DDDBAD0E1EE60A0100666518 /* ALEventTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDBAD0D1EE60A0100666518 /* ALEventTrackingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +157,9 @@
 		2713D01D18EDDD0C006218B2 /* ALDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDemoAppDelegate.m; sourceTree = "<group>"; };
 		2713D02018EDDD0C006218B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2713D02518EDDD0C006218B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DD3DFC071EE0DEDE00454221 /* AppLovinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppLovinSDK.framework; sourceTree = "<group>"; };
+		DDDBAD0C1EE60A0100666518 /* ALEventTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALEventTrackingViewController.h; sourceTree = "<group>"; };
+		DDDBAD0D1EE60A0100666518 /* ALEventTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALEventTrackingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +175,7 @@
 				1D79130A1BB49C45006C6C60 /* MessageUI.framework in Frameworks */,
 				1D72215C1BB7771800FE1B91 /* SafariServices.framework in Frameworks */,
 				1D02380B1E92D329002CC1F9 /* StoreKit.framework in Frameworks */,
+				DD3DFC081EE0DEDE00454221 /* AppLovinSDK.framework in Frameworks */,
 				1D1861641E11025200ED8F11 /* SystemConfiguration.framework in Frameworks */,
 				1D1861651E11025200ED8F11 /* UIKit.framework in Frameworks */,
 				1DDD51AB1DDA62FD00A00A26 /* WebKit.framework in Frameworks */,
@@ -381,6 +387,7 @@
 		2713D00C18EDDD0C006218B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD3DFC071EE0DEDE00454221 /* AppLovinSDK.framework */,
 				1D02380A1E92D329002CC1F9 /* StoreKit.framework */,
 				1D1861561E11025200ED8F11 /* AdSupport.framework */,
 				1D1861571E11025200ED8F11 /* AVFoundation.framework */,
@@ -424,6 +431,7 @@
 		277F7B1C18EDDE27001F2E1F /* SDK Integration Examples */ = {
 			isa = PBXGroup;
 			children = (
+				DDDBAD0B1EE609A900666518 /* Event Tracking */,
 				1DA2DE041E6D63E800FCC9B1 /* Mrecs */,
 				1DA2DDFD1E6D497000FCC9B1 /* Banners */,
 				1D568BB01BB3790400DB4849 /* Interstitials */,
@@ -447,6 +455,15 @@
 				1D568BBC1BB388F500DB4849 /* ALDemoRootViewController.m */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		DDDBAD0B1EE609A900666518 /* Event Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				DDDBAD0C1EE60A0100666518 /* ALEventTrackingViewController.h */,
+				DDDBAD0D1EE60A0100666518 /* ALEventTrackingViewController.m */,
+			);
+			name = "Event Tracking";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,6 +579,7 @@
 				1D5D968E1BB34F9F00F296B0 /* ALDemoInterstitialSharerdInstanceViewController.m in Sources */,
 				1D568BBD1BB388F500DB4849 /* ALDemoRootViewController.m in Sources */,
 				1D7913041BB48173006C6C60 /* ALCarouselView.m in Sources */,
+				DDDBAD0E1EE60A0100666518 /* ALEventTrackingViewController.m in Sources */,
 				1D7913081BB48329006C6C60 /* ALDemoNativeAdFeedTableViewController.m in Sources */,
 				1D7913031BB48173006C6C60 /* ALCarouselReplayOverlayView.m in Sources */,
 				1D79132E1BB4A8FA006C6C60 /* ALDemoBaseTableViewController.m in Sources */,
