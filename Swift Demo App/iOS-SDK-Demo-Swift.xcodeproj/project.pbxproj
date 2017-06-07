@@ -62,6 +62,7 @@
 		1DDB3A071BF5815D002561A0 /* ALCarouselMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A061BF5815D002561A0 /* ALCarouselMediaView.m */; };
 		1DDB3A0D1BF58272002561A0 /* ALDemoRSSFeedRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A0A1BF58272002561A0 /* ALDemoRSSFeedRetriever.m */; };
 		1DDB3A0E1BF58272002561A0 /* ALDemoArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A0C1BF58272002561A0 /* ALDemoArticle.m */; };
+		DDDBAD0A1EE5CE2B00666518 /* ALEventTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBAD091EE5CE2B00666518 /* ALEventTrackingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +139,7 @@
 		1DDB3A0A1BF58272002561A0 /* ALDemoRSSFeedRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoRSSFeedRetriever.m; sourceTree = "<group>"; };
 		1DDB3A0B1BF58272002561A0 /* ALDemoArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoArticle.h; sourceTree = "<group>"; };
 		1DDB3A0C1BF58272002561A0 /* ALDemoArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoArticle.m; sourceTree = "<group>"; };
+		DDDBAD091EE5CE2B00666518 /* ALEventTrackingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALEventTrackingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 		1D7220A11BB608BE00FE1B91 /* SDK Integration Examples */ = {
 			isa = PBXGroup;
 			children = (
+				DDDBAD081EE5CCB900666518 /* Event Tracking */,
 				1DA2DE121E6D699F00FCC9B1 /* MRecs */,
 				1DA2DE051E6D644000FCC9B1 /* Banners */,
 				1D7220CB1BB60BF200FE1B91 /* Interstitials */,
@@ -417,6 +420,14 @@
 			name = "RSS Feed Parsing";
 			sourceTree = "<group>";
 		};
+		DDDBAD081EE5CCB900666518 /* Event Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				DDDBAD091EE5CE2B00666518 /* ALEventTrackingViewController.swift */,
+			);
+			name = "Event Tracking";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -526,6 +537,7 @@
 				1D7221121BB60C5700FE1B91 /* UIView+ALActivityIndicator.m in Sources */,
 				1DDB3A0E1BF58272002561A0 /* ALDemoArticle.m in Sources */,
 				1D72208B1BB6086100FE1B91 /* AppDelegate.swift in Sources */,
+				DDDBAD0A1EE5CE2B00666518 /* ALEventTrackingViewController.swift in Sources */,
 				1DA2DE111E6D699B00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.swift in Sources */,
 				1D7221581BB61F8C00FE1B91 /* ALDemoNativeAdProgrammaticViewController.swift in Sources */,
 				1D7221341BB6198700FE1B91 /* ALDemoInterstitialSharerdInstanceViewController.swift in Sources */,
