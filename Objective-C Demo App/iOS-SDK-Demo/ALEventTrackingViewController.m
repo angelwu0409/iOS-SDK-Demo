@@ -95,8 +95,7 @@
     
     switch ( indexPath.row )
     {
-        case 0:
-        {
+        case 0: {
             [eventService trackEvent: kALEventTypeUserBeganCheckOut
                           parameters: @{kALEventParameterProductIdentifierKey : @"PRODUCT SKU OR ID",
                                         kALEventParameterRevenueAmountKey     : @"PRICE OF ITEM",
@@ -104,13 +103,11 @@
             break;
         }
         case 1: {
-            
             [eventService trackEvent: kALEventTypeUserAddedItemToCart
                           parameters: @{kALEventParameterProductIdentifierKey : @"PRODUCT SKU OR ID"}];
             break;
         }
-        case 2:
-        {
+        case 2: {
             [eventService trackEvent: kALEventTypeUserCompletedAchievement
                           parameters: @{kALEventParameterCompletedAchievementKey : @"ACHIEVEMENT NAME OR ID"}];
             break;
@@ -131,16 +128,16 @@
         case 5: {
             [eventService trackEvent: kALEventTypeUserCreatedReservation
                           parameters: @{kALEventParameterProductIdentifierKey    : @"PRODUCT SKU OR ID",
-                                        kALEventParameterReservationStartDateKey : @"START NSDATE",
-                                        kALEventParameterReservationEndDateKey   : @"END NSDATE"}];
+                                        kALEventParameterReservationStartDateKey : @"START DATE",
+                                        kALEventParameterReservationEndDateKey   : @"END DATE"}];
             break;
         }
         case 6: {
             SKPaymentTransaction *transaction = [[SKPaymentTransaction alloc] init]; // from paymentQueue:updatedTransactions:
             //SKProduct* product = ...; // Appropriate product (matching productIdentifier property to SKPaymentTransaction);
             [eventService trackInAppPurchaseWithTransactionIdentifier: transaction.transactionIdentifier
-                                                           parameters: @{kALEventParameterRevenueAmountKey : @"AMOUNT OF MONEY SPENT",
-                                                                         kALEventParameterRevenueCurrencyKey : @"3-LETTER CURRENCY CODE",
+                                                           parameters: @{kALEventParameterRevenueAmountKey     : @"AMOUNT OF MONEY SPENT",
+                                                                         kALEventParameterRevenueCurrencyKey   : @"3-LETTER CURRENCY CODE",
                                                                          kALEventParameterProductIdentifierKey : @"product.productIdentifier"}]; //product.productIdentifier
             break;
         }
