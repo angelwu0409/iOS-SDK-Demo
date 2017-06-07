@@ -11,7 +11,8 @@ import AppLovinSDK
 
 class ALDemoInterfaceBuilderBannerViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate
 {
-    @IBOutlet weak var adView: ALAdView!;
+    @IBOutlet weak var adView: ALAdView!
+    @IBOutlet weak var loadButton: UIBarButtonItem!
     
     // MARK: View Lifecycle
     
@@ -21,6 +22,11 @@ class ALDemoInterfaceBuilderBannerViewController: ALDemoBaseViewController, ALAd
         
         self.adView.adLoadDelegate = self
         self.adView.adDisplayDelegate = self
+    }
+    
+    @IBAction func loadNextAd(_ sender: UIBarButtonItem)
+    {
+        adView.loadNextAd()
     }
     
     // MARK: Ad Load Delegate
@@ -41,6 +47,8 @@ class ALDemoInterfaceBuilderBannerViewController: ALDemoBaseViewController, ALAd
     func ad(_ ad: ALAd, wasDisplayedIn view: UIView)
     {
         self.log("Banner Displayed")
+        
+        loadButton.isEnabled = true
     }
     
     func ad(_ ad: ALAd, wasHiddenIn view: UIView)

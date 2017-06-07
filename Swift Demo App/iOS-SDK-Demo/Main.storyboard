@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xGH-dd-nBf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xGH-dd-nBf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -211,7 +211,7 @@
                             <tableViewSection headerTitle="SUPPORT" id="AdB-NK-2UZ">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rootPrototype" textLabel="f1r-Zs-4XN" detailTextLabel="WC6-Gh-T9U" style="IBUITableViewCellStyleSubtitle" id="TBs-Zn-XQi">
-                                        <rect key="frame" x="0.0" y="367.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="323.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TBs-Zn-XQi" id="ZZy-75-Uo3">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -235,7 +235,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rootPrototype" textLabel="XdY-RW-fMh" detailTextLabel="XsM-ee-bbp" style="IBUITableViewCellStyleSubtitle" id="eDa-ar-ds6">
-                                        <rect key="frame" x="0.0" y="411.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="367.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eDa-ar-ds6" id="ntb-vA-q0z">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -1060,7 +1060,7 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
         <!--Programmatic Banners-->
         <scene sceneID="lPN-QN-jdM">
             <objects>
-                <viewController title="Programmatic Banners" hidesBottomBarWhenPushed="YES" id="Zlt-XW-KMN" userLabel="Programmatic Banners" customClass="ALDemoProgrammaticBannerViewController" customModule="iOS_SDK_Demo_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Programmatic Banners" id="Zlt-XW-KMN" userLabel="Programmatic Banners" customClass="ALDemoProgrammaticBannerViewController" customModule="iOS_SDK_Demo_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wjA-y6-O8c"/>
                         <viewControllerLayoutGuide type="bottom" id="c8G-dd-eXa"/>
@@ -1070,7 +1070,7 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to load ads." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyu-ck-eZS">
-                                <rect key="frame" x="101" y="322" width="173" height="24"/>
+                                <rect key="frame" x="101" y="321.5" width="173" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1083,11 +1083,22 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
                             <constraint firstItem="Qyu-ck-eZS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mSc-qf-XrM" secondAttribute="leadingMargin" id="biL-Xh-Bo0"/>
                         </constraints>
                     </view>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="2dI-CB-FVO"/>
+                        <barButtonItem enabled="NO" title="Load" id="yu1-fc-d4Y">
+                            <color key="tintColor" red="0.15886658430099487" green="0.54863822460174561" blue="0.70558029413223267" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="loadNextAd:" destination="Zlt-XW-KMN" id="qnK-0X-med"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ep5-ba-cdz">
+                            <color key="tintColor" red="0.1588665843" green="0.5486382246" blue="0.70558029410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Programmatic Banners" id="n1u-Ei-ehQ"/>
-                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="adStatusLabel" destination="Qyu-ck-eZS" id="qed-fM-5VW"/>
+                        <outlet property="loadButton" destination="yu1-fc-d4Y" id="NsN-iE-MXz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqk-g1-pd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1177,7 +1188,7 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
         <!--Interface Builder Banners-->
         <scene sceneID="TOx-En-Ise">
             <objects>
-                <viewController title="Interface Builder Banners" hidesBottomBarWhenPushed="YES" id="ELu-w3-Udg" userLabel="Interface Builder Banners" customClass="ALDemoInterfaceBuilderBannerViewController" customModule="iOS_SDK_Demo_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Interface Builder Banners" id="ELu-w3-Udg" userLabel="Interface Builder Banners" customClass="ALDemoInterfaceBuilderBannerViewController" customModule="iOS_SDK_Demo_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LWp-1O-TL8"/>
                         <viewControllerLayoutGuide type="bottom" id="8Ow-l2-bJW"/>
@@ -1187,12 +1198,12 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to load ads." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lz3-zM-Xs2">
-                                <rect key="frame" x="101" y="322" width="173" height="24"/>
+                                <rect key="frame" x="101" y="321.5" width="173" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s90-HA-Uhn" customClass="ALAdView">
-                                <rect key="frame" x="-4" y="617" width="383" height="50"/>
+                                <rect key="frame" x="-4" y="573" width="383" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Sjx-Yv-Dx9"/>
@@ -1210,12 +1221,21 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
                             <constraint firstItem="lz3-zM-Xs2" firstAttribute="centerX" secondItem="ZYq-oX-FRs" secondAttribute="centerX" id="qEL-Xb-gOA"/>
                         </constraints>
                     </view>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="jry-6T-wMC"/>
+                        <barButtonItem enabled="NO" title="Load" id="qwF-3E-lNW">
+                            <color key="tintColor" red="0.1588665843" green="0.5486382246" blue="0.70558029410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="loadNextAd:" destination="ELu-w3-Udg" id="mVv-4U-AG8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="YbR-SH-lhs"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Interface Builder Banners" id="p8V-EH-8Dz"/>
-                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="adStatusLabel" destination="lz3-zM-Xs2" id="Gbc-Ep-uYN"/>
                         <outlet property="adView" destination="s90-HA-Uhn" id="CzM-D6-XqO"/>
+                        <outlet property="loadButton" destination="qwF-3E-lNW" id="yNP-tA-c7c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Fp-Er-wzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
