@@ -59,7 +59,7 @@
 - (void) adService:(nonnull ALAdService *)adService didFailToLoadAdWithError:(int)code
 {
     // Look at ALErrorCodes.h for list of error codes
-    [self log: [NSString stringWithFormat: @"Interstitial failed to load with error code = %d", code]];
+    [self log: @"Interstitial failed to load with error code = %d", code];
 }
 
 #pragma mark - Ad Display Delegate

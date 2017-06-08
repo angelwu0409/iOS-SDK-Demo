@@ -47,7 +47,7 @@ static const CGFloat kBannerHeight = 50.0f;
 - (void)adService:(ALAdService *)adService didFailToLoadAdWithError:(int)code
 {
     // Look at ALErrorCodes.h for list of error codes
-    [self log: [NSString stringWithFormat: @"Banner failed to load with error code = %d", code]];
+    [self log: @"Banner failed to load with error code = %d", code];
 }
 
 #pragma mark - Ad Display Delegate

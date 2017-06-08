@@ -137,7 +137,7 @@
 
 - (void)nativeAdService:(nonnull ALNativeAdService *)service didFailToLoadAdsWithError:(NSInteger)code
 {
-    [self log: [NSString stringWithFormat: @"Native ad failed to load with error code %ld", code]];
+    [self log: @"Native ad failed to load with error code %ld", code];
 }
 
 #pragma mark - Native Ad Precache Delegate
@@ -161,12 +161,12 @@
 
 - (void)nativeAdService:(nonnull ALNativeAdService *)service didFailToPrecacheImagesForAd:(nonnull ALNativeAd *)ad withError:(NSInteger)errorCode
 {
-    [self log: [NSString stringWithFormat: @"Native ad failed to precache images with error code %lu", errorCode]];
+    [self log: @"Native ad failed to precache images with error code %ld", errorCode];
 }
 
 - (void)nativeAdService:(nonnull ALNativeAdService *)service didFailToPrecacheVideoForAd:(nonnull ALNativeAd *)ad withError:(NSInteger)errorCode
 {
-    [self log: [NSString stringWithFormat: @"Native ad failed to precache video with error code %lu", errorCode]];
+    [self log: @"Native ad failed to precache video with error code %ld", errorCode];
 }
 
 #pragma mark - Utility

@@ -50,7 +50,7 @@ static const CGFloat kMRecWidth = 300.0f;
 - (void)adService:(ALAdService *)adService didFailToLoadAdWithError:(int)code
 {
     // Look at ALErrorCodes.h for list of error codes
-    [self log: [NSString stringWithFormat: @"MRec failed to load with error code = %d", code]];
+    [self log: @"MRec failed to load with error code = %d", code];
 }
 
 #pragma mark - Ad Display Delegate
