@@ -31,7 +31,8 @@ class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoad
     
         adView?.loadNextAd()
         
-        if let adView = adView{
+        if let adView = adView
+        {
             self.view.addSubview(adView)
         }
     }
