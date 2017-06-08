@@ -16,7 +16,7 @@
 #endif
 
 @interface ALDemoInterfaceBuilderBannerViewController () <ALAdLoadDelegate, ALAdDisplayDelegate>
-@property (nonatomic, strong) IBOutlet ALAdView *adView;
+@property (weak, nonatomic) IBOutlet ALAdView *adView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *loadButton;
 @end
 

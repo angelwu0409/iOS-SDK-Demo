@@ -11,7 +11,7 @@ import AppLovinSDK
 
 class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate
 {
-    var adView: ALAdView!
+    var adView: ALAdView?
     @IBOutlet weak var loadButton: UIBarButtonItem!
     
     let kBannerHeight: CGFloat = 50
@@ -25,17 +25,19 @@ class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoad
         let frame = CGRect(x: 0, y: self.view.bounds.height - kBannerHeight - (navigationController?.toolbar.frame.height ?? 0), width: self.view.bounds.width, height: kBannerHeight)
         adView = ALAdView(frame: frame, size: ALAdSize.sizeBanner(), sdk: ALSdk.shared()!)
         
-        adView.adLoadDelegate = self
-        adView.adDisplayDelegate = self
+        adView?.adLoadDelegate = self
+        adView?.adDisplayDelegate = self
     
-        adView.loadNextAd()
+        adView?.loadNextAd()
         
-        self.view.addSubview(adView);
+        if let adView = adView{
+            self.view.addSubview(adView)
+        }
     }
     
     @IBAction func loadNextAd(_ sender: UIBarButtonItem)
     {
-        adView.loadNextAd()
+        adView?.loadNextAd()
     }
     
     // MARK: Ad Load Delegate
