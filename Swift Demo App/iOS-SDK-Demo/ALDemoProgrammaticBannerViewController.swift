@@ -11,6 +11,9 @@ import AppLovinSDK
 
 class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate
 {
+    var adView: ALAdView?
+    @IBOutlet weak var loadButton: UIBarButtonItem!
+    
     let kBannerHeight: CGFloat = 50
     
     // MARK: View Lifecycle
@@ -19,15 +22,24 @@ class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoad
     {
         super.viewDidAppear( animated )
         
-        let frame = CGRect(x: 0, y: self.view.bounds.height - kBannerHeight, width: self.view.bounds.width, height: kBannerHeight)
-        let adView = ALAdView(frame: frame, size: ALAdSize.sizeBanner(), sdk: ALSdk.shared()!)
+        let toolbarHeight = navigationController?.toolbar.frame.height ?? 0
+        let frame = CGRect(x: 0, y: self.view.bounds.height - kBannerHeight - toolbarHeight, width: self.view.bounds.width, height: kBannerHeight)
+        adView = ALAdView(frame: frame, size: ALAdSize.sizeBanner(), sdk: ALSdk.shared()!)
         
-        adView.adLoadDelegate = self
-        adView.adDisplayDelegate = self
+        adView?.adLoadDelegate = self
+        adView?.adDisplayDelegate = self
+    
+        adView?.loadNextAd()
         
-        adView.loadNextAd()
-        
-        self.view.addSubview(adView);
+        if let adView = adView
+        {
+            self.view.addSubview(adView)
+        }
+    }
+    
+    @IBAction func loadNextAd(_ sender: UIBarButtonItem)
+    {
+        adView?.loadNextAd()
     }
     
     // MARK: Ad Load Delegate
@@ -48,6 +60,8 @@ class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoad
     func ad(_ ad: ALAd, wasDisplayedIn view: UIView)
     {
         self.log("Banner Displayed")
+        
+        loadButton.isEnabled = true
     }
     
     func ad(_ ad: ALAd, wasHiddenIn view: UIView)

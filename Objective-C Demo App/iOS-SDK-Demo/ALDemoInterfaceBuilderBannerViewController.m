@@ -16,7 +16,8 @@
 #endif
 
 @interface ALDemoInterfaceBuilderBannerViewController () <ALAdLoadDelegate, ALAdDisplayDelegate>
-@property (nonatomic, strong) IBOutlet ALAdView *adView;
+@property (weak, nonatomic) IBOutlet ALAdView *adView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *loadButton;
 @end
 
 @implementation ALDemoInterfaceBuilderBannerViewController
@@ -29,6 +30,11 @@
     
     self.adView.adLoadDelegate = self;
     self.adView.adDisplayDelegate = self;
+}
+
+- (IBAction)loadNextAd:(UIBarButtonItem *)sender
+{
+    [self.adView loadNextAd];
 }
 
 #pragma mark - Ad Load Delegate
@@ -49,6 +55,8 @@
 - (void)ad:(ALAd *)ad wasDisplayedIn:(UIView *)view
 {
     [self log: @"Banner Displayed"];
+    
+    self.loadButton.enabled = YES;
 }
 
 - (void)ad:(ALAd *)ad wasHiddenIn:(UIView *)view

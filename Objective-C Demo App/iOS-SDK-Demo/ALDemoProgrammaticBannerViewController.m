@@ -15,6 +15,8 @@
 #endif
 
 @interface ALDemoProgrammaticBannerViewController() <ALAdLoadDelegate, ALAdDisplayDelegate>
+@property (weak, nonatomic) ALAdView *adView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *loadButton;
 @end
 
 @implementation ALDemoProgrammaticBannerViewController
@@ -26,15 +28,23 @@ static const CGFloat kBannerHeight = 50.0f;
 {
     [super viewDidAppear: animated];
     
-    ALAdView *adView = [[ALAdView alloc] initWithFrame: CGRectMake(0.0f, CGRectGetHeight(self.view.bounds) - kBannerHeight, CGRectGetWidth(self.view.bounds), kBannerHeight)
-                                                  size: [ALAdSize sizeBanner]
-                                                   sdk: [ALSdk shared]];
-    adView.adLoadDelegate = self;
-    adView.adDisplayDelegate = self;
+     self.adView = [[ALAdView alloc] initWithFrame: CGRectMake(0.0f,
+                                                               CGRectGetHeight(self.view.bounds) - kBannerHeight - self.navigationController.toolbar.frame.size.height,
+                                                               CGRectGetWidth(self.view.bounds), kBannerHeight)
+                                              size: [ALAdSize sizeBanner]
+                                               sdk: [ALSdk shared]];
     
-    [adView loadNextAd];
+    self.adView.adLoadDelegate = self;
+    self.adView.adDisplayDelegate = self;
     
-    [self.view addSubview: adView];
+    [self.adView loadNextAd];
+    
+    [self.view addSubview: self.adView];
+}
+
+- (IBAction)loadNextAd:(UIBarButtonItem *)sender
+{
+    [self.adView loadNextAd];
 }
 
 #pragma mark - Ad Load Delegate
@@ -55,6 +65,8 @@ static const CGFloat kBannerHeight = 50.0f;
 - (void)ad:(ALAd *)ad wasDisplayedIn:(UIView *)view
 {
     [self log: @"Banner Displayed"];
+    
+    self.loadButton.enabled = YES;
 }
 
 - (void)ad:(ALAd *)ad wasHiddenIn:(UIView *)view
