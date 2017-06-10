@@ -93,111 +93,109 @@
     ALDemoEvent *event = self.events[indexPath.row];
     [self setTitle: event.name];
     
-    switch ( indexPath.row )
+    
+    if ( indexPath.row == 0 )
     {
-        case 0: {
-            [eventService trackEvent: kALEventTypeUserBeganCheckOut
-                          parameters: @{kALEventParameterProductIdentifierKey : @"PRODUCT SKU OR ID",
-                                        kALEventParameterRevenueAmountKey     : @"PRICE OF ITEM",
-                                        kALEventParameterRevenueCurrencyKey   : @"3-LETTER CURRENCY CODE"}];
-            break;
-        }
-        case 1: {
-            [eventService trackEvent: kALEventTypeUserAddedItemToCart
-                          parameters: @{kALEventParameterProductIdentifierKey : @"PRODUCT SKU OR ID"}];
-            break;
-        }
-        case 2: {
-            [eventService trackEvent: kALEventTypeUserCompletedAchievement
-                          parameters: @{kALEventParameterCompletedAchievementKey : @"ACHIEVEMENT NAME OR ID"}];
-            break;
-        }
-        case 3: {
-            [eventService trackEvent: kALEventTypeUserCompletedCheckOut
-                          parameters: @{kALEventParameterCheckoutTransactionIdentifierKey : @"UNIQUE TRANSACTION ID",
-                                        kALEventParameterProductIdentifierKey             : @"PRODUCT SKU OR ID",
-                                        kALEventParameterRevenueAmountKey                 : @"AMOUNT OF MONEY SPENT",
-                                        kALEventParameterRevenueCurrencyKey               : @"3-LETTER CURRENCY CODE"}];
-            break;
-        }
-        case 4: {
-            [eventService trackEvent: kALEventTypeUserCompletedLevel
-                          parameters: @{kALEventParameterCompletedLevelKey : @"LEVEL NAME OR NUMBER"}];
-            break;
-        }
-        case 5: {
-            [eventService trackEvent: kALEventTypeUserCreatedReservation
-                          parameters: @{kALEventParameterProductIdentifierKey    : @"PRODUCT SKU OR ID",
-                                        kALEventParameterReservationStartDateKey : @"START DATE",
-                                        kALEventParameterReservationEndDateKey   : @"END DATE"}];
-            break;
-        }
-        case 6: {
-            SKPaymentTransaction *transaction = [[SKPaymentTransaction alloc] init]; // from paymentQueue:updatedTransactions:
-            //SKProduct* product = ...; // Appropriate product (matching productIdentifier property to SKPaymentTransaction);
-            [eventService trackInAppPurchaseWithTransactionIdentifier: transaction.transactionIdentifier
-                                                           parameters: @{kALEventParameterRevenueAmountKey     : @"AMOUNT OF MONEY SPENT",
-                                                                         kALEventParameterRevenueCurrencyKey   : @"3-LETTER CURRENCY CODE",
-                                                                         kALEventParameterProductIdentifierKey : @"product.productIdentifier"}]; //product.productIdentifier
-            break;
-        }
-        case 7: {
-            [eventService trackEvent: kALEventTypeUserLoggedIn
-                          parameters: @{kALEventParameterUserAccountIdentifierKey : @"USERNAME"}];
-            break;
-        }
-        case 8: {
-            [eventService trackEvent: kALEventTypeUserProvidedPaymentInformation];
-            break;
-        }
-        case 9: {
-            [eventService trackEvent: kALEventTypeUserCreatedAccount
-                          parameters: @{kALEventParameterUserAccountIdentifierKey : @"USERNAME"}];
-            break;
-        }
-        case 10: {
-            [eventService trackEvent: kALEventTypeUserExecutedSearch
-                          parameters: @{kALEventParameterSearchQueryKey : @"USER'S SEARCH STRING"}];
-            break;
-        }
-        case 11: {
-            [eventService trackEvent: kALEventTypeUserSentInvitation];
-            break;
-        }
-        case 12: {
-            [eventService trackEvent: kALEventTypeUserSharedLink];
-            break;
-        }
-        case 13: {
-            [eventService trackEvent: kALEventTypeUserSpentVirtualCurrency
-                          parameters: @{kALEventParameterVirtualCurrencyAmountKey : @"NUMBER OF COINS SPENT",
-                                        kALEventParameterVirtualCurrencyNameKey : @"CURRENCY NAME"}];
-            
-            break;
-        }
-        case 14: {
-            [eventService trackEvent: kALEventTypeUserCompletedTutorial];
-            break;
-        }
-        case 15: {
-            [eventService trackEvent: kALEventTypeUserViewedContent
-                          parameters: @{kALEventParameterContentIdentifierKey : @"SOME ID DESCRIBING CONTENT"}];
-            break;
-        }
-        case 16: {
-            [eventService trackEvent: kALEventTypeUserViewedProduct
-                          parameters: @{kALEventParameterProductIdentifierKey : @"PRODUCT SKU OR ID"}];
-            break;
-        }
-        case 17: {
-            [eventService trackEvent: kALEventTypeUserAddedItemToWishlist
-                          parameters: @{kALEventParameterProductIdentifierKey : @"PRODUCT SKU OR ID"}];
-            break;
-        }
-        default: {
-            [self setTitle: @"Default event tracking initiated"];
-            break;
-        }
+        [eventService trackEvent: kALEventTypeUserBeganCheckOut
+                      parameters: @{kALEventParameterProductIdentifierKey : @"PRODUCT SKU OR ID",
+                                    kALEventParameterRevenueAmountKey     : @"PRICE OF ITEM",
+                                    kALEventParameterRevenueCurrencyKey   : @"3-LETTER CURRENCY CODE"}];
+    }
+    else if ( indexPath.row == 1 )
+    {
+        [eventService trackEvent: kALEventTypeUserAddedItemToCart
+                      parameters: @{kALEventParameterProductIdentifierKey : @"PRODUCT SKU OR ID"}];
+    }
+    else if ( indexPath.row == 2 )
+    {
+        [eventService trackEvent: kALEventTypeUserCompletedAchievement
+                      parameters: @{kALEventParameterCompletedAchievementKey : @"ACHIEVEMENT NAME OR ID"}];
+    }
+    else if ( indexPath.row == 3 )
+    {
+        [eventService trackEvent: kALEventTypeUserCompletedCheckOut
+                      parameters: @{kALEventParameterCheckoutTransactionIdentifierKey : @"UNIQUE TRANSACTION ID",
+                                    kALEventParameterProductIdentifierKey             : @"PRODUCT SKU OR ID",
+                                    kALEventParameterRevenueAmountKey                 : @"AMOUNT OF MONEY SPENT",
+                                    kALEventParameterRevenueCurrencyKey               : @"3-LETTER CURRENCY CODE"}];
+    }
+    else if ( indexPath.row == 4 )
+    {
+        [eventService trackEvent: kALEventTypeUserCompletedLevel
+                      parameters: @{kALEventParameterCompletedLevelKey : @"LEVEL NAME OR NUMBER"}];
+    }
+    else if ( indexPath.row == 5 )
+    {
+        [eventService trackEvent: kALEventTypeUserCreatedReservation
+                      parameters: @{kALEventParameterProductIdentifierKey    : @"PRODUCT SKU OR ID",
+                                    kALEventParameterReservationStartDateKey : @"START DATE",
+                                    kALEventParameterReservationEndDateKey   : @"END DATE"}];
+    }
+    else if ( indexPath.row == 6 )
+    {
+        SKPaymentTransaction *transaction = [[SKPaymentTransaction alloc] init]; // from paymentQueue:updatedTransactions:
+        //SKProduct* product = ...; // Appropriate product (matching productIdentifier property to SKPaymentTransaction);
+        [eventService trackInAppPurchaseWithTransactionIdentifier: transaction.transactionIdentifier
+                                                       parameters: @{kALEventParameterRevenueAmountKey     : @"AMOUNT OF MONEY SPENT",
+                                                                     kALEventParameterRevenueCurrencyKey   : @"3-LETTER CURRENCY CODE",
+                                                                     kALEventParameterProductIdentifierKey : @"product.productIdentifier"}]; //product.productIdentifier
+    }
+    else if ( indexPath.row == 7 )
+    {
+        [eventService trackEvent: kALEventTypeUserLoggedIn
+                      parameters: @{kALEventParameterUserAccountIdentifierKey : @"USERNAME"}];
+    }
+    else if ( indexPath.row == 8 )
+    {
+        [eventService trackEvent: kALEventTypeUserProvidedPaymentInformation];
+    }
+    else if ( indexPath.row == 9 )
+    {
+        [eventService trackEvent: kALEventTypeUserCreatedAccount
+                      parameters: @{kALEventParameterUserAccountIdentifierKey : @"USERNAME"}];
+    }
+    else if ( indexPath.row == 10 )
+    {
+        [eventService trackEvent: kALEventTypeUserExecutedSearch
+                      parameters: @{kALEventParameterSearchQueryKey : @"USER'S SEARCH STRING"}];
+    }
+    else if ( indexPath.row == 11 )
+    {
+        [eventService trackEvent: kALEventTypeUserSentInvitation];
+    }
+    else if ( indexPath.row == 12 )
+    {
+        [eventService trackEvent: kALEventTypeUserSharedLink];
+    }
+    else if ( indexPath.row == 13 )
+    {
+        [eventService trackEvent: kALEventTypeUserSpentVirtualCurrency
+                      parameters: @{kALEventParameterVirtualCurrencyAmountKey : @"NUMBER OF COINS SPENT",
+                                    kALEventParameterVirtualCurrencyNameKey : @"CURRENCY NAME"}];
+    }
+    else if ( indexPath.row == 14 )
+    {
+        [eventService trackEvent: kALEventTypeUserCompletedTutorial];
+    }
+    else if ( indexPath.row == 15 )
+    {
+        [eventService trackEvent: kALEventTypeUserViewedContent
+                      parameters: @{kALEventParameterContentIdentifierKey : @"SOME ID DESCRIBING CONTENT"}];
+
+    }
+    else if ( indexPath.row == 16 )
+    {
+        [eventService trackEvent: kALEventTypeUserViewedProduct
+                      parameters: @{kALEventParameterProductIdentifierKey : @"PRODUCT SKU OR ID"}];
+    }
+    else if ( indexPath.row == 17 )
+    {
+        [eventService trackEvent: kALEventTypeUserAddedItemToWishlist
+                      parameters: @{kALEventParameterProductIdentifierKey : @"PRODUCT SKU OR ID"}];
+    }
+    else
+    {
+        [self setTitle: @"Default event tracking initiated"];
     }
 }
 
