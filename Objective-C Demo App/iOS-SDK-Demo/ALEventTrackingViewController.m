@@ -188,11 +188,13 @@
         [eventService trackEvent: kALEventTypeUserViewedProduct
                       parameters: @{kALEventParameterProductIdentifierKey : @"PRODUCT SKU OR ID"}];
     }
-    else if ( indexPath.row == 17 ){
+    else if ( indexPath.row == 17 )
+    {
         [eventService trackEvent: kALEventTypeUserAddedItemToWishlist
                       parameters: @{kALEventParameterProductIdentifierKey : @"PRODUCT SKU OR ID"}];
     }
-    else{
+    else
+    {
         [self setTitle: @"Default event tracking initiated"];
     }
 }
