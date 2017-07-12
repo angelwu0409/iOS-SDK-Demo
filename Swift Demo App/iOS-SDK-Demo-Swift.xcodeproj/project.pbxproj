@@ -173,6 +173,7 @@
 		1D72207E1BB6086100FE1B91 = {
 			isa = PBXGroup;
 			children = (
+				1DB1A5A51F15F925001C50B5 /* APPLOVIN SDK HERE */,
 				1D7220891BB6086100FE1B91 /* iOS-SDK-Demo */,
 				1D72212A1BB60CF000FE1B91 /* Frameworks */,
 				1D7220881BB6086100FE1B91 /* Products */,
@@ -416,6 +417,13 @@
 				1D7220D91BB60C3000FE1B91 /* ALCarouselViewSettings.h */,
 			);
 			name = "Customizable SETTINGS";
+			sourceTree = "<group>";
+		};
+		1DB1A5A51F15F925001C50B5 /* APPLOVIN SDK HERE */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "APPLOVIN SDK HERE";
 			sourceTree = "<group>";
 		};
 		1DDB3A081BF58266002561A0 /* RSS Feed Parsing */ = {
