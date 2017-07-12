@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rdq-oa-hub">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Programmatic Banners-->
+        <scene sceneID="Wrv-z4-XAS">
+            <objects>
+                <viewController title="Banners" id="1eE-GE-L8a" userLabel="Programmatic Banners" customClass="ALDemoProgrammaticBannerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DN5-bi-jkE"/>
+                        <viewControllerLayoutGuide type="bottom" id="amy-cz-zWv"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="7X4-aq-Zti">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to load ads." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40f-fA-6L5">
+                                <rect key="frame" x="103.5" y="321.5" width="168" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="40f-fA-6L5" firstAttribute="centerY" secondItem="7X4-aq-Zti" secondAttribute="centerY" id="D7o-lX-SIx"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="40f-fA-6L5" secondAttribute="trailing" id="O0l-Cs-AOp"/>
+                            <constraint firstItem="40f-fA-6L5" firstAttribute="centerX" secondItem="7X4-aq-Zti" secondAttribute="centerX" id="fzk-pw-lf9"/>
+                            <constraint firstItem="40f-fA-6L5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7X4-aq-Zti" secondAttribute="leadingMargin" id="xrO-NC-ANg"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="fFG-V2-cTO"/>
+                        <barButtonItem enabled="NO" title="Load" id="Fff-dx-2pK">
+                            <color key="tintColor" red="0.1588665843" green="0.5486382246" blue="0.70558029410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="loadNextAd:" destination="1eE-GE-L8a" id="9m6-UW-5Gw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="wb0-Qq-TEM"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Programmatic Banners" id="qBl-hi-DW8"/>
+                    <connections>
+                        <outlet property="adStatusLabel" destination="40f-fA-6L5" id="YE8-4f-sHv"/>
+                        <outlet property="loadButton" destination="Fff-dx-2pK" id="wss-aE-oO2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MX0-Qi-p7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1380" y="579"/>
+        </scene>
+        <!--Banners-->
+        <scene sceneID="PsK-3S-Ags">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="Rdq-oa-hub" customClass="ALDemoBaseTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Sro-WL-AUl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="" id="hn9-Ib-4CL">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rootPrototype" textLabel="EZJ-6T-9Nt" detailTextLabel="pK2-BD-KiC" style="IBUITableViewCellStyleSubtitle" id="Evb-nB-Upw">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Evb-nB-Upw" id="Kvs-He-u3m">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Programmatic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EZJ-6T-9Nt">
+                                                    <rect key="frame" x="16" y="6" width="102" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Programmatically create an instance of it" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pK2-BD-KiC">
+                                                    <rect key="frame" x="16" y="25.5" width="214.5" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1eE-GE-L8a" kind="show" id="soQ-LP-9N3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rootPrototype" textLabel="TL6-pu-VSW" detailTextLabel="jX7-px-GsQ" style="IBUITableViewCellStyleSubtitle" id="oZH-M3-wFL">
+                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oZH-M3-wFL" id="bST-Nd-JXZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Using Interface Builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TL6-pu-VSW">
+                                                    <rect key="frame" x="16" y="6" width="166" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Create a banner using interface builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jX7-px-GsQ">
+                                                    <rect key="frame" x="16" y="25.5" width="205" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8j1-N3-dgk" kind="show" id="eUV-W0-txE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Banners" id="sN1-6o-QHe"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedOrientationMetrics"/>
+                    <nil key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYR-TC-URd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="579"/>
+        </scene>
+        <!--Interface Builder Banners-->
+        <scene sceneID="uGo-wi-Wly">
+            <objects>
+                <viewController title="Banners" id="8j1-N3-dgk" userLabel="Interface Builder Banners" customClass="ALDemoInterfaceBuilderBannerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4GX-FT-UP3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kz9-f6-WMk"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="0dw-q2-y5P">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to load ads." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTd-mN-BHc">
+                                <rect key="frame" x="103.5" y="322" width="168" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Kt-lM-CJL" customClass="ALAdView">
+                                <rect key="frame" x="-4" y="573" width="383" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="r0Q-9z-paz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="KTd-mN-BHc" secondAttribute="trailing" id="0oE-Z1-rxG"/>
+                            <constraint firstItem="KTd-mN-BHc" firstAttribute="centerX" secondItem="0dw-q2-y5P" secondAttribute="centerX" id="5eI-dV-FQB"/>
+                            <constraint firstItem="KTd-mN-BHc" firstAttribute="centerY" secondItem="0dw-q2-y5P" secondAttribute="centerY" id="Cnd-wQ-oTd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Kt-lM-CJL" secondAttribute="trailing" constant="-20" id="WdW-na-Ss8"/>
+                            <constraint firstItem="KTd-mN-BHc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0dw-q2-y5P" secondAttribute="leadingMargin" id="ecc-6y-3Ms"/>
+                            <constraint firstItem="Kz9-f6-WMk" firstAttribute="top" secondItem="3Kt-lM-CJL" secondAttribute="bottom" id="fOC-hq-iad"/>
+                            <constraint firstItem="3Kt-lM-CJL" firstAttribute="leading" secondItem="0dw-q2-y5P" secondAttribute="leadingMargin" constant="-20" id="uQp-tb-5GL"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="BPj-ux-6bh"/>
+                        <barButtonItem enabled="NO" title="Load" id="KFg-O3-njN">
+                            <color key="tintColor" red="0.1588665843" green="0.5486382246" blue="0.70558029410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="loadNextAd:" destination="8j1-N3-dgk" id="yUz-WZ-YB4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Xrb-DB-xgu"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Interface Builder Banners" id="Iux-Zk-2ar"/>
+                    <connections>
+                        <outlet property="adStatusLabel" destination="KTd-mN-BHc" id="Z2d-Fk-AoS"/>
+                        <outlet property="adView" destination="3Kt-lM-CJL" id="sov-24-GFU"/>
+                        <outlet property="loadButton" destination="KFg-O3-njN" id="a7P-WT-MhE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2DZ-79-dwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2056.8000000000002" y="578.86056971514245"/>
+        </scene>
+    </scenes>
+</document>

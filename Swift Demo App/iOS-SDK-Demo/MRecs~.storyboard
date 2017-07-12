@@ -183,7 +183,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="MKr-pY-bth" kind="show" id="ZAP-4J-2Um"/>
+                                            <segue destination="EJB-a5-Sjb" kind="show" id="ZAP-4J-2Um"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rootPrototype" textLabel="vbK-fp-Wc8" detailTextLabel="NJ0-gd-ikl" style="IBUITableViewCellStyleSubtitle" id="qie-X1-v82">
@@ -820,6 +820,94 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
             </objects>
             <point key="canvasLocation" x="1381" y="-96"/>
         </scene>
+        <!--MRecs-->
+        <scene sceneID="zHZ-NX-YWg">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="EJB-a5-Sjb" customClass="ALDemoBaseTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="0hc-Ov-yAA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="" id="SEC-NL-5qH">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rootPrototype" textLabel="2At-Zp-TrU" detailTextLabel="hXA-nl-dKD" style="IBUITableViewCellStyleSubtitle" id="k6k-pR-9ro">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k6k-pR-9ro" id="MGa-71-Fwb">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Programmatic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2At-Zp-TrU">
+                                                    <rect key="frame" x="16" y="6" width="102" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Programmatically create an instance of it" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hXA-nl-dKD">
+                                                    <rect key="frame" x="16" y="25.5" width="214.5" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bQR-zC-A8k" kind="show" id="jMh-cm-pAY">
+                                                <nil key="action"/>
+                                            </segue>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MRecs" id="fxr-hN-pMz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxj-wz-IMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="1256"/>
+        </scene>
+        <!--Programmatic MRecs-->
+        <scene sceneID="fUc-PE-xL2">
+            <objects>
+                <viewController title="Programmatic MRecs" hidesBottomBarWhenPushed="YES" id="bQR-zC-A8k" customClass="ALDemoProgrammaticMRecViewController" customModule="iOS_SDK_Demo_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kDg-QA-KnW"/>
+                        <viewControllerLayoutGuide type="bottom" id="iR4-AM-oI3"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="X0x-re-a9D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to load ads." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mus-x5-r7q">
+                                <rect key="frame" x="103.5" y="563" width="168" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Mus-x5-r7q" secondAttribute="trailing" id="8gf-LC-XXx"/>
+                            <constraint firstItem="iR4-AM-oI3" firstAttribute="top" secondItem="Mus-x5-r7q" secondAttribute="bottom" constant="80" id="QY1-U8-GXM"/>
+                            <constraint firstItem="Mus-x5-r7q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="X0x-re-a9D" secondAttribute="leadingMargin" id="m7i-Ab-pfN"/>
+                            <constraint firstItem="Mus-x5-r7q" firstAttribute="centerX" secondItem="X0x-re-a9D" secondAttribute="centerX" id="w9O-nl-8I6"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Programmatic MRecs" id="OhU-f8-bMa"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="adStatusLabel" destination="Mus-x5-r7q" id="W7Q-pf-I9d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vDS-1B-FfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1380" y="1255"/>
+        </scene>
         <!--Event Tracking-->
         <scene sceneID="48x-2Z-Yl5">
             <objects>
@@ -861,7 +949,7 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aV2-DS-2a3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="684" y="1060"/>
+            <point key="canvasLocation" x="655" y="1946"/>
         </scene>
         <!--Interstitials-->
         <scene sceneID="lvx-XX-ajA">
@@ -869,7 +957,7 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
                 <viewControllerPlaceholder storyboardName="Interstitials" id="hH9-JT-mlM" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VjN-Jf-h3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="683" y="-1210"/>
+            <point key="canvasLocation" x="685" y="-1434"/>
         </scene>
         <!--Banners-->
         <scene sceneID="ssS-OQ-6Lf">
@@ -877,15 +965,7 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
                 <viewControllerPlaceholder storyboardName="Banners" id="FN2-le-EVY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSD-kF-XoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="683" y="364"/>
-        </scene>
-        <!--MRecs-->
-        <scene sceneID="qXA-PK-Gaq">
-            <objects>
-                <viewControllerPlaceholder storyboardName="MRecs" id="MKr-pY-bth" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7pP-1i-doa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="689" y="553"/>
+            <point key="canvasLocation" x="684" y="579"/>
         </scene>
     </scenes>
     <resources>
