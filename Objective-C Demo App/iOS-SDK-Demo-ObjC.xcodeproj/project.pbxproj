@@ -64,6 +64,9 @@
 		2713D01E18EDDD0C006218B2 /* ALDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2713D01D18EDDD0C006218B2 /* ALDemoAppDelegate.m */; };
 		2713D02118EDDD0C006218B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2713D01F18EDDD0C006218B2 /* Main.storyboard */; };
 		2713D02618EDDD0C006218B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2713D02518EDDD0C006218B2 /* Images.xcassets */; };
+		DD65BFE01F15AC5F00F60067 /* Interstitials.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFDE1F15AC5F00F60067 /* Interstitials.storyboard */; };
+		DD65BFE21F15AC7800F60067 /* Banners.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFE11F15AC7800F60067 /* Banners.storyboard */; };
+		DD65BFE51F15AC8E00F60067 /* MRecs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFE31F15AC8E00F60067 /* MRecs.storyboard */; };
 		DDDBAD0E1EE60A0100666518 /* ALEventTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDBAD0D1EE60A0100666518 /* ALEventTrackingViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -156,6 +159,9 @@
 		2713D01D18EDDD0C006218B2 /* ALDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDemoAppDelegate.m; sourceTree = "<group>"; };
 		2713D02018EDDD0C006218B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2713D02518EDDD0C006218B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DD65BFDF1F15AC5F00F60067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interstitials.storyboard; sourceTree = "<group>"; };
+		DD65BFE11F15AC7800F60067 /* Banners.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Banners.storyboard; sourceTree = "<group>"; };
+		DD65BFE41F15AC8E00F60067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MRecs.storyboard; sourceTree = "<group>"; };
 		DDDBAD0C1EE60A0100666518 /* ALEventTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALEventTrackingViewController.h; sourceTree = "<group>"; };
 		DDDBAD0D1EE60A0100666518 /* ALEventTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALEventTrackingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -344,6 +350,13 @@
 			name = "Customizable SETTINGS";
 			sourceTree = "<group>";
 		};
+		1DB1A5A61F15F932001C50B5 /* APPLOVIN SDK HERE */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "APPLOVIN SDK HERE";
+			sourceTree = "<group>";
+		};
 		1DDB39AD1BF561DF002561A0 /* RSS Feed Parsing */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +380,7 @@
 		2713D00118EDDD0C006218B2 = {
 			isa = PBXGroup;
 			children = (
+				1DB1A5A61F15F932001C50B5 /* APPLOVIN SDK HERE */,
 				2713D01318EDDD0C006218B2 /* iOS-SDK-Demo */,
 				2713D00C18EDDD0C006218B2 /* Frameworks */,
 				2713D00B18EDDD0C006218B2 /* Products */,
@@ -419,6 +433,9 @@
 				1DC3E98C1BB321660093EF2A /* LaunchScreen.xib */,
 				2713D01918EDDD0C006218B2 /* main.m */,
 				2713D01F18EDDD0C006218B2 /* Main.storyboard */,
+				DD65BFE31F15AC8E00F60067 /* MRecs.storyboard */,
+				DD65BFE11F15AC7800F60067 /* Banners.storyboard */,
+				DD65BFDE1F15AC5F00F60067 /* Interstitials.storyboard */,
 				1D09FCBB1BB5F21B00001083 /* nav_logo@2x.png */,
 			);
 			name = "Supporting Files";
@@ -534,9 +551,12 @@
 				1D79132B1BB4A837006C6C60 /* applovin_card_unmuted.png in Resources */,
 				2713D02618EDDD0C006218B2 /* Images.xcassets in Resources */,
 				2713D01818EDDD0C006218B2 /* InfoPlist.strings in Resources */,
+				DD65BFE51F15AC8E00F60067 /* MRecs.storyboard in Resources */,
 				1D7913211BB4A837006C6C60 /* Star_Sprite_2.5.png in Resources */,
 				1D7913221BB4A837006C6C60 /* Star_Sprite_3.png in Resources */,
 				1D09FCBC1BB5F21B00001083 /* nav_logo@2x.png in Resources */,
+				DD65BFE01F15AC5F00F60067 /* Interstitials.storyboard in Resources */,
+				DD65BFE21F15AC7800F60067 /* Banners.storyboard in Resources */,
 				1D7913281BB4A837006C6C60 /* applovin_card_muted.png in Resources */,
 				1D7913231BB4A837006C6C60 /* Star_Sprite_3.5.png in Resources */,
 				1D79131C1BB4A837006C6C60 /* Star_Sprite_0.png in Resources */,
@@ -602,6 +622,22 @@
 				2713D02018EDDD0C006218B2 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD65BFDE1F15AC5F00F60067 /* Interstitials.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD65BFDF1F15AC5F00F60067 /* Base */,
+			);
+			name = Interstitials.storyboard;
+			sourceTree = "<group>";
+		};
+		DD65BFE31F15AC8E00F60067 /* MRecs.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD65BFE41F15AC8E00F60067 /* Base */,
+			);
+			name = MRecs.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

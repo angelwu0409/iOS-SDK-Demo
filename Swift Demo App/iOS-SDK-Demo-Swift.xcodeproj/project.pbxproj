@@ -62,6 +62,9 @@
 		1DDB3A071BF5815D002561A0 /* ALCarouselMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A061BF5815D002561A0 /* ALCarouselMediaView.m */; };
 		1DDB3A0D1BF58272002561A0 /* ALDemoRSSFeedRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A0A1BF58272002561A0 /* ALDemoRSSFeedRetriever.m */; };
 		1DDB3A0E1BF58272002561A0 /* ALDemoArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A0C1BF58272002561A0 /* ALDemoArticle.m */; };
+		DD65BFD91F15AA9100F60067 /* Interstitials.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFD81F15AA9100F60067 /* Interstitials.storyboard */; };
+		DD65BFDB1F15AAC300F60067 /* Banners.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFDA1F15AAC300F60067 /* Banners.storyboard */; };
+		DD65BFDD1F15AAD900F60067 /* MRecs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFDC1F15AAD900F60067 /* MRecs.storyboard */; };
 		DDDBAD0A1EE5CE2B00666518 /* ALEventTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBAD091EE5CE2B00666518 /* ALEventTrackingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +142,9 @@
 		1DDB3A0A1BF58272002561A0 /* ALDemoRSSFeedRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoRSSFeedRetriever.m; sourceTree = "<group>"; };
 		1DDB3A0B1BF58272002561A0 /* ALDemoArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoArticle.h; sourceTree = "<group>"; };
 		1DDB3A0C1BF58272002561A0 /* ALDemoArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoArticle.m; sourceTree = "<group>"; };
+		DD65BFD81F15AA9100F60067 /* Interstitials.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interstitials.storyboard; sourceTree = "<group>"; };
+		DD65BFDA1F15AAC300F60067 /* Banners.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Banners.storyboard; sourceTree = "<group>"; };
+		DD65BFDC1F15AAD900F60067 /* MRecs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MRecs.storyboard; sourceTree = "<group>"; };
 		DDDBAD091EE5CE2B00666518 /* ALEventTrackingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALEventTrackingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +173,7 @@
 		1D72207E1BB6086100FE1B91 = {
 			isa = PBXGroup;
 			children = (
+				1DB1A5A51F15F925001C50B5 /* APPLOVIN SDK HERE */,
 				1D7220891BB6086100FE1B91 /* iOS-SDK-Demo */,
 				1D72212A1BB60CF000FE1B91 /* Frameworks */,
 				1D7220881BB6086100FE1B91 /* Products */,
@@ -224,6 +231,9 @@
 				1D7220A41BB6093F00FE1B91 /* nav_logo@2x.png */,
 				1D7220D11BB60C3000FE1B91 /* iOS-SDK-Demo-Bridging-Header.h */,
 				1D72212D1BB613E300FE1B91 /* Main.storyboard */,
+				DD65BFDC1F15AAD900F60067 /* MRecs.storyboard */,
+				DD65BFDA1F15AAC300F60067 /* Banners.storyboard */,
+				DD65BFD81F15AA9100F60067 /* Interstitials.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -409,6 +419,13 @@
 			name = "Customizable SETTINGS";
 			sourceTree = "<group>";
 		};
+		1DB1A5A51F15F925001C50B5 /* APPLOVIN SDK HERE */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "APPLOVIN SDK HERE";
+			sourceTree = "<group>";
+		};
 		1DDB3A081BF58266002561A0 /* RSS Feed Parsing */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,14 +518,17 @@
 				1D7220FA1BB60C4A00FE1B91 /* Star_Sprite_5.png in Resources */,
 				1D7220FE1BB60C4A00FE1B91 /* applovin_card_replay.png in Resources */,
 				1D7220FF1BB60C4A00FE1B91 /* applovin_card_unmuted.png in Resources */,
+				DD65BFDB1F15AAC300F60067 /* Banners.storyboard in Resources */,
 				1D7220A81BB609A300FE1B91 /* Images.xcassets in Resources */,
 				1D7220F51BB60C4A00FE1B91 /* Star_Sprite_2.5.png in Resources */,
+				DD65BFDD1F15AAD900F60067 /* MRecs.storyboard in Resources */,
 				1D7220F61BB60C4A00FE1B91 /* Star_Sprite_3.png in Resources */,
 				1D7220FC1BB60C4A00FE1B91 /* applovin_card_muted.png in Resources */,
 				1D7220F71BB60C4A00FE1B91 /* Star_Sprite_3.5.png in Resources */,
 				1D7220F01BB60C4A00FE1B91 /* Star_Sprite_0.png in Resources */,
 				1D7220F91BB60C4A00FE1B91 /* Star_Sprite_4.5.png in Resources */,
 				1D7220F41BB60C4A00FE1B91 /* Star_Sprite_2.png in Resources */,
+				DD65BFD91F15AA9100F60067 /* Interstitials.storyboard in Resources */,
 				1D7220FD1BB60C4A00FE1B91 /* applovin_card_play.png in Resources */,
 				1D7220F21BB60C4A00FE1B91 /* Star_Sprite_1.png in Resources */,
 				1D7220FB1BB60C4A00FE1B91 /* applovin_card_learn_more.png in Resources */,
