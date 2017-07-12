@@ -67,7 +67,6 @@
 		DD65BFE01F15AC5F00F60067 /* Interstitials.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFDE1F15AC5F00F60067 /* Interstitials.storyboard */; };
 		DD65BFE21F15AC7800F60067 /* Banners.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFE11F15AC7800F60067 /* Banners.storyboard */; };
 		DD65BFE51F15AC8E00F60067 /* MRecs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFE31F15AC8E00F60067 /* MRecs.storyboard */; };
-		DD6C15161F0DC34800331BB0 /* AppLovinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6C15151F0DC34800331BB0 /* AppLovinSDK.framework */; };
 		DDDBAD0E1EE60A0100666518 /* ALEventTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDBAD0D1EE60A0100666518 /* ALEventTrackingViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -163,7 +162,6 @@
 		DD65BFDF1F15AC5F00F60067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interstitials.storyboard; sourceTree = "<group>"; };
 		DD65BFE11F15AC7800F60067 /* Banners.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Banners.storyboard; sourceTree = "<group>"; };
 		DD65BFE41F15AC8E00F60067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MRecs.storyboard; sourceTree = "<group>"; };
-		DD6C15151F0DC34800331BB0 /* AppLovinSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppLovinSDK.framework; sourceTree = "<group>"; };
 		DDDBAD0C1EE60A0100666518 /* ALEventTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALEventTrackingViewController.h; sourceTree = "<group>"; };
 		DDDBAD0D1EE60A0100666518 /* ALEventTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALEventTrackingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,7 +179,6 @@
 				1D79130A1BB49C45006C6C60 /* MessageUI.framework in Frameworks */,
 				1D72215C1BB7771800FE1B91 /* SafariServices.framework in Frameworks */,
 				1D02380B1E92D329002CC1F9 /* StoreKit.framework in Frameworks */,
-				DD6C15161F0DC34800331BB0 /* AppLovinSDK.framework in Frameworks */,
 				1D1861641E11025200ED8F11 /* SystemConfiguration.framework in Frameworks */,
 				1D1861651E11025200ED8F11 /* UIKit.framework in Frameworks */,
 				1DDD51AB1DDA62FD00A00A26 /* WebKit.framework in Frameworks */,
@@ -393,7 +390,6 @@
 		2713D00C18EDDD0C006218B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DD6C15151F0DC34800331BB0 /* AppLovinSDK.framework */,
 				1D02380A1E92D329002CC1F9 /* StoreKit.framework */,
 				1D1861561E11025200ED8F11 /* AdSupport.framework */,
 				1D1861571E11025200ED8F11 /* AVFoundation.framework */,
