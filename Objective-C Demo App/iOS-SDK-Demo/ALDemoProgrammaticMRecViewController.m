@@ -14,8 +14,7 @@
     #import "ALAdView.h"
 #endif
 
-@interface ALDemoProgrammaticMRecViewController () <ALAdLoadDelegate, ALAdDisplayDelegate>
-
+@interface ALDemoProgrammaticMRecViewController () <ALAdLoadDelegate, ALAdDisplayDelegate, ALAdViewEventDelegate>
 @end
 
 @implementation ALDemoProgrammaticMRecViewController
@@ -34,6 +33,7 @@ static const CGFloat kMRecWidth = 300.0f;
     
     adView.adLoadDelegate = self;
     adView.adDisplayDelegate = self;
+    adView.adEventDelegate = self;
     
     [adView loadNextAd];
     
@@ -68,6 +68,33 @@ static const CGFloat kMRecWidth = 300.0f;
 - (void)ad:(ALAd *)ad wasClickedIn:(UIView *)view
 {
     [self log: @"MRec Clicked"];
+}
+
+#pragma mark - Ad View Event Delegate
+
+- (void)ad:(ALAd *)ad didPresentFullscreenForAdView:(ALAdView *)adView
+{
+    [self log: @"MRec did present fullscreen"];
+}
+
+- (void)ad:(ALAd *)ad willDismissFullscreenForAdView:(ALAdView *)adView
+{
+    [self log: @"MRec Will dismiss fullscreen"];
+}
+
+- (void)ad:(ALAd *)ad didDismissFullscreenForAdView:(ALAdView *)adView
+{
+    [self log: @"MRec did dismiss fullscreen"];
+}
+
+- (void)ad:(ALAd *)ad willLeaveApplicationForAdView:(ALAdView *)adView
+{
+    [self log: @"MRec will leave application"];
+}
+
+- (void)ad:(ALAd *)ad didFailToDisplayInAdView:(ALAdView *)adView withError:(ALAdViewDisplayErrorCode)code
+{
+    [self log: @"MRec did fail to display with error code: %ld", code];
 }
 
 @end

@@ -11,11 +11,10 @@
 #if __has_include(<AppLovinSDK/AppLovinSDK.h>)
     #import <AppLovinSDK/AppLovinSDK.h>
 #else
-    #import "ALAdService.h"
     #import "ALAdView.h"
 #endif
 
-@interface ALDemoInterfaceBuilderBannerViewController () <ALAdLoadDelegate, ALAdDisplayDelegate>
+@interface ALDemoInterfaceBuilderBannerViewController () <ALAdLoadDelegate, ALAdDisplayDelegate, ALAdViewEventDelegate>
 @property (weak, nonatomic) IBOutlet ALAdView *adView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *loadButton;
 @end
@@ -30,7 +29,10 @@
     
     self.adView.adLoadDelegate = self;
     self.adView.adDisplayDelegate = self;
+    self.adView.adEventDelegate = self;
 }
+
+#pragma mark - IB Action
 
 - (IBAction)loadNextAd:(UIBarButtonItem *)sender
 {
@@ -67,6 +69,33 @@
 - (void)ad:(ALAd *)ad wasClickedIn:(UIView *)view
 {
     [self log: @"Banner Clicked"];
+}
+
+#pragma mark - Ad View Event Delegate
+
+- (void)ad:(ALAd *)ad didPresentFullscreenForAdView:(ALAdView *)adView
+{
+    [self log: @"Banner did present fullscreen"];
+}
+
+- (void)ad:(ALAd *)ad willDismissFullscreenForAdView:(ALAdView *)adView
+{
+    [self log: @"Banner Will dismiss fullscreen"];
+}
+
+- (void)ad:(ALAd *)ad didDismissFullscreenForAdView:(ALAdView *)adView
+{
+    [self log: @"Banner did dismiss fullscreen"];
+}
+
+- (void)ad:(ALAd *)ad willLeaveApplicationForAdView:(ALAdView *)adView
+{
+    [self log: @"Banner will leave application"];
+}
+
+- (void)ad:(ALAd *)ad didFailToDisplayInAdView:(ALAdView *)adView withError:(ALAdViewDisplayErrorCode)code
+{
+    [self log: @"Banner did fail to display with error code: %ld", code];
 }
 
 @end

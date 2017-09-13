@@ -14,13 +14,12 @@
     #import "ALAdView.h"
 #endif
 
-@interface ALDemoProgrammaticBannerViewController() <ALAdLoadDelegate, ALAdDisplayDelegate>
-@property (strong, nonatomic) ALAdView *adView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *loadButton;
+@interface ALDemoProgrammaticBannerViewController() <ALAdLoadDelegate, ALAdDisplayDelegate, ALAdViewEventDelegate>
+@property (nonatomic, strong) ALAdView *adView;
+@property (nonatomic,   weak) IBOutlet UIBarButtonItem *loadButton;
 @end
 
 @implementation ALDemoProgrammaticBannerViewController
-static const CGFloat kBannerHeight = 50.0f;
 
 #pragma mark - View Lifecycle
 
@@ -28,19 +27,18 @@ static const CGFloat kBannerHeight = 50.0f;
 {
     [super viewDidAppear: animated];
     
-     self.adView = [[ALAdView alloc] initWithFrame: CGRectMake(0.0f,
-                                                               CGRectGetHeight(self.view.bounds) - kBannerHeight - self.navigationController.toolbar.frame.size.height,
-                                                               CGRectGetWidth(self.view.bounds), kBannerHeight)
-                                              size: [ALAdSize sizeBanner]
-                                               sdk: [ALSdk shared]];
+    self.adView = [[ALAdView alloc] initWithSize: [ALAdSize sizeBanner]];
     
     self.adView.adLoadDelegate = self;
     self.adView.adDisplayDelegate = self;
+    self.adView.adEventDelegate = self;
     
     [self.adView loadNextAd];
     
     [self.view addSubview: self.adView];
 }
+
+#pragma mark - IB Action
 
 - (IBAction)loadNextAd:(UIBarButtonItem *)sender
 {
@@ -77,6 +75,33 @@ static const CGFloat kBannerHeight = 50.0f;
 - (void)ad:(ALAd *)ad wasClickedIn:(UIView *)view
 {
     [self log: @"Banner Clicked"];
+}
+
+#pragma mark - Ad View Event Delegate
+
+- (void)ad:(ALAd *)ad didPresentFullscreenForAdView:(ALAdView *)adView
+{
+    [self log: @"Banner did present fullscreen"];
+}
+
+- (void)ad:(ALAd *)ad willDismissFullscreenForAdView:(ALAdView *)adView
+{
+    [self log: @"Banner Will dismiss fullscreen"];
+}
+
+- (void)ad:(ALAd *)ad didDismissFullscreenForAdView:(ALAdView *)adView
+{
+    [self log: @"Banner did dismiss fullscreen"];
+}
+
+- (void)ad:(ALAd *)ad willLeaveApplicationForAdView:(ALAdView *)adView
+{
+    [self log: @"Banner will leave application"];
+}
+
+- (void)ad:(ALAd *)ad didFailToDisplayInAdView:(ALAdView *)adView withError:(ALAdViewDisplayErrorCode)code
+{
+    [self log: @"Banner did fail to display with error code: %ld", code];
 }
 
 @end
