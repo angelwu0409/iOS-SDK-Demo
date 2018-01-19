@@ -16,6 +16,9 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import <SafariServices/SafariServices.h>
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 @interface ALDemoRootViewController()<MFMailComposeViewControllerDelegate>
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *muteToggle;
 @end
@@ -48,10 +51,7 @@ static NSString *const kSupportLink = @"https://support.applovin.com/support/hom
     [super viewWillAppear: animated];
 
     // Re-set status bar style after returning from SFSafariViewController
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
     [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleLightContent];
-#pragma GCC diagnostic pop
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -119,10 +119,7 @@ static NSString *const kSupportLink = @"https://support.applovin.com/support/hom
         SFSafariViewController *safariController = [[SFSafariViewController alloc] initWithURL: [NSURL URLWithString: kSupportLink]
                                                                        entersReaderIfAvailable: YES];
         [self presentViewController: safariController animated: YES completion:^{
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
             [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleDefault];
-#pragma GCC diagnostic pop
         }];
     }
     else
@@ -142,10 +139,7 @@ static NSString *const kSupportLink = @"https://support.applovin.com/support/hom
         [mailController setMessageBody: [NSString stringWithFormat: @"\n\n---\nSDK Version: %@", [ALSdk version]] isHTML: NO];
         mailController.navigationBar.tintColor = [UIColor whiteColor];
         [self presentViewController: mailController animated: YES completion:^{
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
             [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleLightContent];
-#pragma GCC diagnostic pop
         }];
     }
     else
@@ -202,3 +196,6 @@ static NSString *const kSupportLink = @"https://support.applovin.com/support/hom
 }
 
 @end
+
+#pragma GCC diagnostic pop
+
