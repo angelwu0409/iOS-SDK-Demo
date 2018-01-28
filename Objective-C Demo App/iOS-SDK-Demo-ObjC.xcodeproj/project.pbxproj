@@ -21,8 +21,7 @@
 		1D568BB31BB3792800DB4849 /* ALDemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D568BB21BB3792800DB4849 /* ALDemoBaseViewController.m */; };
 		1D568BB61BB37BB900DB4849 /* ALDemoRewardedVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D568BB51BB37BB900DB4849 /* ALDemoRewardedVideosViewController.m */; };
 		1D568BBD1BB388F500DB4849 /* ALDemoRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D568BBC1BB388F500DB4849 /* ALDemoRootViewController.m */; };
-		1D5D968B1BB34EB700F296B0 /* ALDemoInterstitialSingleInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D968A1BB34EB700F296B0 /* ALDemoInterstitialSingleInstanceViewController.m */; };
-		1D5D968E1BB34F9F00F296B0 /* ALDemoInterstitialSharerdInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D968D1BB34F9F00F296B0 /* ALDemoInterstitialSharerdInstanceViewController.m */; };
+		1D5D968B1BB34EB700F296B0 /* ALDemoInterstitialBasicIntegrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D968A1BB34EB700F296B0 /* ALDemoInterstitialBasicIntegrationViewController.m */; };
 		1D72215C1BB7771800FE1B91 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D72215B1BB7771800FE1B91 /* SafariServices.framework */; };
 		1D7498A01BF52A1E00FB14B2 /* ALDemoRSSFeedRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D74989F1BF52A1E00FB14B2 /* ALDemoRSSFeedRetriever.m */; };
 		1D7912EE1BB4813D006C6C60 /* ALNativeAdVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7912E51BB4813D006C6C60 /* ALNativeAdVideoPlayer.m */; };
@@ -91,10 +90,8 @@
 		1D568BB51BB37BB900DB4849 /* ALDemoRewardedVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoRewardedVideosViewController.m; sourceTree = "<group>"; usesTabs = 0; };
 		1D568BBB1BB388F500DB4849 /* ALDemoRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoRootViewController.h; sourceTree = "<group>"; };
 		1D568BBC1BB388F500DB4849 /* ALDemoRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoRootViewController.m; sourceTree = "<group>"; };
-		1D5D96891BB34EB700F296B0 /* ALDemoInterstitialSingleInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoInterstitialSingleInstanceViewController.h; sourceTree = "<group>"; };
-		1D5D968A1BB34EB700F296B0 /* ALDemoInterstitialSingleInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoInterstitialSingleInstanceViewController.m; sourceTree = "<group>"; };
-		1D5D968C1BB34F9F00F296B0 /* ALDemoInterstitialSharerdInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoInterstitialSharerdInstanceViewController.h; sourceTree = "<group>"; };
-		1D5D968D1BB34F9F00F296B0 /* ALDemoInterstitialSharerdInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoInterstitialSharerdInstanceViewController.m; sourceTree = "<group>"; };
+		1D5D96891BB34EB700F296B0 /* ALDemoInterstitialBasicIntegrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoInterstitialBasicIntegrationViewController.h; sourceTree = "<group>"; };
+		1D5D968A1BB34EB700F296B0 /* ALDemoInterstitialBasicIntegrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoInterstitialBasicIntegrationViewController.m; sourceTree = "<group>"; };
 		1D72215B1BB7771800FE1B91 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		1D74989E1BF52A1E00FB14B2 /* ALDemoRSSFeedRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoRSSFeedRetriever.h; sourceTree = "<group>"; };
 		1D74989F1BF52A1E00FB14B2 /* ALDemoRSSFeedRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoRSSFeedRetriever.m; sourceTree = "<group>"; };
@@ -191,22 +188,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D09FCAB1BB5DC5800001083 /* As a property */ = {
+		1D09FCAB1BB5DC5800001083 /* Basic Integration */ = {
 			isa = PBXGroup;
 			children = (
-				1D5D96891BB34EB700F296B0 /* ALDemoInterstitialSingleInstanceViewController.h */,
-				1D5D968A1BB34EB700F296B0 /* ALDemoInterstitialSingleInstanceViewController.m */,
+				1D5D96891BB34EB700F296B0 /* ALDemoInterstitialBasicIntegrationViewController.h */,
+				1D5D968A1BB34EB700F296B0 /* ALDemoInterstitialBasicIntegrationViewController.m */,
 			);
-			name = "As a property";
-			sourceTree = "<group>";
-		};
-		1D09FCAC1BB5DC7000001083 /* With shared instance */ = {
-			isa = PBXGroup;
-			children = (
-				1D5D968C1BB34F9F00F296B0 /* ALDemoInterstitialSharerdInstanceViewController.h */,
-				1D5D968D1BB34F9F00F296B0 /* ALDemoInterstitialSharerdInstanceViewController.m */,
-			);
-			name = "With shared instance";
+			name = "Basic Integration";
 			sourceTree = "<group>";
 		};
 		1D09FCAD1BB5DC8400001083 /* Manual loading */ = {
@@ -221,9 +209,8 @@
 		1D568BB01BB3790400DB4849 /* Interstitials */ = {
 			isa = PBXGroup;
 			children = (
-				1D09FCAB1BB5DC5800001083 /* As a property */,
+				1D09FCAB1BB5DC5800001083 /* Basic Integration */,
 				1D09FCAD1BB5DC8400001083 /* Manual loading */,
-				1D09FCAC1BB5DC7000001083 /* With shared instance */,
 			);
 			name = Interstitials;
 			sourceTree = "<group>";
@@ -590,13 +577,12 @@
 				1DDB39AC1BF56181002561A0 /* ALDemoArticle.m in Sources */,
 				2713D01E18EDDD0C006218B2 /* ALDemoAppDelegate.m in Sources */,
 				1D7913011BB48173006C6C60 /* ALCarouselCardView.m in Sources */,
-				1D5D968B1BB34EB700F296B0 /* ALDemoInterstitialSingleInstanceViewController.m in Sources */,
+				1D5D968B1BB34EB700F296B0 /* ALDemoInterstitialBasicIntegrationViewController.m in Sources */,
 				1D7498A01BF52A1E00FB14B2 /* ALDemoRSSFeedRetriever.m in Sources */,
 				1D7912F11BB4813D006C6C60 /* ALCarouselViewModel.m in Sources */,
 				2713D01A18EDDD0C006218B2 /* main.m in Sources */,
 				1DA2DE001E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.m in Sources */,
 				1DFA1BEE1BB4AF9900CA13C2 /* ALDemoNativeAdProgrammaticViewController.m in Sources */,
-				1D5D968E1BB34F9F00F296B0 /* ALDemoInterstitialSharerdInstanceViewController.m in Sources */,
 				1D568BBD1BB388F500DB4849 /* ALDemoRootViewController.m in Sources */,
 				1D7913041BB48173006C6C60 /* ALCarouselView.m in Sources */,
 				DDDBAD0E1EE60A0100666518 /* ALEventTrackingViewController.m in Sources */,

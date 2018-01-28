@@ -1,5 +1,5 @@
 //
-//  ALDemoInterstitialSharerdInstanceViewController.h
+//  ALDemoInterstitialBasicIntegrationViewController.h
 //  iOS-SDK-Demo
 //
 //  Created by Thomas So on 9/23/15.
@@ -8,6 +8,6 @@
 
 #import "ALDemoBaseViewController.h"
 
-@interface ALDemoInterstitialSharerdInstanceViewController : ALDemoBaseViewController
+@interface ALDemoInterstitialBasicIntegrationViewController : ALDemoBaseViewController
 
 @end
