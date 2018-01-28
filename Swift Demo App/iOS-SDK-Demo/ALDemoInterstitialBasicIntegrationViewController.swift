@@ -1,5 +1,5 @@
 //
-//  ALDemoInterstitialSharerdInstanceViewController.swift
+//  ALDemoInterstitialSingleInstanceViewController.swift
 //  iOS-SDK-Demo
 //
 //  Created by Thomas So on 9/25/15.
@@ -8,32 +8,35 @@
 
 import UIKit
 
-class ALDemoInterstitialSharerdInstanceViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate
+class ALDemoInterstitialBasicIntegrationViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate
 {
+    private var interstitial: ALInterstitialAd!
+    
+    // MARK: View Lifecycle
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        // If creating an instance of `ALInterstitialAd`, you must store it in a pproperty so it doesn't get dealloc'd by ARC
+        // Alternatively, you can use `ALInterstitialAd.shared()`
+        self.interstitial = ALInterstitialAd(sdk: ALSdk.shared()!)
+        self.interstitial.adLoadDelegate = self
+        self.interstitial.adDisplayDelegate = self
+        self.interstitial.adVideoPlaybackDelegate = self
+    }
+    
+    // MARK: IB Action Methods
+    
     @IBAction func showInterstitial(_ sender: AnyObject!)
     {
-        if ALInterstitialAd.isReadyForDisplay()
+        if self.interstitial.isReadyForDisplay
         {
-            // Optional: Assign delegates.
-            ALInterstitialAd.shared().adLoadDelegate = self;
-            ALInterstitialAd.shared().adDisplayDelegate = self;
-            ALInterstitialAd.shared().adVideoPlaybackDelegate = self; // This will only ever be used if you have video ads enabled.
-            
-            /*
-             NOTE: We recommend the use of placements (AFTER creating them in your dashboard):
-             
-             ALInterstitialAd.shared().showOverPlacement("SHARED_INSTANCE_SCREEN")
-             
-             To learn more about placements, check out https://applovin.com/integration#iosPlacementsIntegration
-             */
-            
-            ALInterstitialAd.shared().show()
+            self.interstitial.show()
             self.log("Interstitial Shown")
         }
         else
         {
-            // Ideally, the SDK preloads ads when you initialize it in application:didFinishLaunchingWithOptions: of the app delegate
-            // you can manually load an ad as demonstrated in the ALDemoInterstitialManualLoadingViewController class
             self.log("Interstitial not ready for display.\nPlease check SDK key or internet connection.")
         }
     }

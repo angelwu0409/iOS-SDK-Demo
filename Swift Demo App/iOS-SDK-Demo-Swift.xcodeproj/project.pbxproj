@@ -50,8 +50,7 @@
 		1D7221261BB60CB500FE1B91 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D72211B1BB60CB500FE1B91 /* MessageUI.framework */; };
 		1D72212C1BB60D5500FE1B91 /* ALDemoRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72212B1BB60D5500FE1B91 /* ALDemoRootViewController.swift */; };
 		1D72212E1BB613E300FE1B91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D72212D1BB613E300FE1B91 /* Main.storyboard */; };
-		1D7221311BB6176000FE1B91 /* ALDemoInterstitialSingleInstanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7221301BB6176000FE1B91 /* ALDemoInterstitialSingleInstanceViewController.swift */; };
-		1D7221341BB6198700FE1B91 /* ALDemoInterstitialSharerdInstanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7221331BB6198700FE1B91 /* ALDemoInterstitialSharerdInstanceViewController.swift */; };
+		1D7221311BB6176000FE1B91 /* ALDemoInterstitialBasicIntegrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7221301BB6176000FE1B91 /* ALDemoInterstitialBasicIntegrationViewController.swift */; };
 		1D7221371BB619F600FE1B91 /* ALDemoInterstitialManualLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7221361BB619F600FE1B91 /* ALDemoInterstitialManualLoadingViewController.swift */; };
 		1D7221391BB61B0100FE1B91 /* ALDemoRewardedVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7221381BB61B0100FE1B91 /* ALDemoRewardedVideosViewController.swift */; };
 		1D7221581BB61F8C00FE1B91 /* ALDemoNativeAdProgrammaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7221571BB61F8C00FE1B91 /* ALDemoNativeAdProgrammaticViewController.swift */; };
@@ -129,8 +128,7 @@
 		1D72211B1BB60CB500FE1B91 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		1D72212B1BB60D5500FE1B91 /* ALDemoRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoRootViewController.swift; sourceTree = "<group>"; };
 		1D72212D1BB613E300FE1B91 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		1D7221301BB6176000FE1B91 /* ALDemoInterstitialSingleInstanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoInterstitialSingleInstanceViewController.swift; sourceTree = "<group>"; };
-		1D7221331BB6198700FE1B91 /* ALDemoInterstitialSharerdInstanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoInterstitialSharerdInstanceViewController.swift; sourceTree = "<group>"; };
+		1D7221301BB6176000FE1B91 /* ALDemoInterstitialBasicIntegrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoInterstitialBasicIntegrationViewController.swift; sourceTree = "<group>"; };
 		1D7221361BB619F600FE1B91 /* ALDemoInterstitialManualLoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoInterstitialManualLoadingViewController.swift; sourceTree = "<group>"; };
 		1D7221381BB61B0100FE1B91 /* ALDemoRewardedVideosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoRewardedVideosViewController.swift; sourceTree = "<group>"; };
 		1D7221571BB61F8C00FE1B91 /* ALDemoNativeAdProgrammaticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoNativeAdProgrammaticViewController.swift; sourceTree = "<group>"; };
@@ -244,8 +242,7 @@
 		1D7220CB1BB60BF200FE1B91 /* Interstitials */ = {
 			isa = PBXGroup;
 			children = (
-				1D72212F1BB6174200FE1B91 /* As a property */,
-				1D7221321BB6197100FE1B91 /* WIth shared instance */,
+				1D72212F1BB6174200FE1B91 /* Basic Integration */,
 				1D7221351BB619E500FE1B91 /* Manual Loading */,
 			);
 			name = Interstitials;
@@ -374,20 +371,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1D72212F1BB6174200FE1B91 /* As a property */ = {
+		1D72212F1BB6174200FE1B91 /* Basic Integration */ = {
 			isa = PBXGroup;
 			children = (
-				1D7221301BB6176000FE1B91 /* ALDemoInterstitialSingleInstanceViewController.swift */,
+				1D7221301BB6176000FE1B91 /* ALDemoInterstitialBasicIntegrationViewController.swift */,
 			);
-			name = "As a property";
-			sourceTree = "<group>";
-		};
-		1D7221321BB6197100FE1B91 /* WIth shared instance */ = {
-			isa = PBXGroup;
-			children = (
-				1D7221331BB6198700FE1B91 /* ALDemoInterstitialSharerdInstanceViewController.swift */,
-			);
-			name = "WIth shared instance";
+			name = "Basic Integration";
 			sourceTree = "<group>";
 		};
 		1D7221351BB619E500FE1B91 /* Manual Loading */ = {
@@ -564,14 +553,13 @@
 				DDDBAD0A1EE5CE2B00666518 /* ALEventTrackingViewController.swift in Sources */,
 				1DA2DE111E6D699B00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.swift in Sources */,
 				1D7221581BB61F8C00FE1B91 /* ALDemoNativeAdProgrammaticViewController.swift in Sources */,
-				1D7221341BB6198700FE1B91 /* ALDemoInterstitialSharerdInstanceViewController.swift in Sources */,
 				1D72210D1BB60C4F00FE1B91 /* ALCarouselView.m in Sources */,
 				1D72210E1BB60C4F00FE1B91 /* ALNativeAdVideoView.m in Sources */,
 				1DA2DE141E6D69AE00FCC9B1 /* ALDemoProgrammaticMRecViewController.swift in Sources */,
 				1D72215A1BB6285800FE1B91 /* ALDemoNativeAdFeedTableViewController.swift in Sources */,
 				1D7221391BB61B0100FE1B91 /* ALDemoRewardedVideosViewController.swift in Sources */,
 				1D7220DA1BB60C3000FE1B91 /* ALNativeAdVideoPlayer.m in Sources */,
-				1D7221311BB6176000FE1B91 /* ALDemoInterstitialSingleInstanceViewController.swift in Sources */,
+				1D7221311BB6176000FE1B91 /* ALDemoInterstitialBasicIntegrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,7 +705,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS-SDK-Demo/iOS-SDK-Demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -748,7 +736,7 @@
 				PRODUCT_NAME = "iOS-SDK-Demo-Swift";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS-SDK-Demo/iOS-SDK-Demo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
