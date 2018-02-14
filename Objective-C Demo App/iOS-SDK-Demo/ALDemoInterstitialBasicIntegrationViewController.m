@@ -29,9 +29,6 @@
     [ALInterstitialAd shared].adLoadDelegate = self;
     [ALInterstitialAd shared].adDisplayDelegate = self;
     [ALInterstitialAd shared].adVideoPlaybackDelegate = self;
-    
-    // Optional: You can preload an interstitial ad ahead of time
-    [[ALSdk shared].adService preloadAdOfSize: [ALAdSize sizeInterstitial]];
 }
 
 #pragma mark - IB Action Methods
