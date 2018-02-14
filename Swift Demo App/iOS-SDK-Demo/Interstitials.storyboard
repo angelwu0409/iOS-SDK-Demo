@@ -117,7 +117,7 @@
                         <barButtonItem systemItem="flexibleSpace" id="YEq-LY-I3x">
                             <color key="tintColor" red="0.039215686270000001" green="0.51372549020000002" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
-                        <barButtonItem title="Show if Ready" id="6XQ-QR-Lye">
+                        <barButtonItem title="Show" id="6XQ-QR-Lye">
                             <color key="tintColor" red="0.039215686270000001" green="0.51372549020000002" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="showInterstitial:" destination="vSY-NH-TSN" id="ZT4-i9-Q8u"/>
