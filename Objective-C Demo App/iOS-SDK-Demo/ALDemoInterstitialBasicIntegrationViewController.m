@@ -15,6 +15,7 @@
 #endif
 
 @interface ALDemoInterstitialBasicIntegrationViewController ()<ALAdLoadDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate>
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *showButton;
 @end
 
 @implementation ALDemoInterstitialBasicIntegrationViewController
@@ -35,6 +36,9 @@
 
 - (IBAction)showInterstitial:(id)sender
 {
+    self.showButton.enabled = NO;
+    
+    [self log: @"Showing..."];
     [[ALInterstitialAd shared] show];
 }
 
@@ -43,12 +47,15 @@
 - (void)adService:(ALAdService *)adService didLoadAd:(ALAd *)ad
 {
     [self log: @"Interstitial Loaded"];
+    self.showButton.enabled = YES;
 }
 
 - (void) adService:(ALAdService *)adService didFailToLoadAdWithError:(int)code
 {
     // Look at ALErrorCodes.h for list of error codes
     [self log: @"Interstitial failed to load with error code = %d", code];
+    
+    self.showButton.enabled = YES;
 }
 
 #pragma mark - Ad Display Delegate
