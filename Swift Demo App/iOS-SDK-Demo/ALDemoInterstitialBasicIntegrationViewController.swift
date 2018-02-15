@@ -10,6 +10,8 @@ import UIKit
 
 class ALDemoInterstitialBasicIntegrationViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate
 {
+    @IBOutlet private weak var showButton: UIBarButtonItem!
+    
     // MARK: View Lifecycle
     
     override func viewDidLoad()
@@ -26,6 +28,9 @@ class ALDemoInterstitialBasicIntegrationViewController: ALDemoBaseViewController
     
     @IBAction func showInterstitial(_ sender: AnyObject!)
     {
+        self.showButton.enabled = false
+    
+        self.log("Showing...")
         ALInterstitialAd.shared().show()
     }
     
@@ -34,12 +39,15 @@ class ALDemoInterstitialBasicIntegrationViewController: ALDemoBaseViewController
     func adService(_ adService: ALAdService, didLoad ad: ALAd)
     {
         self.log("Interstitial Loaded")
+        self.showButton.enabled = true
     }
     
     func adService(_ adService: ALAdService, didFailToLoadAdWithError code: Int32)
     {
         // Look at ALErrorCodes.h for list of error codes
         self.log("Interstitial failed to load with error code \(code)")
+        
+        self.showButton.enabled = true
     }
     
     // MARK: Ad Display Delegate
