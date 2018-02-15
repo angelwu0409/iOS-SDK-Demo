@@ -15,7 +15,6 @@
 #endif
 
 @interface ALDemoInterstitialBasicIntegrationViewController ()<ALAdLoadDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate>
-@property (nonatomic, strong) ALInterstitialAd *interstitial;
 @end
 
 @implementation ALDemoInterstitialBasicIntegrationViewController
@@ -26,27 +25,17 @@
 {
     [super viewDidLoad];
     
-    // If creating an instance of `ALInterstitialAd`, you must store it in a @property so it doesn't get dealloc'd by ARC
-    // Alternatively, you can use `[ALInterstitialAd sharedInstance]`
-    self.interstitial = [[ALInterstitialAd alloc] initWithSdk: [ALSdk shared]];
-    self.interstitial.adLoadDelegate = self;
-    self.interstitial.adDisplayDelegate = self;
-    self.interstitial.adVideoPlaybackDelegate = self;
+    // Alternatively, you can create an instance of `ALInterstitialAd`, but you must store it in a strong property
+    [ALInterstitialAd shared].adLoadDelegate = self;
+    [ALInterstitialAd shared].adDisplayDelegate = self;
+    [ALInterstitialAd shared].adVideoPlaybackDelegate = self;
 }
 
 #pragma mark - IB Action Methods
 
 - (IBAction)showInterstitial:(id)sender
 {
-    if ( [self.interstitial isReadyForDisplay] )
-    {
-        [self.interstitial show];
-        [self log: @"Interstitial Shown"];
-    }
-    else
-    {
-        [self log: @"Interstitial not ready for display.\nPlease check SDK key or internet connection."];
-    }
+    [[ALInterstitialAd shared] show];
 }
 
 #pragma mark - Ad Load Delegate

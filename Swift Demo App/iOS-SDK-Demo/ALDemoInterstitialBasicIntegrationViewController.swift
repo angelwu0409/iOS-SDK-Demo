@@ -10,35 +10,23 @@ import UIKit
 
 class ALDemoInterstitialBasicIntegrationViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate
 {
-    private var interstitial: ALInterstitialAd!
-    
     // MARK: View Lifecycle
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        // If creating an instance of `ALInterstitialAd`, you must store it in a pproperty so it doesn't get dealloc'd by ARC
-        // Alternatively, you can use `ALInterstitialAd.shared()`
-        self.interstitial = ALInterstitialAd(sdk: ALSdk.shared()!)
-        self.interstitial.adLoadDelegate = self
-        self.interstitial.adDisplayDelegate = self
-        self.interstitial.adVideoPlaybackDelegate = self
+        // Alternatively, you can create an instance of `ALInterstitialAd`, but you must store it in a strong property
+        ALInterstitialAd.shared().adLoadDelegate = self
+        ALInterstitialAd.shared().adDisplayDelegate = self
+        ALInterstitialAd.shared().adVideoPlaybackDelegate = self
     }
     
     // MARK: IB Action Methods
     
     @IBAction func showInterstitial(_ sender: AnyObject!)
     {
-        if self.interstitial.isReadyForDisplay
-        {
-            self.interstitial.show()
-            self.log("Interstitial Shown")
-        }
-        else
-        {
-            self.log("Interstitial not ready for display.\nPlease check SDK key or internet connection.")
-        }
+        ALInterstitialAd.shared().show()
     }
     
     // MARK: Ad Load Delegate
