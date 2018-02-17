@@ -22,17 +22,15 @@ class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoad
     {
         super.viewDidAppear( animated )
         
-        let toolbarHeight = navigationController?.toolbar.frame.height ?? 0
-        let frame = CGRect(x: 0, y: self.view.bounds.height - kBannerHeight - toolbarHeight, width: self.view.bounds.width, height: kBannerHeight)
-        adView = ALAdView(frame: frame, size: ALAdSize.sizeBanner(), sdk: ALSdk.shared()!)
-        
-        adView?.adLoadDelegate = self
-        adView?.adDisplayDelegate = self
-    
-        adView?.loadNextAd()
+        adView = ALAdView(sdk: ALSdk.shared()!, size: .sizeBanner())
         
         if let adView = adView
         {
+            adView.adLoadDelegate = self
+            adView.adDisplayDelegate = self
+    
+            adView.loadNextAd()
+            
             self.view.addSubview(adView)
         }
     }
