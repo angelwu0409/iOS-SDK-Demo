@@ -20,6 +20,7 @@
 @end
 
 @implementation ALDemoProgrammaticBannerViewController
+static const CGFloat kBannerHeight = 50.0f;
 
 #pragma mark - View Lifecycle
 
@@ -32,10 +33,19 @@
     self.adView.adLoadDelegate = self;
     self.adView.adDisplayDelegate = self;
     self.adView.adEventDelegate = self;
+    self.adView.translatesAutoresizingMaskIntoConstraints = false;
     
     [self.adView loadNextAd];
     
     [self.view addSubview: self.adView];
+    
+    UILayoutGuide *margins = self.view.layoutMarginsGuide;
+    [NSLayoutConstraint activateConstraints: @[
+                                               [self.adView.leadingAnchor constraintEqualToAnchor: margins.leadingAnchor],
+                                               [self.adView.trailingAnchor constraintEqualToAnchor: margins.trailingAnchor],
+                                               [self.adView.topAnchor constraintEqualToAnchor: margins.topAnchor],
+                                               [self.adView.heightAnchor constraintEqualToConstant: kBannerHeight]
+                                               ]];
 }
 
 #pragma mark - IB Action

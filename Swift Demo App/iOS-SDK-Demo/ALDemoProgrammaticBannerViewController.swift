@@ -11,33 +11,38 @@ import AppLovinSDK
 
 class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate
 {
-    var adView: ALAdView?
-    @IBOutlet weak var loadButton: UIBarButtonItem!
-    
     let kBannerHeight: CGFloat = 50
+    
+    var adView = ALAdView(size: .sizeBanner())
+    
+    @IBOutlet weak var loadButton: UIBarButtonItem!
     
     // MARK: View Lifecycle
     
     override func viewDidAppear(_ animated: Bool)
     {
-        super.viewDidAppear( animated )
+        super.viewDidAppear(animated)
+
+        adView.adLoadDelegate = self
+        adView.adDisplayDelegate = self
+        adView.translatesAutoresizingMaskIntoConstraints = false
         
-        adView = ALAdView(sdk: ALSdk.shared()!, size: .sizeBanner())
+        adView.loadNextAd()
         
-        if let adView = adView
-        {
-            adView.adLoadDelegate = self
-            adView.adDisplayDelegate = self
-    
-            adView.loadNextAd()
-            
-            self.view.addSubview(adView)
-        }
+        view.addSubview(adView)
+        
+        let margins = view.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            adView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
+            adView.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
+            adView.bottomAnchor.constraint(equalTo: margins.bottomAnchor),
+            adView.heightAnchor.constraint(equalToConstant: kBannerHeight)
+            ])
     }
     
     @IBAction func loadNextAd(_ sender: UIBarButtonItem)
     {
-        adView?.loadNextAd()
+        adView.loadNextAd()
     }
     
     // MARK: Ad Load Delegate

@@ -27,17 +27,24 @@ static const CGFloat kMRecWidth = 300.0f;
 {
     [super viewDidAppear: animated];
     
-    ALAdView *adView = [[ALAdView alloc] initWithFrame: CGRectMake(CGRectGetMidX(self.view.bounds) - kMRecWidth/2.0f, 80.0f, kMRecWidth, kMRecHeight)
-                                                  size: [ALAdSize sizeMRec]
-                                                   sdk: [ALSdk shared]];
+    ALAdView *adView = [[ALAdView alloc] initWithSize: [ALAdSize sizeMRec]];
     
     adView.adLoadDelegate = self;
     adView.adDisplayDelegate = self;
     adView.adEventDelegate = self;
+    adView.translatesAutoresizingMaskIntoConstraints = false;
     
     [adView loadNextAd];
     
     [self.view addSubview: adView];
+    
+    UILayoutGuide *margins = self.view.layoutMarginsGuide;
+    [NSLayoutConstraint activateConstraints: @[
+                                               [adView.centerXAnchor constraintEqualToAnchor: margins.centerXAnchor],
+                                               [adView.centerYAnchor constraintEqualToAnchor: margins.centerYAnchor],
+                                               [adView.widthAnchor constraintEqualToConstant: kMRecWidth],
+                                               [adView.heightAnchor constraintEqualToConstant: kMRecHeight]
+                                               ]];
 }
 
 #pragma mark - Ad Load Delegate

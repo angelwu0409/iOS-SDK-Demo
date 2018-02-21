@@ -18,17 +18,25 @@ class ALDemoProgrammaticMRecViewController: ALDemoBaseViewController, ALAdLoadDe
     
     override func viewDidAppear(_ animated: Bool)
     {
-        super.viewDidAppear( animated )
+        super.viewDidAppear(animated)
         
-        let frame = CGRect(x: self.view.bounds.midX - kMRecWidth/2, y: 80, width: kMRecWidth, height: kMRecHeight)
-        let adView = ALAdView(frame: frame, size: ALAdSize.sizeMRec(), sdk: ALSdk.shared()!)
+        let adView = ALAdView(size: .sizeMRec())
         
         adView.adLoadDelegate = self
         adView.adDisplayDelegate = self
+        adView.translatesAutoresizingMaskIntoConstraints = false
         
         adView.loadNextAd()
         
-        self.view.addSubview(adView);
+        self.view.addSubview(adView)
+        
+        let margins = view.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            adView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
+            adView.centerYAnchor.constraint(equalTo: margins.centerYAnchor),
+            adView.widthAnchor.constraint(equalToConstant: kMRecWidth),
+            adView.heightAnchor.constraint(equalToConstant: kMRecHeight)
+            ])
     }
     
     // MARK: Ad Load Delegate
