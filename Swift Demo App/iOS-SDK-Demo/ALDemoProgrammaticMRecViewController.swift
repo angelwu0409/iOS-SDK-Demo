@@ -20,17 +20,21 @@ class ALDemoProgrammaticMRecViewController: ALDemoBaseViewController, ALAdLoadDe
     {
         super.viewDidAppear(animated)
         
+        // Create the MRec view
         let adView = ALAdView(size: .sizeMRec())
         
+        // Optional: Implement the ad delegates to receive ad events.
         adView.adLoadDelegate = self
         adView.adDisplayDelegate = self
         adView.adEventDelegate = self
         adView.translatesAutoresizingMaskIntoConstraints = false
         
+        // Call loadNextAd() to start showing ads
         adView.loadNextAd()
         
         self.view.addSubview(adView)
         
+        // Center the MRec.
         let margins = view.layoutMarginsGuide
         NSLayoutConstraint.activate([
             adView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),

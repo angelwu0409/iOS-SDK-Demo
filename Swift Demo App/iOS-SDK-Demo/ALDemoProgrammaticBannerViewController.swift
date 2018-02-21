@@ -13,6 +13,7 @@ class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoad
 {
     let kBannerHeight: CGFloat = 50
     
+    // Create the banner view
     var adView = ALAdView(size: .sizeBanner())
     
     @IBOutlet weak var loadButton: UIBarButtonItem!
@@ -23,15 +24,19 @@ class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoad
     {
         super.viewDidAppear(animated)
 
+        // Optional: Implement the ad delegates to receive ad events.
         adView.adLoadDelegate = self
         adView.adDisplayDelegate = self
         adView.adEventDelegate = self
         adView.translatesAutoresizingMaskIntoConstraints = false
         
+        // Call loadNextAd() to start showing ads
         adView.loadNextAd()
         
         view.addSubview(adView)
         
+        // Center the banner and anchor it to the bottom of the screen.
+        // Alternatively, you can manually set the banner's frames or use the Interface Builder as seen in the ALDemoInterfaceBuilderBannerViewController.swift example.
         let margins = view.layoutMarginsGuide
         NSLayoutConstraint.activate([
             adView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),

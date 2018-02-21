@@ -27,17 +27,21 @@ static const CGFloat kMRecWidth = 300.0f;
 {
     [super viewDidAppear: animated];
     
+    // Create the MRec view
     ALAdView *adView = [[ALAdView alloc] initWithSize: [ALAdSize sizeMRec]];
     
+    // Optional: Implement the ad delegates to receive ad events.
     adView.adLoadDelegate = self;
     adView.adDisplayDelegate = self;
     adView.adEventDelegate = self;
     adView.translatesAutoresizingMaskIntoConstraints = false;
     
+    // Call loadNextAd() to start showing ads
     [adView loadNextAd];
     
     [self.view addSubview: adView];
     
+    // Center the MRec.
     UILayoutGuide *margins = self.view.layoutMarginsGuide;
     [NSLayoutConstraint activateConstraints: @[
                                                [adView.centerXAnchor constraintEqualToAnchor: margins.centerXAnchor],
