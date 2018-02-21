@@ -96,7 +96,7 @@ static const CGFloat kBannerHeight = 50.0f;
 
 - (void)ad:(ALAd *)ad willDismissFullscreenForAdView:(ALAdView *)adView
 {
-    [self log: @"Banner Will dismiss fullscreen"];
+    [self log: @"Banner will dismiss fullscreen"];
 }
 
 - (void)ad:(ALAd *)ad didDismissFullscreenForAdView:(ALAdView *)adView

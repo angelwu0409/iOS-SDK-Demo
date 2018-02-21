@@ -9,7 +9,7 @@
 import UIKit
 import AppLovinSDK
 
-class ALDemoProgrammaticMRecViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate
+class ALDemoProgrammaticMRecViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate, ALAdViewEventDelegate
 {
     let kMRecHeight: CGFloat = 250
     let kMRecWidth: CGFloat = 300
@@ -24,6 +24,7 @@ class ALDemoProgrammaticMRecViewController: ALDemoBaseViewController, ALAdLoadDe
         
         adView.adLoadDelegate = self
         adView.adDisplayDelegate = self
+        adView.adEventDelegate = self
         adView.translatesAutoresizingMaskIntoConstraints = false
         
         adView.loadNextAd()
@@ -67,5 +68,31 @@ class ALDemoProgrammaticMRecViewController: ALDemoBaseViewController, ALAdLoadDe
     func ad(_ ad: ALAd, wasClickedIn view: UIView)
     {
         self.log("MRec Clicked")
+    }
+    
+    // MARK: Ad View Event Delegate
+    
+    func ad(_ ad: ALAd, didPresentFullscreenFor adView: ALAdView) {
+        self.log("Banner did present fullscreen")
+    }
+    
+    func ad(_ ad: ALAd, willDismissFullscreenFor adView: ALAdView) {
+        self.log("Banner will dismiss fullscreen")
+    }
+    
+    func ad(_ ad: ALAd, didDismissFullscreenFor adView: ALAdView) {
+        self.log("Banner did dismiss fullscreen")
+    }
+    
+    func ad(_ ad: ALAd, willLeaveApplicationFor adView: ALAdView) {
+        self.log("Banner will leave application")
+    }
+    
+    func ad(_ ad: ALAd, didReturnToApplicationFor adView: ALAdView) {
+        self.log("Banner did return to application")
+    }
+    
+    func ad(_ ad: ALAd, didFailToDisplayIn adView: ALAdView, withError code: ALAdViewDisplayErrorCode) {
+        self.log("Banner did fail to display with error code: \(code)")
     }
 }
