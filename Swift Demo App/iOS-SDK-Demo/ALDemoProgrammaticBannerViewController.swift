@@ -80,27 +80,33 @@ class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoad
     
     // MARK: Ad View Event Delegate
     
-    func ad(_ ad: ALAd, didPresentFullscreenFor adView: ALAdView) {
+    func ad(_ ad: ALAd, didPresentFullscreenFor adView: ALAdView)
+    {
         self.log("Banner did present fullscreen")
     }
     
-    func ad(_ ad: ALAd, willDismissFullscreenFor adView: ALAdView) {
+    func ad(_ ad: ALAd, willDismissFullscreenFor adView: ALAdView)
+    {
         self.log("Banner will dismiss fullscreen")
     }
     
-    func ad(_ ad: ALAd, didDismissFullscreenFor adView: ALAdView) {
+    func ad(_ ad: ALAd, didDismissFullscreenFor adView: ALAdView)
+    {
         self.log("Banner did dismiss fullscreen")
     }
     
-    func ad(_ ad: ALAd, willLeaveApplicationFor adView: ALAdView) {
+    func ad(_ ad: ALAd, willLeaveApplicationFor adView: ALAdView)
+    {
         self.log("Banner will leave application")
     }
     
-    func ad(_ ad: ALAd, didReturnToApplicationFor adView: ALAdView) {
+    func ad(_ ad: ALAd, didReturnToApplicationFor adView: ALAdView)
+    {
         self.log("Banner did return to application")
     }
     
-    func ad(_ ad: ALAd, didFailToDisplayIn adView: ALAdView, withError code: ALAdViewDisplayErrorCode) {
+    func ad(_ ad: ALAd, didFailToDisplayIn adView: ALAdView, withError code: ALAdViewDisplayErrorCode)
+    {
         self.log("Banner did fail to display with error code: \(code)")
     }
 }
