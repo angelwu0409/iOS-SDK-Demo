@@ -9,37 +9,46 @@
 import UIKit
 import AppLovinSDK
 
-class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate
+class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate, ALAdViewEventDelegate
 {
-    var adView: ALAdView?
-    @IBOutlet weak var loadButton: UIBarButtonItem!
-    
     let kBannerHeight: CGFloat = 50
+    
+    // Create the banner view
+    var adView = ALAdView(size: .sizeBanner())
+    
+    @IBOutlet weak var loadButton: UIBarButtonItem!
     
     // MARK: View Lifecycle
     
     override func viewDidAppear(_ animated: Bool)
     {
-        super.viewDidAppear( animated )
+        super.viewDidAppear(animated)
+
+        // Optional: Implement the ad delegates to receive ad events.
+        adView.adLoadDelegate = self
+        adView.adDisplayDelegate = self
+        adView.adEventDelegate = self
+        adView.translatesAutoresizingMaskIntoConstraints = false
         
-        let toolbarHeight = navigationController?.toolbar.frame.height ?? 0
-        let frame = CGRect(x: 0, y: self.view.bounds.height - kBannerHeight - toolbarHeight, width: self.view.bounds.width, height: kBannerHeight)
-        adView = ALAdView(frame: frame, size: ALAdSize.sizeBanner(), sdk: ALSdk.shared()!)
+        // Call loadNextAd() to start showing ads
+        adView.loadNextAd()
         
-        adView?.adLoadDelegate = self
-        adView?.adDisplayDelegate = self
-    
-        adView?.loadNextAd()
+        view.addSubview(adView)
         
-        if let adView = adView
-        {
-            self.view.addSubview(adView)
-        }
+        // Center the banner and anchor it to the bottom of the screen.
+        // Alternatively, you can manually set the banner's frames or use the Interface Builder as seen in the ALDemoInterfaceBuilderBannerViewController.swift example.
+        let margins = view.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            adView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
+            adView.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
+            adView.bottomAnchor.constraint(equalTo: margins.bottomAnchor),
+            adView.heightAnchor.constraint(equalToConstant: kBannerHeight)
+            ])
     }
     
     @IBAction func loadNextAd(_ sender: UIBarButtonItem)
     {
-        adView?.loadNextAd()
+        adView.loadNextAd()
     }
     
     // MARK: Ad Load Delegate
@@ -72,5 +81,37 @@ class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoad
     func ad(_ ad: ALAd, wasClickedIn view: UIView)
     {
         self.log("Banner Clicked")
+    }
+    
+    // MARK: Ad View Event Delegate
+    
+    func ad(_ ad: ALAd, didPresentFullscreenFor adView: ALAdView)
+    {
+        self.log("Banner did present fullscreen")
+    }
+    
+    func ad(_ ad: ALAd, willDismissFullscreenFor adView: ALAdView)
+    {
+        self.log("Banner will dismiss fullscreen")
+    }
+    
+    func ad(_ ad: ALAd, didDismissFullscreenFor adView: ALAdView)
+    {
+        self.log("Banner did dismiss fullscreen")
+    }
+    
+    func ad(_ ad: ALAd, willLeaveApplicationFor adView: ALAdView)
+    {
+        self.log("Banner will leave application")
+    }
+    
+    func ad(_ ad: ALAd, didReturnToApplicationFor adView: ALAdView)
+    {
+        self.log("Banner did return to application")
+    }
+    
+    func ad(_ ad: ALAd, didFailToDisplayIn adView: ALAdView, withError code: ALAdViewDisplayErrorCode)
+    {
+        self.log("Banner did fail to display with error code: \(code)")
     }
 }
