@@ -23,31 +23,22 @@ class ALDemoRewardedVideosViewController: ALDemoBaseViewController, ALAdLoadDele
     
     @IBAction func showRewardedVideo(_ sender: AnyObject!)
     {
-        // Unlike interstitials, you need to preload each rewarded video before it can be displayed.
+        // You need to preload each rewarded video before it can be displayed
         if ALIncentivizedInterstitialAd.isReadyForDisplay()
         {
             // Optional: Assign delegates
             ALIncentivizedInterstitialAd.shared().adDisplayDelegate = self
             ALIncentivizedInterstitialAd.shared().adVideoPlaybackDelegate = self
             
-            /*
-             NOTE: We recommend the use of placements (AFTER creating them in your dashboard):
-             
-             ALIncentivizedInterstitialAd.showOverPlacement("REWARDED_VIDEO_DEMO_SCREEN", andNotify: self)
-             
-             To learn more about placements, check out https://applovin.com/integration#iosPlacementsIntegration
-             */
-            
             ALIncentivizedInterstitialAd.showAndNotify(self)
         }
         else
         {
-            // Ideally, the SDK preloads ads when you initialize it in application:didFinishLaunchingWithOptions: of the app delegate
             self.preloadRewardedVideo(nil)
         }
     }
     
-    // Unlike interstitials, you need to preload each rewarded video before it can be displayed.
+    // You need to preload each rewarded video before it can be displayed
     @IBAction func preloadRewardedVideo(_ sender: AnyObject!)
     {
         self.log("Preloading...")
