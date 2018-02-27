@@ -16,9 +16,7 @@
 #endif
 
 @interface ALDemoRewardedVideosViewController ()<ALAdLoadDelegate, ALAdRewardDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate>
-
 @property (nonatomic, strong) ALIncentivizedInterstitialAd *incentivizedInterstitial;
-
 @end
 
 @implementation ALDemoRewardedVideosViewController
@@ -43,31 +41,22 @@
 
 - (IBAction)showRewardedVideo:(id)sender
 {
-    // Unlike interstitials, you need to preload each rewarded video before it can be displayed.
+    // You need to preload each rewarded video before it can be displayed
     if ( self.incentivizedInterstitial.isReadyForDisplay )
     {
         // Optional: Assign delegates
         self.incentivizedInterstitial.adDisplayDelegate = self;
         self.incentivizedInterstitial.adVideoPlaybackDelegate = self;
         
-        /*
-         NOTE: We recommend the use of placements (AFTER creating them in your dashboard):
-         
-         [ALIncentivizedInterstitialAd showOverPlacement: @"REWARDED_VIDEO_DEMO_SCREEN" andNotify: self];
-         
-         To learn more about placements, check out https://applovin.com/integration#iosPlacementsIntegration
-         */
-        
         [self.incentivizedInterstitial showAndNotify: self];
     }
     else
     {
-        // Ideally, the SDK preloads ads when you initialize it in application:didFinishLaunchingWithOptions: of the app delegate
         [self preloadRewardedVideo: nil];
     }
 }
 
-// Unlike interstitials, you need to preload each rewarded video before it can be displayed.
+// You need to preload each rewarded video before it can be displayed
 - (IBAction)preloadRewardedVideo:(id)sender
 {
     [self log: @"Preloading..."];
@@ -89,7 +78,7 @@
 
 #pragma mark - Ad Reward Delegate
 
-- (void)rewardValidationRequestForAd:(ALAd *)ad didSucceedWithResponse:(nonnull NSDictionary *)response
+- (void)rewardValidationRequestForAd:(ALAd *)ad didSucceedWithResponse:(NSDictionary *)response
 {
     /* AppLovin servers validated the reward. Refresh user balance from your server.  We will also pass the number of coins
      awarded and the name of the currency.  However, ideally, you should verify this with your server before granting it. */
@@ -155,29 +144,29 @@
 
 #pragma mark - Ad Display Delegate
 
-- (void)ad:(nonnull ALAd *)ad wasDisplayedIn:(nonnull UIView *)view
+- (void)ad:(ALAd *)ad wasDisplayedIn:(UIView *)view
 {
     [self log: @"Ad Displayed"];
 }
 
-- (void)ad:(nonnull ALAd *)ad wasHiddenIn:(nonnull UIView *)view
+- (void)ad:(ALAd *)ad wasHiddenIn:(UIView *)view
 {
     [self log: @"Ad Dismissed"];
 }
 
-- (void)ad:(nonnull ALAd *)ad wasClickedIn:(nonnull UIView *)view
+- (void)ad:(ALAd *)ad wasClickedIn:(UIView *)view
 {
     [self log: @"Ad Clicked"];
 }
 
 #pragma mark - Ad Video Playback Delegate
 
-- (void)videoPlaybackBeganInAd:(nonnull ALAd *)ad
+- (void)videoPlaybackBeganInAd:(ALAd *)ad
 {
     [self log: @"Video Started"];
 }
 
-- (void)videoPlaybackEndedInAd:(nonnull ALAd *)ad atPlaybackPercent:(nonnull NSNumber *)percentPlayed fullyWatched:(BOOL)wasFullyWatched
+- (void)videoPlaybackEndedInAd:(ALAd *)ad atPlaybackPercent:(NSNumber *)percentPlayed fullyWatched:(BOOL)wasFullyWatched
 {
     [self log: @"Video Ended"];
 }

@@ -22,21 +22,15 @@ class ALDemoInterstitialManualLoadingViewController: ALDemoBaseViewController, A
     
     @IBAction func showInterstitial(_ sender: AnyObject!)
     {
-        // Optional: Assign delegates
-        ALInterstitialAd.shared().adDisplayDelegate = self
-        ALInterstitialAd.shared().adVideoPlaybackDelegate = self
-        
         if let ad = self.ad
         {
-            /*
-             NOTE: We recommend the use of placements (AFTER creating them in your dashboard):
-             
-             ALInterstitialAd.shared().showOver(UIApplication.sharedApplication().keyWindow!, placement: "MANUAL_LOADING_SCREEN"" andRender: ad)
-             
-             To learn more about placements, check out https://applovin.com/integration#iosPlacementsIntegration
-             */
+            // Optional: Assign delegates
+            ALInterstitialAd.shared().adDisplayDelegate = self
+            ALInterstitialAd.shared().adVideoPlaybackDelegate = self
             
             ALInterstitialAd.shared().showOver(UIApplication.shared.keyWindow!, andRender: ad)
+            
+            self.log("Interstitial Shown");
         }
     }
     
