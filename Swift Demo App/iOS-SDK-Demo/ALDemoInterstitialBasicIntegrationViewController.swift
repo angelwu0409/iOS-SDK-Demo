@@ -28,8 +28,8 @@ class ALDemoInterstitialBasicIntegrationViewController: ALDemoBaseViewController
     
     @IBAction func showInterstitial(_ sender: AnyObject!)
     {
-        self.showButton.enabled = false
-    
+        self.showButton.isEnabled = false
+        
         self.log("Showing...")
         ALInterstitialAd.shared().show()
     }
@@ -39,7 +39,7 @@ class ALDemoInterstitialBasicIntegrationViewController: ALDemoBaseViewController
     func adService(_ adService: ALAdService, didLoad ad: ALAd)
     {
         self.log("Interstitial Loaded")
-        self.showButton.enabled = true
+        self.showButton.isEnabled = true
     }
     
     func adService(_ adService: ALAdService, didFailToLoadAdWithError code: Int32)
@@ -47,7 +47,7 @@ class ALDemoInterstitialBasicIntegrationViewController: ALDemoBaseViewController
         // Look at ALErrorCodes.h for list of error codes
         self.log("Interstitial failed to load with error code \(code)")
         
-        self.showButton.enabled = true
+        self.showButton.isEnabled = true
     }
     
     // MARK: Ad Display Delegate

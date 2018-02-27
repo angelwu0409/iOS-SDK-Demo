@@ -9,7 +9,7 @@
 import UIKit
 import AppLovinSDK
 
-class ALDemoProgrammaticMRecViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate
+class ALDemoProgrammaticMRecViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdDisplayDelegate, ALAdViewEventDelegate
 {
     let kMRecHeight: CGFloat = 250
     let kMRecWidth: CGFloat = 300
@@ -18,17 +18,30 @@ class ALDemoProgrammaticMRecViewController: ALDemoBaseViewController, ALAdLoadDe
     
     override func viewDidAppear(_ animated: Bool)
     {
-        super.viewDidAppear( animated )
+        super.viewDidAppear(animated)
         
-        let frame = CGRect(x: self.view.bounds.midX - kMRecWidth/2, y: 80, width: kMRecWidth, height: kMRecHeight)
-        let adView = ALAdView(frame: frame, size: ALAdSize.sizeMRec(), sdk: ALSdk.shared()!)
+        // Create the MRec view
+        let adView = ALAdView(size: .sizeMRec())
         
+        // Optional: Implement the ad delegates to receive ad events.
         adView.adLoadDelegate = self
         adView.adDisplayDelegate = self
+        adView.adEventDelegate = self
+        adView.translatesAutoresizingMaskIntoConstraints = false
         
+        // Call loadNextAd() to start showing ads
         adView.loadNextAd()
         
-        self.view.addSubview(adView);
+        self.view.addSubview(adView)
+        
+        // Center the MRec.
+        let margins = view.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            adView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
+            adView.centerYAnchor.constraint(equalTo: margins.centerYAnchor),
+            adView.widthAnchor.constraint(equalToConstant: kMRecWidth),
+            adView.heightAnchor.constraint(equalToConstant: kMRecHeight)
+            ])
     }
     
     // MARK: Ad Load Delegate
@@ -59,5 +72,37 @@ class ALDemoProgrammaticMRecViewController: ALDemoBaseViewController, ALAdLoadDe
     func ad(_ ad: ALAd, wasClickedIn view: UIView)
     {
         self.log("MRec Clicked")
+    }
+    
+    // MARK: Ad View Event Delegate
+    
+    func ad(_ ad: ALAd, didPresentFullscreenFor adView: ALAdView)
+    {
+        self.log("Banner did present fullscreen")
+    }
+    
+    func ad(_ ad: ALAd, willDismissFullscreenFor adView: ALAdView)
+    {
+        self.log("Banner will dismiss fullscreen")
+    }
+    
+    func ad(_ ad: ALAd, didDismissFullscreenFor adView: ALAdView)
+    {
+        self.log("Banner did dismiss fullscreen")
+    }
+    
+    func ad(_ ad: ALAd, willLeaveApplicationFor adView: ALAdView)
+    {
+        self.log("Banner will leave application")
+    }
+    
+    func ad(_ ad: ALAd, didReturnToApplicationFor adView: ALAdView)
+    {
+        self.log("Banner did return to application")
+    }
+    
+    func ad(_ ad: ALAd, didFailToDisplayIn adView: ALAdView, withError code: ALAdViewDisplayErrorCode)
+    {
+        self.log("Banner did fail to display with error code: \(code)")
     }
 }

@@ -20,6 +20,7 @@
 @end
 
 @implementation ALDemoProgrammaticBannerViewController
+static const CGFloat kBannerHeight = 50.0f;
 
 #pragma mark - View Lifecycle
 
@@ -27,15 +28,29 @@
 {
     [super viewDidAppear: animated];
     
+    // Create the banner view
     self.adView = [[ALAdView alloc] initWithSize: [ALAdSize sizeBanner]];
     
+    // Optional: Implement the ad delegates to receive ad events.
     self.adView.adLoadDelegate = self;
     self.adView.adDisplayDelegate = self;
     self.adView.adEventDelegate = self;
+    self.adView.translatesAutoresizingMaskIntoConstraints = false;
     
+    // Call loadNextAd() to start showing ads
     [self.adView loadNextAd];
     
     [self.view addSubview: self.adView];
+    
+    // Center the banner and anchor it to the bottom of the screen.
+    // Alternatively, you can manually set the banner's frames or use the Interface Builder as seen in the ALDemoInterfaceBuilderBannerViewController example.
+    UILayoutGuide *margins = self.view.layoutMarginsGuide;
+    [NSLayoutConstraint activateConstraints: @[
+                                               [self.adView.leadingAnchor constraintEqualToAnchor: margins.leadingAnchor],
+                                               [self.adView.trailingAnchor constraintEqualToAnchor: margins.trailingAnchor],
+                                               [self.adView.topAnchor constraintEqualToAnchor: margins.topAnchor],
+                                               [self.adView.heightAnchor constraintEqualToConstant: kBannerHeight]
+                                               ]];
 }
 
 #pragma mark - IB Action
@@ -86,7 +101,7 @@
 
 - (void)ad:(ALAd *)ad willDismissFullscreenForAdView:(ALAdView *)adView
 {
-    [self log: @"Banner Will dismiss fullscreen"];
+    [self log: @"Banner will dismiss fullscreen"];
 }
 
 - (void)ad:(ALAd *)ad didDismissFullscreenForAdView:(ALAdView *)adView
