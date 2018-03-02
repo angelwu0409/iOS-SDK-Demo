@@ -41,7 +41,7 @@ class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoad
         NSLayoutConstraint.activate([
             adView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
             adView.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
-            adView.bottomAnchor.constraint(equalTo: margins.bottomAnchor),
+            adView.topAnchor.constraint(equalTo: margins.topAnchor),
             adView.heightAnchor.constraint(equalToConstant: kBannerHeight)
             ])
     }
