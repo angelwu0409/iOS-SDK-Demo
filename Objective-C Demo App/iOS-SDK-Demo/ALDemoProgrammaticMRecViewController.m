@@ -42,13 +42,12 @@ static const CGFloat kMRecWidth = 300.0f;
     [self.view addSubview: adView];
     
     // Center the MRec.
-    UILayoutGuide *margins = self.view.layoutMarginsGuide;
-    [NSLayoutConstraint activateConstraints: @[
-                                               [adView.centerXAnchor constraintEqualToAnchor: margins.centerXAnchor],
-                                               [adView.centerYAnchor constraintEqualToAnchor: margins.centerYAnchor],
-                                               [adView.widthAnchor constraintEqualToConstant: kMRecWidth],
-                                               [adView.heightAnchor constraintEqualToConstant: kMRecHeight]
-                                               ]];
+    [self.view addConstraints: @[
+                                 [NSLayoutConstraint constraintWithItem: adView attribute: NSLayoutAttributeCenterX relatedBy: NSLayoutRelationEqual toItem: self.view attribute: NSLayoutAttributeCenterX multiplier: 1.0 constant: 0.0],
+                                 [NSLayoutConstraint constraintWithItem: adView attribute: NSLayoutAttributeCenterY relatedBy: NSLayoutRelationEqual toItem: self.view attribute: NSLayoutAttributeCenterY multiplier: 1.0 constant: 0.0],
+                                 [NSLayoutConstraint constraintWithItem: adView attribute: NSLayoutAttributeHeight relatedBy: NSLayoutRelationEqual toItem: nil attribute: NSLayoutAttributeNotAnAttribute multiplier: 1.0 constant: kMRecHeight],
+                                 [NSLayoutConstraint constraintWithItem: adView attribute: NSLayoutAttributeWidth relatedBy: NSLayoutRelationEqual toItem: nil attribute: NSLayoutAttributeNotAnAttribute multiplier: 1.0 constant: kMRecWidth]
+                                 ]];
 }
 
 #pragma mark - Ad Load Delegate

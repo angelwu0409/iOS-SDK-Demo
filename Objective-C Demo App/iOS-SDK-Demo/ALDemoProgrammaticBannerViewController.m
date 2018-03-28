@@ -43,14 +43,13 @@ static const CGFloat kBannerHeight = 50.0f;
     [self.view addSubview: self.adView];
     
     // Center the banner and anchor it to the bottom of the screen.
-    // Alternatively, you can manually set the banner's frames or use the Interface Builder as seen in the ALDemoInterfaceBuilderBannerViewController example.
-    UILayoutGuide *margins = self.view.layoutMarginsGuide;
-    [NSLayoutConstraint activateConstraints: @[
-                                               [self.adView.leadingAnchor constraintEqualToAnchor: margins.leadingAnchor],
-                                               [self.adView.trailingAnchor constraintEqualToAnchor: margins.trailingAnchor],
-                                               [self.adView.topAnchor constraintEqualToAnchor: margins.topAnchor],
-                                               [self.adView.heightAnchor constraintEqualToConstant: kBannerHeight]
-                                               ]];
+    // Alternatively, you can manually set the banner's frames or use the Interface Builder as seen in the ALDemoInterfaceBuilderBannerViewController.m example.
+    [self.view addConstraints: @[
+                                 [NSLayoutConstraint constraintWithItem: self.adView attribute: NSLayoutAttributeLeading relatedBy: NSLayoutRelationEqual toItem: self.view attribute: NSLayoutAttributeLeading multiplier: 1.0 constant: 0.0],
+                                 [NSLayoutConstraint constraintWithItem: self.adView attribute: NSLayoutAttributeTrailing relatedBy: NSLayoutRelationEqual toItem: self.view attribute: NSLayoutAttributeTrailing multiplier: 1.0 constant: 0.0],
+                                 [NSLayoutConstraint constraintWithItem: self.adView attribute: NSLayoutAttributeBottom relatedBy: NSLayoutRelationEqual toItem: self.view attribute: NSLayoutAttributeBottom multiplier: 1.0 constant: 0.0],
+                                 [NSLayoutConstraint constraintWithItem: self.adView attribute: NSLayoutAttributeHeight relatedBy: NSLayoutRelationEqual toItem: nil attribute: NSLayoutAttributeNotAnAttribute multiplier: 1.0 constant: kBannerHeight]
+                                 ]];
 }
 
 #pragma mark - IB Action
