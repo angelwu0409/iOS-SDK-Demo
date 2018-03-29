@@ -745,7 +745,7 @@
 				GENERATE_MASTER_OBJECT_FILE = NO;
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../../AppLovin-iPhone-SDK/sdk/**";
 				INFOPLIST_FILE = "iOS-SDK-Demo/iOS-SDK-Demo-ObjC-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -778,7 +778,7 @@
 				GENERATE_MASTER_OBJECT_FILE = NO;
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../../AppLovin-iPhone-SDK/sdk/**";
 				INFOPLIST_FILE = "iOS-SDK-Demo/iOS-SDK-Demo-ObjC-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
