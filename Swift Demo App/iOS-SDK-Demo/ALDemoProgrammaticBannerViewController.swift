@@ -37,12 +37,11 @@ class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoad
         
         // Center the banner and anchor it to the bottom of the screen.
         // Alternatively, you can manually set the banner's frames or use the Interface Builder as seen in the ALDemoInterfaceBuilderBannerViewController.swift example.
-        let margins = view.layoutMarginsGuide
-        NSLayoutConstraint.activate([
-            adView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
-            adView.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
-            adView.topAnchor.constraint(equalTo: margins.topAnchor),
-            adView.heightAnchor.constraint(equalToConstant: kBannerHeight)
+        view.addConstraints([
+            NSLayoutConstraint(item: adView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: adView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: adView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: adView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: kBannerHeight)
             ])
     }
     

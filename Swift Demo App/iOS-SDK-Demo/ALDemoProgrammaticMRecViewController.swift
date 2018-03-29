@@ -32,15 +32,14 @@ class ALDemoProgrammaticMRecViewController: ALDemoBaseViewController, ALAdLoadDe
         // Call loadNextAd() to start showing ads
         adView.loadNextAd()
         
-        self.view.addSubview(adView)
+        view.addSubview(adView)
         
         // Center the MRec.
-        let margins = view.layoutMarginsGuide
-        NSLayoutConstraint.activate([
-            adView.centerXAnchor.constraint(equalTo: margins.centerXAnchor),
-            adView.centerYAnchor.constraint(equalTo: margins.centerYAnchor),
-            adView.widthAnchor.constraint(equalToConstant: kMRecWidth),
-            adView.heightAnchor.constraint(equalToConstant: kMRecHeight)
+        view.addConstraints([
+            NSLayoutConstraint(item: adView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: adView, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: adView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: kMRecHeight),
+            NSLayoutConstraint(item: adView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: kMRecWidth)
             ])
     }
     

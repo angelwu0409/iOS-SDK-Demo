@@ -113,7 +113,7 @@ static NSString *const kSupportLink = @"https://support.applovin.com/support/hom
 
 - (void)openSupportSite
 {
-    NSOperatingSystemVersion version = [[NSProcessInfo processInfo]operatingSystemVersion];
+    NSOperatingSystemVersion version = [NSProcessInfo processInfo].operatingSystemVersion;
     if ( version.majorVersion > 8 )
     {
         SFSafariViewController *safariController = [[SFSafariViewController alloc] initWithURL: [NSURL URLWithString: kSupportLink]
