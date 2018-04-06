@@ -14,6 +14,8 @@ class ALDemoRootViewController: UITableViewController, MFMailComposeViewControll
 {
     let kSupportEmail = "support@applovin.com"
     let kSupportLink = "https://support.applovin.com/support/home"
+
+    let kRowIndexToHideForPhones = 5;
     
     @IBOutlet var muteToggle: UIBarButtonItem!
     
@@ -76,8 +78,26 @@ class ALDemoRootViewController: UITableViewController, MFMailComposeViewControll
         }
     }
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    {
+        if UIDevice.current.userInterfaceIdiom == .phone && indexPath.section == 0 && indexPath.row  == kRowIndexToHideForPhones
+        {
+            cell.isHidden = true;
+        }
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        if UIDevice.current.userInterfaceIdiom == .phone && indexPath.section == 0 && indexPath.row  == kRowIndexToHideForPhones
+        {
+            return 0;
+        }
+
+        return super.tableView(tableView, heightForRowAt: indexPath)
+    }
+
     // MARK: Sound Toggling
-    
+
     @IBAction func toggleMute(_ sender: UIBarButtonItem!)
     {
         /**

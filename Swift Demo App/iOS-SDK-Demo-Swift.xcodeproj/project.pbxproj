@@ -62,6 +62,9 @@
 		1DDB3A071BF5815D002561A0 /* ALCarouselMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A061BF5815D002561A0 /* ALCarouselMediaView.m */; };
 		1DDB3A0D1BF58272002561A0 /* ALDemoRSSFeedRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A0A1BF58272002561A0 /* ALDemoRSSFeedRetriever.m */; };
 		1DDB3A0E1BF58272002561A0 /* ALDemoArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A0C1BF58272002561A0 /* ALDemoArticle.m */; };
+		632451F32076E00F00D80A74 /* ALDemoProgrammaticLeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632451F22076E00F00D80A74 /* ALDemoProgrammaticLeaderViewController.swift */; };
+		632451F52076E05900D80A74 /* ALDemoInterfaceBuilderLeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632451F42076E05900D80A74 /* ALDemoInterfaceBuilderLeaderViewController.swift */; };
+		632451FA2076EE2000D80A74 /* Leaders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632451F92076EE2000D80A74 /* Leaders.storyboard */; };
 		DD65BFD91F15AA9100F60067 /* Interstitials.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFD81F15AA9100F60067 /* Interstitials.storyboard */; };
 		DD65BFDB1F15AAC300F60067 /* Banners.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFDA1F15AAC300F60067 /* Banners.storyboard */; };
 		DD65BFDD1F15AAD900F60067 /* MRecs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFDC1F15AAD900F60067 /* MRecs.storyboard */; };
@@ -142,6 +145,9 @@
 		1DDB3A0A1BF58272002561A0 /* ALDemoRSSFeedRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoRSSFeedRetriever.m; sourceTree = "<group>"; };
 		1DDB3A0B1BF58272002561A0 /* ALDemoArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoArticle.h; sourceTree = "<group>"; };
 		1DDB3A0C1BF58272002561A0 /* ALDemoArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoArticle.m; sourceTree = "<group>"; };
+		632451F22076E00F00D80A74 /* ALDemoProgrammaticLeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALDemoProgrammaticLeaderViewController.swift; sourceTree = "<group>"; };
+		632451F42076E05900D80A74 /* ALDemoInterfaceBuilderLeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALDemoInterfaceBuilderLeaderViewController.swift; sourceTree = "<group>"; };
+		632451F92076EE2000D80A74 /* Leaders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Leaders.storyboard; sourceTree = "<group>"; };
 		DD65BFD81F15AA9100F60067 /* Interstitials.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interstitials.storyboard; sourceTree = "<group>"; };
 		DD65BFDA1F15AAC300F60067 /* Banners.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Banners.storyboard; sourceTree = "<group>"; };
 		DD65BFDC1F15AAD900F60067 /* MRecs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MRecs.storyboard; sourceTree = "<group>"; };
@@ -216,6 +222,7 @@
 				DDDBAD081EE5CCB900666518 /* Event Tracking */,
 				1DA2DE121E6D699F00FCC9B1 /* MRecs */,
 				1DA2DE051E6D644000FCC9B1 /* Banners */,
+				632451F12076DFEC00D80A74 /* Leaders */,
 				1D7220CB1BB60BF200FE1B91 /* Interstitials */,
 				1D7220CD1BB60C0100FE1B91 /* Native */,
 				1D7220CC1BB60BF800FE1B91 /* Rewarded/Incentivized Videos */,
@@ -234,6 +241,7 @@
 				1D72212D1BB613E300FE1B91 /* Main.storyboard */,
 				DD65BFDC1F15AAD900F60067 /* MRecs.storyboard */,
 				DD65BFDA1F15AAC300F60067 /* Banners.storyboard */,
+				632451F92076EE2000D80A74 /* Leaders.storyboard */,
 				DD65BFD81F15AA9100F60067 /* Interstitials.storyboard */,
 			);
 			name = "Supporting Files";
@@ -430,6 +438,15 @@
 			name = "RSS Feed Parsing";
 			sourceTree = "<group>";
 		};
+		632451F12076DFEC00D80A74 /* Leaders */ = {
+			isa = PBXGroup;
+			children = (
+				632451F22076E00F00D80A74 /* ALDemoProgrammaticLeaderViewController.swift */,
+				632451F42076E05900D80A74 /* ALDemoInterfaceBuilderLeaderViewController.swift */,
+			);
+			name = Leaders;
+			sourceTree = "<group>";
+		};
 		DDDBAD081EE5CCB900666518 /* Event Tracking */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,6 +537,7 @@
 				1D7220F71BB60C4A00FE1B91 /* Star_Sprite_3.5.png in Resources */,
 				1D7220F01BB60C4A00FE1B91 /* Star_Sprite_0.png in Resources */,
 				1D7220F91BB60C4A00FE1B91 /* Star_Sprite_4.5.png in Resources */,
+				632451FA2076EE2000D80A74 /* Leaders.storyboard in Resources */,
 				1D7220F41BB60C4A00FE1B91 /* Star_Sprite_2.png in Resources */,
 				DD65BFD91F15AA9100F60067 /* Interstitials.storyboard in Resources */,
 				1D7220FD1BB60C4A00FE1B91 /* applovin_card_play.png in Resources */,
@@ -537,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DA2DE0F1E6D698C00FCC9B1 /* ALDemoProgrammaticBannerViewController.swift in Sources */,
+				632451F52076E05900D80A74 /* ALDemoInterfaceBuilderLeaderViewController.swift in Sources */,
 				1D72210A1BB60C4F00FE1B91 /* ALCarouselCardView.m in Sources */,
 				1D72212C1BB60D5500FE1B91 /* ALDemoRootViewController.swift in Sources */,
 				1D7220DB1BB60C3000FE1B91 /* ALCarouselCardState.m in Sources */,
@@ -559,6 +578,7 @@
 				1D72215A1BB6285800FE1B91 /* ALDemoNativeAdFeedTableViewController.swift in Sources */,
 				1D7221391BB61B0100FE1B91 /* ALDemoRewardedVideosViewController.swift in Sources */,
 				1D7220DA1BB60C3000FE1B91 /* ALNativeAdVideoPlayer.m in Sources */,
+				632451F32076E00F00D80A74 /* ALDemoProgrammaticLeaderViewController.swift in Sources */,
 				1D7221311BB6176000FE1B91 /* ALDemoInterstitialBasicIntegrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

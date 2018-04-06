@@ -26,6 +26,8 @@
 @implementation ALDemoRootViewController
 static NSString *const kSupportEmail = @"support@applovin.com";
 static NSString *const kSupportLink = @"https://support.applovin.com/support/home";
+static const NSInteger kRowIndexToHideForPhone = 5;
+
 
 #pragma mark - View Lifecycle
 
@@ -90,6 +92,23 @@ static NSString *const kSupportLink = @"https://support.applovin.com/support/hom
             [self attemptSendEmail];
         }
     }
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ( UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone && indexPath.section == 0 && indexPath.row == kRowIndexToHideForPhone )
+    {
+        cell.hidden = YES;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ( UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone && indexPath.section == 0 && indexPath.row == kRowIndexToHideForPhone )
+    {
+        return 0;
+    }
+    return [super tableView: tableView heightForRowAtIndexPath: indexPath];
 }
 
 #pragma mark - Sound Toggling
