@@ -18,12 +18,12 @@
 		1D1BB7501DDFE81000E61729 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1BB74F1DDFE81000E61729 /* SafariServices.framework */; };
 		1D1BB7521DDFE81300E61729 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1BB7511DDFE81300E61729 /* WebKit.framework */; };
 		1D253B742004255D00E1FA87 /* AppLovinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D253B752004255D00E1FA87 /* AppLovinSDK.framework */; };
+		1D6FDD952079FEAE0059D762 /* ALNativeAdVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FDD942079FEAD0059D762 /* ALNativeAdVideoPlayer.m */; };
 		1D72208B1BB6086100FE1B91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72208A1BB6086100FE1B91 /* AppDelegate.swift */; };
 		1D7220A61BB6093F00FE1B91 /* nav_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7220A41BB6093F00FE1B91 /* nav_logo@2x.png */; };
 		1D7220A81BB609A300FE1B91 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7220A71BB609A300FE1B91 /* Images.xcassets */; };
 		1D7220C71BB60A7E00FE1B91 /* ALDemoBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7220C61BB60A7E00FE1B91 /* ALDemoBaseTableViewController.swift */; };
 		1D7220C91BB60ABF00FE1B91 /* ALDemoBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7220C81BB60ABF00FE1B91 /* ALDemoBaseViewController.swift */; };
-		1D7220DA1BB60C3000FE1B91 /* ALNativeAdVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7220D31BB60C3000FE1B91 /* ALNativeAdVideoPlayer.m */; };
 		1D7220DB1BB60C3000FE1B91 /* ALCarouselCardState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7220D51BB60C3000FE1B91 /* ALCarouselCardState.m */; };
 		1D7220DC1BB60C3000FE1B91 /* ALCarouselViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7220D81BB60C3000FE1B91 /* ALCarouselViewModel.m */; };
 		1D7220F01BB60C4A00FE1B91 /* Star_Sprite_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7220E01BB60C4A00FE1B91 /* Star_Sprite_0.png */; };
@@ -83,6 +83,7 @@
 		1D1BB74F1DDFE81000E61729 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		1D1BB7511DDFE81300E61729 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1D253B752004255D00E1FA87 /* AppLovinSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppLovinSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6FDD942079FEAD0059D762 /* ALNativeAdVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALNativeAdVideoPlayer.m; path = "Native Ads Carousel/ALNativeAdVideoPlayer.m"; sourceTree = "<group>"; };
 		1D7220871BB6086100FE1B91 /* iOS-SDK-Demo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-SDK-Demo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D72208A1BB6086100FE1B91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D7220941BB6086100FE1B91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,42 +93,41 @@
 		1D7220C61BB60A7E00FE1B91 /* ALDemoBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoBaseTableViewController.swift; sourceTree = "<group>"; };
 		1D7220C81BB60ABF00FE1B91 /* ALDemoBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoBaseViewController.swift; sourceTree = "<group>"; };
 		1D7220D11BB60C3000FE1B91 /* iOS-SDK-Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-SDK-Demo-Bridging-Header.h"; sourceTree = "<group>"; };
-		1D7220D21BB60C3000FE1B91 /* ALNativeAdVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNativeAdVideoPlayer.h; sourceTree = "<group>"; };
-		1D7220D31BB60C3000FE1B91 /* ALNativeAdVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNativeAdVideoPlayer.m; sourceTree = "<group>"; };
-		1D7220D41BB60C3000FE1B91 /* ALCarouselCardState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCarouselCardState.h; sourceTree = "<group>"; };
-		1D7220D51BB60C3000FE1B91 /* ALCarouselCardState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCarouselCardState.m; sourceTree = "<group>"; };
-		1D7220D61BB60C3000FE1B91 /* ALCarouselRenderingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCarouselRenderingProtocol.h; sourceTree = "<group>"; };
-		1D7220D71BB60C3000FE1B91 /* ALCarouselViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCarouselViewModel.h; sourceTree = "<group>"; };
-		1D7220D81BB60C3000FE1B91 /* ALCarouselViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCarouselViewModel.m; sourceTree = "<group>"; };
-		1D7220D91BB60C3000FE1B91 /* ALCarouselViewSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCarouselViewSettings.h; sourceTree = "<group>"; };
-		1D7220E01BB60C4A00FE1B91 /* Star_Sprite_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_Sprite_0.png; sourceTree = "<group>"; };
-		1D7220E11BB60C4A00FE1B91 /* Star_Sprite_0.5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_Sprite_0.5.png; sourceTree = "<group>"; };
-		1D7220E21BB60C4A00FE1B91 /* Star_Sprite_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_Sprite_1.png; sourceTree = "<group>"; };
-		1D7220E31BB60C4A00FE1B91 /* Star_Sprite_1.5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_Sprite_1.5.png; sourceTree = "<group>"; };
-		1D7220E41BB60C4A00FE1B91 /* Star_Sprite_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_Sprite_2.png; sourceTree = "<group>"; };
-		1D7220E51BB60C4A00FE1B91 /* Star_Sprite_2.5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_Sprite_2.5.png; sourceTree = "<group>"; };
-		1D7220E61BB60C4A00FE1B91 /* Star_Sprite_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_Sprite_3.png; sourceTree = "<group>"; };
-		1D7220E71BB60C4A00FE1B91 /* Star_Sprite_3.5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_Sprite_3.5.png; sourceTree = "<group>"; };
-		1D7220E81BB60C4A00FE1B91 /* Star_Sprite_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_Sprite_4.png; sourceTree = "<group>"; };
-		1D7220E91BB60C4A00FE1B91 /* Star_Sprite_4.5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_Sprite_4.5.png; sourceTree = "<group>"; };
-		1D7220EA1BB60C4A00FE1B91 /* Star_Sprite_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_Sprite_5.png; sourceTree = "<group>"; };
-		1D7220EB1BB60C4A00FE1B91 /* applovin_card_learn_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applovin_card_learn_more.png; sourceTree = "<group>"; };
-		1D7220EC1BB60C4A00FE1B91 /* applovin_card_muted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applovin_card_muted.png; sourceTree = "<group>"; };
-		1D7220ED1BB60C4A00FE1B91 /* applovin_card_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applovin_card_play.png; sourceTree = "<group>"; };
-		1D7220EE1BB60C4A00FE1B91 /* applovin_card_replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applovin_card_replay.png; sourceTree = "<group>"; };
-		1D7220EF1BB60C4A00FE1B91 /* applovin_card_unmuted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applovin_card_unmuted.png; sourceTree = "<group>"; };
-		1D7221001BB60C4F00FE1B91 /* ALCarouselCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCarouselCardView.h; sourceTree = "<group>"; };
-		1D7221011BB60C4F00FE1B91 /* ALCarouselCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCarouselCardView.m; sourceTree = "<group>"; };
-		1D7221041BB60C4F00FE1B91 /* ALCarouselReplayOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCarouselReplayOverlayView.h; sourceTree = "<group>"; };
-		1D7221051BB60C4F00FE1B91 /* ALCarouselReplayOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCarouselReplayOverlayView.m; sourceTree = "<group>"; };
-		1D7221061BB60C4F00FE1B91 /* ALCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCarouselView.h; sourceTree = "<group>"; };
-		1D7221071BB60C4F00FE1B91 /* ALCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCarouselView.m; sourceTree = "<group>"; };
-		1D7221081BB60C4F00FE1B91 /* ALNativeAdVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNativeAdVideoView.h; sourceTree = "<group>"; };
-		1D7221091BB60C4F00FE1B91 /* ALNativeAdVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNativeAdVideoView.m; sourceTree = "<group>"; };
-		1D72210F1BB60C5700FE1B91 /* ALCarouselView+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALCarouselView+Internal.h"; sourceTree = "<group>"; };
-		1D7221101BB60C5700FE1B91 /* UIView+ALActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ALActivityIndicator.m"; sourceTree = "<group>"; };
-		1D7221111BB60C5700FE1B91 /* UIView+ALActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ALActivityIndicator.h"; sourceTree = "<group>"; };
-		1D7221131BB60C7200FE1B91 /* ALDebugLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDebugLog.h; sourceTree = "<group>"; };
+		1D7220D21BB60C3000FE1B91 /* ALNativeAdVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALNativeAdVideoPlayer.h; path = "Native Ads Carousel/ALNativeAdVideoPlayer.h"; sourceTree = "<group>"; };
+		1D7220D41BB60C3000FE1B91 /* ALCarouselCardState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALCarouselCardState.h; path = "Native Ads Carousel/ALCarouselCardState.h"; sourceTree = "<group>"; };
+		1D7220D51BB60C3000FE1B91 /* ALCarouselCardState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALCarouselCardState.m; path = "Native Ads Carousel/ALCarouselCardState.m"; sourceTree = "<group>"; };
+		1D7220D61BB60C3000FE1B91 /* ALCarouselRenderingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALCarouselRenderingProtocol.h; path = "Native Ads Carousel/ALCarouselRenderingProtocol.h"; sourceTree = "<group>"; };
+		1D7220D71BB60C3000FE1B91 /* ALCarouselViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALCarouselViewModel.h; path = "Native Ads Carousel/ALCarouselViewModel.h"; sourceTree = "<group>"; };
+		1D7220D81BB60C3000FE1B91 /* ALCarouselViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALCarouselViewModel.m; path = "Native Ads Carousel/ALCarouselViewModel.m"; sourceTree = "<group>"; };
+		1D7220D91BB60C3000FE1B91 /* ALCarouselViewSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALCarouselViewSettings.h; path = "Native Ads Carousel/ALCarouselViewSettings.h"; sourceTree = "<group>"; };
+		1D7220E01BB60C4A00FE1B91 /* Star_Sprite_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star_Sprite_0.png; path = "Native Ads Carousel/Star_Sprite_0.png"; sourceTree = "<group>"; };
+		1D7220E11BB60C4A00FE1B91 /* Star_Sprite_0.5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star_Sprite_0.5.png; path = "Native Ads Carousel/Star_Sprite_0.5.png"; sourceTree = "<group>"; };
+		1D7220E21BB60C4A00FE1B91 /* Star_Sprite_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star_Sprite_1.png; path = "Native Ads Carousel/Star_Sprite_1.png"; sourceTree = "<group>"; };
+		1D7220E31BB60C4A00FE1B91 /* Star_Sprite_1.5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star_Sprite_1.5.png; path = "Native Ads Carousel/Star_Sprite_1.5.png"; sourceTree = "<group>"; };
+		1D7220E41BB60C4A00FE1B91 /* Star_Sprite_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star_Sprite_2.png; path = "Native Ads Carousel/Star_Sprite_2.png"; sourceTree = "<group>"; };
+		1D7220E51BB60C4A00FE1B91 /* Star_Sprite_2.5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star_Sprite_2.5.png; path = "Native Ads Carousel/Star_Sprite_2.5.png"; sourceTree = "<group>"; };
+		1D7220E61BB60C4A00FE1B91 /* Star_Sprite_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star_Sprite_3.png; path = "Native Ads Carousel/Star_Sprite_3.png"; sourceTree = "<group>"; };
+		1D7220E71BB60C4A00FE1B91 /* Star_Sprite_3.5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star_Sprite_3.5.png; path = "Native Ads Carousel/Star_Sprite_3.5.png"; sourceTree = "<group>"; };
+		1D7220E81BB60C4A00FE1B91 /* Star_Sprite_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star_Sprite_4.png; path = "Native Ads Carousel/Star_Sprite_4.png"; sourceTree = "<group>"; };
+		1D7220E91BB60C4A00FE1B91 /* Star_Sprite_4.5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star_Sprite_4.5.png; path = "Native Ads Carousel/Star_Sprite_4.5.png"; sourceTree = "<group>"; };
+		1D7220EA1BB60C4A00FE1B91 /* Star_Sprite_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star_Sprite_5.png; path = "Native Ads Carousel/Star_Sprite_5.png"; sourceTree = "<group>"; };
+		1D7220EB1BB60C4A00FE1B91 /* applovin_card_learn_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applovin_card_learn_more.png; path = "Native Ads Carousel/applovin_card_learn_more.png"; sourceTree = "<group>"; };
+		1D7220EC1BB60C4A00FE1B91 /* applovin_card_muted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applovin_card_muted.png; path = "Native Ads Carousel/applovin_card_muted.png"; sourceTree = "<group>"; };
+		1D7220ED1BB60C4A00FE1B91 /* applovin_card_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applovin_card_play.png; path = "Native Ads Carousel/applovin_card_play.png"; sourceTree = "<group>"; };
+		1D7220EE1BB60C4A00FE1B91 /* applovin_card_replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applovin_card_replay.png; path = "Native Ads Carousel/applovin_card_replay.png"; sourceTree = "<group>"; };
+		1D7220EF1BB60C4A00FE1B91 /* applovin_card_unmuted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applovin_card_unmuted.png; path = "Native Ads Carousel/applovin_card_unmuted.png"; sourceTree = "<group>"; };
+		1D7221001BB60C4F00FE1B91 /* ALCarouselCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALCarouselCardView.h; path = "Native Ads Carousel/ALCarouselCardView.h"; sourceTree = "<group>"; };
+		1D7221011BB60C4F00FE1B91 /* ALCarouselCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALCarouselCardView.m; path = "Native Ads Carousel/ALCarouselCardView.m"; sourceTree = "<group>"; };
+		1D7221041BB60C4F00FE1B91 /* ALCarouselReplayOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALCarouselReplayOverlayView.h; path = "Native Ads Carousel/ALCarouselReplayOverlayView.h"; sourceTree = "<group>"; };
+		1D7221051BB60C4F00FE1B91 /* ALCarouselReplayOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALCarouselReplayOverlayView.m; path = "Native Ads Carousel/ALCarouselReplayOverlayView.m"; sourceTree = "<group>"; };
+		1D7221061BB60C4F00FE1B91 /* ALCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALCarouselView.h; path = "Native Ads Carousel/ALCarouselView.h"; sourceTree = "<group>"; };
+		1D7221071BB60C4F00FE1B91 /* ALCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALCarouselView.m; path = "Native Ads Carousel/ALCarouselView.m"; sourceTree = "<group>"; };
+		1D7221081BB60C4F00FE1B91 /* ALNativeAdVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALNativeAdVideoView.h; path = "Native Ads Carousel/ALNativeAdVideoView.h"; sourceTree = "<group>"; };
+		1D7221091BB60C4F00FE1B91 /* ALNativeAdVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALNativeAdVideoView.m; path = "Native Ads Carousel/ALNativeAdVideoView.m"; sourceTree = "<group>"; };
+		1D72210F1BB60C5700FE1B91 /* ALCarouselView+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALCarouselView+Internal.h"; path = "Native Ads Carousel/ALCarouselView+Internal.h"; sourceTree = "<group>"; };
+		1D7221101BB60C5700FE1B91 /* UIView+ALActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+ALActivityIndicator.m"; path = "Native Ads Carousel/UIView+ALActivityIndicator.m"; sourceTree = "<group>"; };
+		1D7221111BB60C5700FE1B91 /* UIView+ALActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+ALActivityIndicator.h"; path = "Native Ads Carousel/UIView+ALActivityIndicator.h"; sourceTree = "<group>"; };
+		1D7221131BB60C7200FE1B91 /* ALDebugLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ALDebugLog.h; path = "Native Ads Carousel/ALDebugLog.h"; sourceTree = "<group>"; };
 		1D72211B1BB60CB500FE1B91 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		1D72212B1BB60D5500FE1B91 /* ALDemoRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoRootViewController.swift; sourceTree = "<group>"; };
 		1D72212D1BB613E300FE1B91 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -139,8 +139,8 @@
 		1DA2DE0E1E6D698C00FCC9B1 /* ALDemoProgrammaticBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoProgrammaticBannerViewController.swift; sourceTree = "<group>"; };
 		1DA2DE101E6D699B00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoInterfaceBuilderBannerViewController.swift; sourceTree = "<group>"; };
 		1DA2DE131E6D69AE00FCC9B1 /* ALDemoProgrammaticMRecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoProgrammaticMRecViewController.swift; sourceTree = "<group>"; };
-		1DDB3A051BF5815D002561A0 /* ALCarouselMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCarouselMediaView.h; sourceTree = "<group>"; };
-		1DDB3A061BF5815D002561A0 /* ALCarouselMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCarouselMediaView.m; sourceTree = "<group>"; };
+		1DDB3A051BF5815D002561A0 /* ALCarouselMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALCarouselMediaView.h; path = "Native Ads Carousel/ALCarouselMediaView.h"; sourceTree = "<group>"; };
+		1DDB3A061BF5815D002561A0 /* ALCarouselMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALCarouselMediaView.m; path = "Native Ads Carousel/ALCarouselMediaView.m"; sourceTree = "<group>"; };
 		1DDB3A091BF58272002561A0 /* ALDemoRSSFeedRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoRSSFeedRetriever.h; sourceTree = "<group>"; };
 		1DDB3A0A1BF58272002561A0 /* ALDemoRSSFeedRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoRSSFeedRetriever.m; sourceTree = "<group>"; };
 		1DDB3A0B1BF58272002561A0 /* ALDemoArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoArticle.h; sourceTree = "<group>"; };
@@ -305,7 +305,7 @@
 				1D7220D81BB60C3000FE1B91 /* ALCarouselViewModel.m */,
 				1D7221131BB60C7200FE1B91 /* ALDebugLog.h */,
 				1D7220D21BB60C3000FE1B91 /* ALNativeAdVideoPlayer.h */,
-				1D7220D31BB60C3000FE1B91 /* ALNativeAdVideoPlayer.m */,
+				1D6FDD942079FEAD0059D762 /* ALNativeAdVideoPlayer.m */,
 			);
 			name = "Carousel UI";
 			sourceTree = "<group>";
@@ -563,6 +563,7 @@
 				1D7220C91BB60ABF00FE1B91 /* ALDemoBaseViewController.swift in Sources */,
 				1D72210C1BB60C4F00FE1B91 /* ALCarouselReplayOverlayView.m in Sources */,
 				1D7220C71BB60A7E00FE1B91 /* ALDemoBaseTableViewController.swift in Sources */,
+				1D6FDD952079FEAE0059D762 /* ALNativeAdVideoPlayer.m in Sources */,
 				1DDB3A071BF5815D002561A0 /* ALCarouselMediaView.m in Sources */,
 				1D7221371BB619F600FE1B91 /* ALDemoInterstitialManualLoadingViewController.swift in Sources */,
 				1DDB3A0D1BF58272002561A0 /* ALDemoRSSFeedRetriever.m in Sources */,
@@ -577,7 +578,6 @@
 				1DA2DE141E6D69AE00FCC9B1 /* ALDemoProgrammaticMRecViewController.swift in Sources */,
 				1D72215A1BB6285800FE1B91 /* ALDemoNativeAdFeedTableViewController.swift in Sources */,
 				1D7221391BB61B0100FE1B91 /* ALDemoRewardedVideosViewController.swift in Sources */,
-				1D7220DA1BB60C3000FE1B91 /* ALNativeAdVideoPlayer.m in Sources */,
 				632451F32076E00F00D80A74 /* ALDemoProgrammaticLeaderViewController.swift in Sources */,
 				1D7221311BB6176000FE1B91 /* ALDemoInterstitialBasicIntegrationViewController.swift in Sources */,
 			);
