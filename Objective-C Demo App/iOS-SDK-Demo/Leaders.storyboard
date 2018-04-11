@@ -41,6 +41,9 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="4tu-Ow-Y5W"/>
                         <barButtonItem enabled="NO" title="Load" id="Taf-IP-Bbk">
                             <color key="tintColor" red="0.1588665843" green="0.5486382246" blue="0.70558029410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="loadNextAd:" destination="fkB-CC-Szz" id="udI-ww-9xb"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="TKK-7S-L4z"/>
                     </toolbarItems>

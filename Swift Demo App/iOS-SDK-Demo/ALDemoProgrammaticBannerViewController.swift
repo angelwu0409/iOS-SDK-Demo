@@ -48,6 +48,8 @@ class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoad
     @IBAction func loadNextAd(_ sender: UIBarButtonItem)
     {
         adView.loadNextAd()
+
+        sender.isEnabled = false
     }
     
     // MARK: Ad Load Delegate
@@ -61,6 +63,8 @@ class ALDemoProgrammaticBannerViewController: ALDemoBaseViewController, ALAdLoad
     {
         // Look at ALErrorCodes.h for list of error codes
         self.log("Banner failed to load with error code \(code)")
+        
+        loadButton.isEnabled = true
     }
     
     // MARK: Ad Display Delegate

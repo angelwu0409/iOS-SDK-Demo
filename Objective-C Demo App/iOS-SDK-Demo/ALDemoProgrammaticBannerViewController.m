@@ -57,6 +57,8 @@ static const CGFloat kBannerHeight = 50.0f;
 - (IBAction)loadNextAd:(UIBarButtonItem *)sender
 {
     [self.adView loadNextAd];
+
+    sender.enabled = NO;
 }
 
 #pragma mark - Ad Load Delegate
@@ -70,6 +72,8 @@ static const CGFloat kBannerHeight = 50.0f;
 {
     // Look at ALErrorCodes.h for list of error codes
     [self log: @"Banner failed to load with error code = %d", code];
+
+    self.loadButton.enabled = YES;
 }
 
 #pragma mark - Ad Display Delegate
