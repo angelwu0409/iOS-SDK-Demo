@@ -73,7 +73,7 @@ static const CGFloat kLeaderHeight = 90.0f;
     // Look at ALErrorCodes.h for list of error codes
     [self log: @"Leader failed to load with error code = %d", code];
 
-    self.loadButton.enabled = YES
+    self.loadButton.enabled = YES;
 }
 
 #pragma mark - Ad Display Delegate
