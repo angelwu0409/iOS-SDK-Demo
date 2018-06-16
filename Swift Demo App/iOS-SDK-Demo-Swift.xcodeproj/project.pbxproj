@@ -718,6 +718,7 @@
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
+					"$(inherited)",
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.applovin.apps.demoapp;
@@ -750,6 +751,7 @@
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
+					"$(inherited)",
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.applovin.apps.demoapp;

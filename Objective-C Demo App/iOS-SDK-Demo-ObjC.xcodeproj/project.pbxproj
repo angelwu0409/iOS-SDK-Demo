@@ -778,7 +778,10 @@
 					"$(PROJECT_DIR)/iOS-SDK-Demo",
 					"$(PROJECT_DIR)",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.applovin.apps.demoapp;
 				PRODUCT_NAME = "iOS-SDK-Demo-ObjC";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -811,7 +814,10 @@
 					"$(PROJECT_DIR)/iOS-SDK-Demo",
 					"$(PROJECT_DIR)",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.applovin.apps.demoapp;
 				PRODUCT_NAME = "iOS-SDK-Demo-ObjC";
 				TARGETED_DEVICE_FAMILY = "1,2";
