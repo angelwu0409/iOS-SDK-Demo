@@ -1,0 +1,17 @@
+# Sources
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+# Settings
+
+platform :ios, '8.0'
+use_frameworks!
+inhibit_all_warnings!
+
+# Pods
+
+target 'iOS-SDK-Demo-Swift' do
+
+pod 'AppLovinSDK'
+
+end
