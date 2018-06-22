@@ -57,7 +57,6 @@
 		1D72215A1BB6285800FE1B91 /* ALDemoNativeAdFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7221591BB6285800FE1B91 /* ALDemoNativeAdFeedTableViewController.swift */; };
 		1DA2DE0F1E6D698C00FCC9B1 /* ALDemoProgrammaticBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DE0E1E6D698C00FCC9B1 /* ALDemoProgrammaticBannerViewController.swift */; };
 		1DA2DE111E6D699B00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DE101E6D699B00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.swift */; };
-		1DA2DE141E6D69AE00FCC9B1 /* ALDemoProgrammaticMRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA2DE131E6D69AE00FCC9B1 /* ALDemoProgrammaticMRecViewController.swift */; };
 		1DCFE4A41BBA14220022ACD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7220931BB6086100FE1B91 /* LaunchScreen.storyboard */; };
 		1DDB3A071BF5815D002561A0 /* ALCarouselMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A061BF5815D002561A0 /* ALCarouselMediaView.m */; };
 		1DDB3A0D1BF58272002561A0 /* ALDemoRSSFeedRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3A0A1BF58272002561A0 /* ALDemoRSSFeedRetriever.m */; };
@@ -69,6 +68,11 @@
 		DD65BFDB1F15AAC300F60067 /* Banners.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFDA1F15AAC300F60067 /* Banners.storyboard */; };
 		DD65BFDD1F15AAD900F60067 /* MRecs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFDC1F15AAD900F60067 /* MRecs.storyboard */; };
 		DDDBAD0A1EE5CE2B00666518 /* ALEventTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBAD091EE5CE2B00666518 /* ALEventTrackingViewController.swift */; };
+		DF45848620D97D7F00DA593F /* ALDemoInterstitialZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45848520D97D7F00DA593F /* ALDemoInterstitialZoneViewController.swift */; };
+		DF45848820D980BF00DA593F /* Incentivized.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF45848720D980BF00DA593F /* Incentivized.storyboard */; };
+		DF45848A20D9915C00DA593F /* ALDemoRewardedVideosZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45848920D9915C00DA593F /* ALDemoRewardedVideosZoneViewController.swift */; };
+		DF45848C20D995AD00DA593F /* ALDemoBannerZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF45848B20D995AD00DA593F /* ALDemoBannerZoneViewController.swift */; };
+		DFC492D220DAE75B0096F13C /* ALDemoProgrammaticMRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC492D020DAE75B0096F13C /* ALDemoProgrammaticMRecViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,7 +142,6 @@
 		1D7221591BB6285800FE1B91 /* ALDemoNativeAdFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoNativeAdFeedTableViewController.swift; sourceTree = "<group>"; };
 		1DA2DE0E1E6D698C00FCC9B1 /* ALDemoProgrammaticBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoProgrammaticBannerViewController.swift; sourceTree = "<group>"; };
 		1DA2DE101E6D699B00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoInterfaceBuilderBannerViewController.swift; sourceTree = "<group>"; };
-		1DA2DE131E6D69AE00FCC9B1 /* ALDemoProgrammaticMRecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoProgrammaticMRecViewController.swift; sourceTree = "<group>"; };
 		1DDB3A051BF5815D002561A0 /* ALCarouselMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALCarouselMediaView.h; path = "Native Ads Carousel/ALCarouselMediaView.h"; sourceTree = "<group>"; };
 		1DDB3A061BF5815D002561A0 /* ALCarouselMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALCarouselMediaView.m; path = "Native Ads Carousel/ALCarouselMediaView.m"; sourceTree = "<group>"; };
 		1DDB3A091BF58272002561A0 /* ALDemoRSSFeedRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoRSSFeedRetriever.h; sourceTree = "<group>"; };
@@ -152,6 +155,11 @@
 		DD65BFDA1F15AAC300F60067 /* Banners.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Banners.storyboard; sourceTree = "<group>"; };
 		DD65BFDC1F15AAD900F60067 /* MRecs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MRecs.storyboard; sourceTree = "<group>"; };
 		DDDBAD091EE5CE2B00666518 /* ALEventTrackingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALEventTrackingViewController.swift; sourceTree = "<group>"; };
+		DF45848520D97D7F00DA593F /* ALDemoInterstitialZoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALDemoInterstitialZoneViewController.swift; sourceTree = "<group>"; };
+		DF45848720D980BF00DA593F /* Incentivized.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Incentivized.storyboard; sourceTree = "<group>"; };
+		DF45848920D9915C00DA593F /* ALDemoRewardedVideosZoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALDemoRewardedVideosZoneViewController.swift; sourceTree = "<group>"; };
+		DF45848B20D995AD00DA593F /* ALDemoBannerZoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALDemoBannerZoneViewController.swift; sourceTree = "<group>"; };
+		DFC492D020DAE75B0096F13C /* ALDemoProgrammaticMRecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALDemoProgrammaticMRecViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				DDDBAD081EE5CCB900666518 /* Event Tracking */,
-				1DA2DE121E6D699F00FCC9B1 /* MRecs */,
+				DFC492D420DAE7750096F13C /* MRecs */,
 				1DA2DE051E6D644000FCC9B1 /* Banners */,
 				632451F12076DFEC00D80A74 /* Leaders */,
 				1D7220CB1BB60BF200FE1B91 /* Interstitials */,
@@ -243,6 +251,7 @@
 				DD65BFDA1F15AAC300F60067 /* Banners.storyboard */,
 				632451F92076EE2000D80A74 /* Leaders.storyboard */,
 				DD65BFD81F15AA9100F60067 /* Interstitials.storyboard */,
+				DF45848720D980BF00DA593F /* Incentivized.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -252,6 +261,7 @@
 			children = (
 				1D72212F1BB6174200FE1B91 /* Basic Integration */,
 				1D7221351BB619E500FE1B91 /* Manual Loading */,
+				DF45848220D888B200DA593F /* Zone Integration */,
 			);
 			name = Interstitials;
 			sourceTree = "<group>";
@@ -260,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				1D7221381BB61B0100FE1B91 /* ALDemoRewardedVideosViewController.swift */,
+				DF45848920D9915C00DA593F /* ALDemoRewardedVideosZoneViewController.swift */,
 			);
 			name = "Rewarded/Incentivized Videos";
 			sourceTree = "<group>";
@@ -400,16 +411,9 @@
 			children = (
 				1DA2DE0E1E6D698C00FCC9B1 /* ALDemoProgrammaticBannerViewController.swift */,
 				1DA2DE101E6D699B00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.swift */,
+				DF45848B20D995AD00DA593F /* ALDemoBannerZoneViewController.swift */,
 			);
 			name = Banners;
-			sourceTree = "<group>";
-		};
-		1DA2DE121E6D699F00FCC9B1 /* MRecs */ = {
-			isa = PBXGroup;
-			children = (
-				1DA2DE131E6D69AE00FCC9B1 /* ALDemoProgrammaticMRecViewController.swift */,
-			);
-			name = MRecs;
 			sourceTree = "<group>";
 		};
 		1DA5821A1BB9BF6A00497A94 /* Customizable SETTINGS */ = {
@@ -455,6 +459,22 @@
 			name = "Event Tracking";
 			sourceTree = "<group>";
 		};
+		DF45848220D888B200DA593F /* Zone Integration */ = {
+			isa = PBXGroup;
+			children = (
+				DF45848520D97D7F00DA593F /* ALDemoInterstitialZoneViewController.swift */,
+			);
+			name = "Zone Integration";
+			sourceTree = "<group>";
+		};
+		DFC492D420DAE7750096F13C /* MRecs */ = {
+			isa = PBXGroup;
+			children = (
+				DFC492D020DAE75B0096F13C /* ALDemoProgrammaticMRecViewController.swift */,
+			);
+			name = MRecs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -487,7 +507,6 @@
 				TargetAttributes = {
 					1D7220861BB6086100FE1B91 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = X8JXXK4FF5;
 						LastSwiftMigration = 0810;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
@@ -532,6 +551,7 @@
 				1D7220A81BB609A300FE1B91 /* Images.xcassets in Resources */,
 				1D7220F51BB60C4A00FE1B91 /* Star_Sprite_2.5.png in Resources */,
 				DD65BFDD1F15AAD900F60067 /* MRecs.storyboard in Resources */,
+				DF45848820D980BF00DA593F /* Incentivized.storyboard in Resources */,
 				1D7220F61BB60C4A00FE1B91 /* Star_Sprite_3.png in Resources */,
 				1D7220FC1BB60C4A00FE1B91 /* applovin_card_muted.png in Resources */,
 				1D7220F71BB60C4A00FE1B91 /* Star_Sprite_3.5.png in Resources */,
@@ -555,9 +575,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DA2DE0F1E6D698C00FCC9B1 /* ALDemoProgrammaticBannerViewController.swift in Sources */,
+				DFC492D220DAE75B0096F13C /* ALDemoProgrammaticMRecViewController.swift in Sources */,
 				632451F52076E05900D80A74 /* ALDemoInterfaceBuilderLeaderViewController.swift in Sources */,
 				1D72210A1BB60C4F00FE1B91 /* ALCarouselCardView.m in Sources */,
 				1D72212C1BB60D5500FE1B91 /* ALDemoRootViewController.swift in Sources */,
+				DF45848A20D9915C00DA593F /* ALDemoRewardedVideosZoneViewController.swift in Sources */,
 				1D7220DB1BB60C3000FE1B91 /* ALCarouselCardState.m in Sources */,
 				1D7220DC1BB60C3000FE1B91 /* ALCarouselViewModel.m in Sources */,
 				1D7220C91BB60ABF00FE1B91 /* ALDemoBaseViewController.swift in Sources */,
@@ -568,14 +590,15 @@
 				1D7221371BB619F600FE1B91 /* ALDemoInterstitialManualLoadingViewController.swift in Sources */,
 				1DDB3A0D1BF58272002561A0 /* ALDemoRSSFeedRetriever.m in Sources */,
 				1D7221121BB60C5700FE1B91 /* UIView+ALActivityIndicator.m in Sources */,
+				DF45848C20D995AD00DA593F /* ALDemoBannerZoneViewController.swift in Sources */,
 				1DDB3A0E1BF58272002561A0 /* ALDemoArticle.m in Sources */,
+				DF45848620D97D7F00DA593F /* ALDemoInterstitialZoneViewController.swift in Sources */,
 				1D72208B1BB6086100FE1B91 /* AppDelegate.swift in Sources */,
 				DDDBAD0A1EE5CE2B00666518 /* ALEventTrackingViewController.swift in Sources */,
 				1DA2DE111E6D699B00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.swift in Sources */,
 				1D7221581BB61F8C00FE1B91 /* ALDemoNativeAdProgrammaticViewController.swift in Sources */,
 				1D72210D1BB60C4F00FE1B91 /* ALCarouselView.m in Sources */,
 				1D72210E1BB60C4F00FE1B91 /* ALNativeAdVideoView.m in Sources */,
-				1DA2DE141E6D69AE00FCC9B1 /* ALDemoProgrammaticMRecViewController.swift in Sources */,
 				1D72215A1BB6285800FE1B91 /* ALDemoNativeAdFeedTableViewController.swift in Sources */,
 				1D7221391BB61B0100FE1B91 /* ALDemoRewardedVideosViewController.swift in Sources */,
 				632451F32076E00F00D80A74 /* ALDemoProgrammaticLeaderViewController.swift in Sources */,
@@ -703,7 +726,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = X8JXXK4FF5;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -736,7 +759,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = X8JXXK4FF5;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

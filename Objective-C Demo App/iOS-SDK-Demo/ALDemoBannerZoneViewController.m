@@ -1,12 +1,12 @@
 //
-//  ALDemoProgrammaticBannerViewController.m
+//  ALDemoBannerZoneViewController.m
 //  iOS-SDK-Demo-ObjC
 //
-//  Created by Thomas So on 3/5/17.
-//  Copyright © 2017 AppLovin. All rights reserved.
+//  Created by Suyash Saxena on 6/19/18.
+//  Copyright © 2018 AppLovin. All rights reserved.
 //
 
-#import "ALDemoProgrammaticBannerViewController.h"
+#import "ALDemoBannerZoneViewController.h"
 
 #if __has_include(<AppLovinSDK/AppLovinSDK.h>)
     #import <AppLovinSDK/AppLovinSDK.h>
@@ -14,12 +14,13 @@
     #import "ALAdView.h"
 #endif
 
-@interface ALDemoProgrammaticBannerViewController() <ALAdLoadDelegate, ALAdDisplayDelegate, ALAdViewEventDelegate>
+@interface ALDemoBannerZoneViewController() <ALAdLoadDelegate, ALAdDisplayDelegate, ALAdViewEventDelegate>
 @property (nonatomic, strong) ALAdView *adView;
 @property (nonatomic,   weak) IBOutlet UIBarButtonItem *loadButton;
 @end
 
-@implementation ALDemoProgrammaticBannerViewController
+@implementation ALDemoBannerZoneViewController
+
 static const CGFloat kBannerHeight = 50.0f;
 
 #pragma mark - View Lifecycle
@@ -29,7 +30,7 @@ static const CGFloat kBannerHeight = 50.0f;
     [super viewDidAppear: animated];
     
     // Create the banner view
-    self.adView = [[ALAdView alloc] initWithSize: [ALAdSize sizeBanner]];
+    self.adView = [[ALAdView alloc] initWithSize: [ALAdSize sizeBanner] zoneIdentifier: @"YOUR_ZONE_ID"];
     
     // Optional: Implement the ad delegates to receive ad events.
     self.adView.adLoadDelegate = self;
@@ -57,7 +58,7 @@ static const CGFloat kBannerHeight = 50.0f;
 - (IBAction)loadNextAd:(UIBarButtonItem *)sender
 {
     [self.adView loadNextAd];
-
+    
     sender.enabled = NO;
 }
 
@@ -72,7 +73,7 @@ static const CGFloat kBannerHeight = 50.0f;
 {
     // Look at ALErrorCodes.h for list of error codes
     [self log: @"Banner failed to load with error code = %d", code];
-
+    
     self.loadButton.enabled = YES;
 }
 

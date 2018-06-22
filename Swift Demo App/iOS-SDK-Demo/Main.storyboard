@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xGH-dd-nBf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xGH-dd-nBf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -96,7 +96,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="NS1-0R-0Fu" kind="show" id="6cQ-R2-nkr"/>
+                                            <segue destination="0Ac-LN-NPT" kind="show" id="duc-3I-ZP5"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rootPrototype" textLabel="Cmg-2W-qmF" detailTextLabel="qET-id-j8X" style="IBUITableViewCellStyleSubtitle" id="OmD-lv-7PS">
@@ -305,111 +305,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vgz-9w-PiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-34" y="-96"/>
-        </scene>
-        <!--Rewarded Videos-->
-        <scene sceneID="YMH-Kd-e3L">
-            <objects>
-                <viewController id="NS1-0R-0Fu" customClass="ALDemoRewardedVideosViewController" customModule="iOS_SDK_Demo_Swift" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ftk-vp-zmK"/>
-                        <viewControllerLayoutGuide type="bottom" id="YEV-no-mk4"/>
-                    </layoutGuides>
-                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="vXD-cI-Zd1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ze8-oz-j9z">
-                                <rect key="frame" x="41" y="269.5" width="293.5" height="128"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to load ads." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6b-of-mNe">
-                                        <rect key="frame" x="0.0" y="0.0" width="293.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKf-6b-W00">
-                                        <rect key="frame" x="0.0" y="34" width="293.5" height="94"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="You must turn ">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="ON">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content"> "Rewarded Videos" in AppLovin dashboard.
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">
-Please allow at least 30 minutes for the changes to fully propagate.</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="ZKf-6b-W00" firstAttribute="leading" secondItem="Ze8-oz-j9z" secondAttribute="leading" id="6xS-oV-e5K"/>
-                                    <constraint firstItem="y6b-of-mNe" firstAttribute="top" secondItem="Ze8-oz-j9z" secondAttribute="top" id="P1c-BX-3fA"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZKf-6b-W00" secondAttribute="bottom" id="U5q-l7-Hnv"/>
-                                    <constraint firstItem="ZKf-6b-W00" firstAttribute="top" secondItem="y6b-of-mNe" secondAttribute="bottom" constant="10" id="cDv-Gu-2un"/>
-                                    <constraint firstItem="y6b-of-mNe" firstAttribute="leading" secondItem="Ze8-oz-j9z" secondAttribute="leading" id="d2V-ui-FbC"/>
-                                    <constraint firstAttribute="trailing" secondItem="y6b-of-mNe" secondAttribute="trailing" id="kNx-Zp-VjQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZKf-6b-W00" secondAttribute="trailing" id="rdI-7c-SzU"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Ze8-oz-j9z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vXD-cI-Zd1" secondAttribute="leadingMargin" id="BsO-bA-Ftc"/>
-                            <constraint firstItem="Ze8-oz-j9z" firstAttribute="centerX" secondItem="vXD-cI-Zd1" secondAttribute="centerX" id="ENE-Fl-lUu"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Ze8-oz-j9z" secondAttribute="trailing" id="EcZ-nT-II4"/>
-                            <constraint firstItem="Ze8-oz-j9z" firstAttribute="centerY" secondItem="vXD-cI-Zd1" secondAttribute="centerY" id="zM2-1J-190"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems>
-                        <barButtonItem title="Preload" id="TtH-jH-5aM">
-                            <color key="tintColor" red="0.039215686270000001" green="0.51372549020000002" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="preloadRewardedVideo:" destination="NS1-0R-0Fu" id="68Y-xv-rpr"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem systemItem="flexibleSpace" id="FhG-o4-Gfj">
-                            <color key="tintColor" red="0.039215686270000001" green="0.51372549020000002" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                        <barButtonItem title="Show if Ready" id="0ZB-o4-uU6">
-                            <color key="tintColor" red="0.039215686270000001" green="0.51372549020000002" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="showRewardedVideo:" destination="NS1-0R-0Fu" id="QTv-6n-DJ0"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Rewarded Videos" id="uuF-hI-6Pe"/>
-                    <connections>
-                        <outlet property="adStatusLabel" destination="y6b-of-mNe" id="bDb-zh-D6F"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MAp-r3-jxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="685" y="-770"/>
         </scene>
         <!--Native Ads-->
         <scene sceneID="EDA-QI-XPv">
@@ -915,6 +810,14 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdZ-LF-x0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="684" y="611"/>
+        </scene>
+        <!--Incentivized-->
+        <scene sceneID="PjY-jN-SBD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Incentivized" id="0Ac-LN-NPT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="puQ-8F-PiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="-1153"/>
         </scene>
     </scenes>
     <resources>

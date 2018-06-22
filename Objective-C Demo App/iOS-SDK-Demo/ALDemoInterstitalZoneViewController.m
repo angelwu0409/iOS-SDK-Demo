@@ -1,12 +1,12 @@
 //
-//  ALDemoInterstitialManualLoadingViewController.m
-//  iOS-SDK-Demo
+//  ALDemoInterstitalZoneViewController.m
+//  iOS-SDK-Demo-ObjC
 //
-//  Created by Thomas So on 9/25/15.
-//  Copyright © 2015 AppLovin. All rights reserved.
+//  Created by Suyash Saxena on 6/19/18.
+//  Copyright © 2018 AppLovin. All rights reserved.
 //
 
-#import "ALDemoInterstitialManualLoadingViewController.h"
+#import "ALDemoInterstitalZoneViewController.h"
 
 #if __has_include(<AppLovinSDK/AppLovinSDK.h>)
     #import <AppLovinSDK/AppLovinSDK.h>
@@ -14,17 +14,17 @@
     #import "ALInterstitialAd.h"
 #endif
 
-@interface ALDemoInterstitialManualLoadingViewController()<ALAdLoadDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate>
+@interface ALDemoInterstitalZoneViewController ()<ALAdLoadDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate>
 @property (nonatomic, strong) ALAd *ad;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *showButton;
 @end
 
-@implementation ALDemoInterstitialManualLoadingViewController
+@implementation ALDemoInterstitalZoneViewController
 
 - (IBAction)loadInterstitial:(id)sender
 {
     [self log: @"Interstitial loading..."];
-    [[ALSdk shared].adService loadNextAd: [ALAdSize sizeInterstitial] andNotify: self];
+    [[ALSdk shared].adService loadNextAdForZoneIdentifier: @"YOUR_ZONE_ID" andNotify: self];
 }
 
 - (IBAction)showInterstitial:(id)sender

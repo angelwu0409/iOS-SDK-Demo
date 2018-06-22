@@ -77,31 +77,31 @@ class ALDemoProgrammaticMRecViewController: ALDemoBaseViewController, ALAdLoadDe
     
     func ad(_ ad: ALAd, didPresentFullscreenFor adView: ALAdView)
     {
-        self.log("Banner did present fullscreen")
+        self.log("MRec did present fullscreen")
     }
     
     func ad(_ ad: ALAd, willDismissFullscreenFor adView: ALAdView)
     {
-        self.log("Banner will dismiss fullscreen")
+        self.log("MRec will dismiss fullscreen")
     }
     
     func ad(_ ad: ALAd, didDismissFullscreenFor adView: ALAdView)
     {
-        self.log("Banner did dismiss fullscreen")
+        self.log("MRec did dismiss fullscreen")
     }
     
     func ad(_ ad: ALAd, willLeaveApplicationFor adView: ALAdView)
     {
-        self.log("Banner will leave application")
+        self.log("MRec will leave application")
     }
     
     func ad(_ ad: ALAd, didReturnToApplicationFor adView: ALAdView)
     {
-        self.log("Banner did return to application")
+        self.log("MRec did return to application")
     }
     
     func ad(_ ad: ALAd, didFailToDisplayIn adView: ALAdView, withError code: ALAdViewDisplayErrorCode)
     {
-        self.log("Banner did fail to display with error code: \(code)")
+        self.log("MRec did fail to display with error code: \(code)")
     }
 }

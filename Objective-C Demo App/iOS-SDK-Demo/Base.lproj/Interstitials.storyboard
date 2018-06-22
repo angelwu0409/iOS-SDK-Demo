@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14087.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QYQ-e9-5uQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QYQ-e9-5uQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14075.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -74,6 +74,33 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="lTK-Oi-Niw" kind="show" id="sXo-g3-tHB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rootPrototype" textLabel="yr0-fW-1cq" detailTextLabel="RwM-ea-NwJ" style="IBUITableViewCellStyleSubtitle" id="e6y-XR-Crq">
+                                        <rect key="frame" x="0.0" y="123" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e6y-XR-Crq" id="ShV-sX-Wo3">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Zone Integration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yr0-fW-1cq">
+                                                    <rect key="frame" x="16" y="6" width="119.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Create different user experiences of the same ad type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RwM-ea-NwJ">
+                                                    <rect key="frame" x="16" y="25.5" width="283" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="0Is-Rg-8T1" kind="show" id="Lnn-5a-YQf"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -184,6 +211,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAg-YI-cJA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2074" y="-1434"/>
+        </scene>
+        <!--Zone Integration-->
+        <scene sceneID="u5K-NW-WGg">
+            <objects>
+                <viewController title="Zone Integration" id="0Is-Rg-8T1" customClass="ALDemoInterstitalZoneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oG8-Tp-M4g"/>
+                        <viewControllerLayoutGuide type="bottom" id="KQC-zW-FyG"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="BTl-8b-hyE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to load ads." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiq-OT-Ifl">
+                                <rect key="frame" x="103.5" y="321.5" width="168" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qiq-OT-Ifl" firstAttribute="centerX" secondItem="BTl-8b-hyE" secondAttribute="centerX" id="IKw-fG-Kln"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Qiq-OT-Ifl" secondAttribute="trailing" id="c3n-e3-tSQ"/>
+                            <constraint firstItem="Qiq-OT-Ifl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BTl-8b-hyE" secondAttribute="leadingMargin" id="iPC-EK-1Do"/>
+                            <constraint firstItem="Qiq-OT-Ifl" firstAttribute="centerY" secondItem="BTl-8b-hyE" secondAttribute="centerY" id="itL-b8-Tns"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Load" id="3kg-rH-Xib">
+                            <color key="tintColor" red="0.039215686270000001" green="0.51372549020000002" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="loadInterstitial:" destination="0Is-Rg-8T1" id="uCp-Eq-zYS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="NNk-D0-ekY"/>
+                        <barButtonItem enabled="NO" title="Show" id="9eV-gt-OE8">
+                            <color key="tintColor" red="0.039215686270000001" green="0.51372549020000002" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="showInterstitial:" destination="0Is-Rg-8T1" id="uSj-TC-duR"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Zone Integration" id="7Ov-dw-SzA"/>
+                    <connections>
+                        <outlet property="adStatusLabel" destination="Qiq-OT-Ifl" id="IV9-7z-OPo"/>
+                        <outlet property="showButton" destination="9eV-gt-OE8" id="d6M-te-ni9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HpW-Ve-h9F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2766" y="-1434"/>
         </scene>
     </scenes>
 </document>

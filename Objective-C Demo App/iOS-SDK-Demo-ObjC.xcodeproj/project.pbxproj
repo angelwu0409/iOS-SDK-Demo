@@ -71,6 +71,10 @@
 		DD65BFE21F15AC7800F60067 /* Banners.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFE11F15AC7800F60067 /* Banners.storyboard */; };
 		DD65BFE51F15AC8E00F60067 /* MRecs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFE31F15AC8E00F60067 /* MRecs.storyboard */; };
 		DDDBAD0E1EE60A0100666518 /* ALEventTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDBAD0D1EE60A0100666518 /* ALEventTrackingViewController.m */; };
+		DF45849720D9C4AB00DA593F /* ALDemoInterstitalZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF45849620D9C4AB00DA593F /* ALDemoInterstitalZoneViewController.m */; };
+		DF45849920D9C73B00DA593F /* Incentivized.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF45849820D9C73B00DA593F /* Incentivized.storyboard */; };
+		DFC492C320D9CB5E0096F13C /* ALDemoRewardedVideosZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC492C220D9CB5E0096F13C /* ALDemoRewardedVideosZoneViewController.m */; };
+		DFC492C620D9CF5A0096F13C /* ALDemoBannerZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC492C520D9CF5A0096F13C /* ALDemoBannerZoneViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,6 +175,13 @@
 		DD65BFE41F15AC8E00F60067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MRecs.storyboard; sourceTree = "<group>"; };
 		DDDBAD0C1EE60A0100666518 /* ALEventTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALEventTrackingViewController.h; sourceTree = "<group>"; };
 		DDDBAD0D1EE60A0100666518 /* ALEventTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALEventTrackingViewController.m; sourceTree = "<group>"; };
+		DF45849520D9C4AB00DA593F /* ALDemoInterstitalZoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDemoInterstitalZoneViewController.h; sourceTree = "<group>"; };
+		DF45849620D9C4AB00DA593F /* ALDemoInterstitalZoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDemoInterstitalZoneViewController.m; sourceTree = "<group>"; };
+		DF45849820D9C73B00DA593F /* Incentivized.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Incentivized.storyboard; sourceTree = "<group>"; };
+		DFC492C120D9CB5E0096F13C /* ALDemoRewardedVideosZoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDemoRewardedVideosZoneViewController.h; sourceTree = "<group>"; };
+		DFC492C220D9CB5E0096F13C /* ALDemoRewardedVideosZoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDemoRewardedVideosZoneViewController.m; sourceTree = "<group>"; };
+		DFC492C420D9CF5A0096F13C /* ALDemoBannerZoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDemoBannerZoneViewController.h; sourceTree = "<group>"; };
+		DFC492C520D9CF5A0096F13C /* ALDemoBannerZoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDemoBannerZoneViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +230,7 @@
 			children = (
 				1D09FCAB1BB5DC5800001083 /* Basic Integration */,
 				1D09FCAD1BB5DC8400001083 /* Manual loading */,
+				DF45849420D9C42300DA593F /* Zone Integration */,
 			);
 			name = Interstitials;
 			sourceTree = "<group>";
@@ -228,6 +240,8 @@
 			children = (
 				1D568BB41BB37BB900DB4849 /* ALDemoRewardedVideosViewController.h */,
 				1D568BB51BB37BB900DB4849 /* ALDemoRewardedVideosViewController.m */,
+				DFC492C120D9CB5E0096F13C /* ALDemoRewardedVideosZoneViewController.h */,
+				DFC492C220D9CB5E0096F13C /* ALDemoRewardedVideosZoneViewController.m */,
 			);
 			name = "Rewarded/Incentivized Videos";
 			sourceTree = "<group>";
@@ -324,21 +338,20 @@
 		1DA2DDFD1E6D497000FCC9B1 /* Banners */ = {
 			isa = PBXGroup;
 			children = (
-				1DA2DDFE1E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.h */,
-				1DA2DDFF1E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.m */,
-				1DA2DE011E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.h */,
-				1DA2DE021E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.m */,
+				DFC492CA20DACEA00096F13C /* Programmatic */,
+				DFC492CB20DACEAF0096F13C /* Interface Builder */,
+				DFC492CC20DACEBB0096F13C /* Zone Integration */,
 			);
 			name = Banners;
 			sourceTree = "<group>";
 		};
-		1DA2DE041E6D63E800FCC9B1 /* Mrecs */ = {
+		1DA2DE041E6D63E800FCC9B1 /* MRecs */ = {
 			isa = PBXGroup;
 			children = (
 				1DA2DE061E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.h */,
 				1DA2DE071E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.m */,
 			);
-			name = Mrecs;
+			name = MRecs;
 			sourceTree = "<group>";
 		};
 		1DA582191BB9BF4E00497A94 /* Customizable SETTINGS */ = {
@@ -438,6 +451,7 @@
 				DD65BFE11F15AC7800F60067 /* Banners.storyboard */,
 				63F279B220758FEC008BBA88 /* Leaders.storyboard */,
 				DD65BFDE1F15AC5F00F60067 /* Interstitials.storyboard */,
+				DF45849820D9C73B00DA593F /* Incentivized.storyboard */,
 				1D09FCBB1BB5F21B00001083 /* nav_logo@2x.png */,
 			);
 			name = "Supporting Files";
@@ -447,7 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				DDDBAD0B1EE609A900666518 /* Event Tracking */,
-				1DA2DE041E6D63E800FCC9B1 /* Mrecs */,
+				1DA2DE041E6D63E800FCC9B1 /* MRecs */,
 				1DA2DDFD1E6D497000FCC9B1 /* Banners */,
 				63F279B120758CF4008BBA88 /* Leaders */,
 				1D568BB01BB3790400DB4849 /* Interstitials */,
@@ -493,6 +507,42 @@
 			name = "Event Tracking";
 			sourceTree = "<group>";
 		};
+		DF45849420D9C42300DA593F /* Zone Integration */ = {
+			isa = PBXGroup;
+			children = (
+				DF45849520D9C4AB00DA593F /* ALDemoInterstitalZoneViewController.h */,
+				DF45849620D9C4AB00DA593F /* ALDemoInterstitalZoneViewController.m */,
+			);
+			name = "Zone Integration";
+			sourceTree = "<group>";
+		};
+		DFC492CA20DACEA00096F13C /* Programmatic */ = {
+			isa = PBXGroup;
+			children = (
+				1DA2DDFE1E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.h */,
+				1DA2DDFF1E6D498B00FCC9B1 /* ALDemoProgrammaticBannerViewController.m */,
+			);
+			name = Programmatic;
+			sourceTree = "<group>";
+		};
+		DFC492CB20DACEAF0096F13C /* Interface Builder */ = {
+			isa = PBXGroup;
+			children = (
+				1DA2DE011E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.h */,
+				1DA2DE021E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.m */,
+			);
+			name = "Interface Builder";
+			sourceTree = "<group>";
+		};
+		DFC492CC20DACEBB0096F13C /* Zone Integration */ = {
+			isa = PBXGroup;
+			children = (
+				DFC492C420D9CF5A0096F13C /* ALDemoBannerZoneViewController.h */,
+				DFC492C520D9CF5A0096F13C /* ALDemoBannerZoneViewController.m */,
+			);
+			name = "Zone Integration";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -524,7 +574,6 @@
 				ORGANIZATIONNAME = AppLovin;
 				TargetAttributes = {
 					2713D00918EDDD0C006218B2 = {
-						DevelopmentTeam = X8JXXK4FF5;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -558,6 +607,7 @@
 			files = (
 				63F279B320758FEC008BBA88 /* Leaders.storyboard in Resources */,
 				1D79131D1BB4A837006C6C60 /* Star_Sprite_0.5.png in Resources */,
+				DF45849920D9C73B00DA593F /* Incentivized.storyboard in Resources */,
 				1D7913241BB4A837006C6C60 /* Star_Sprite_4.png in Resources */,
 				1DC3E98D1BB321660093EF2A /* LaunchScreen.xib in Resources */,
 				1D79131F1BB4A837006C6C60 /* Star_Sprite_1.5.png in Resources */,
@@ -591,7 +641,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC492C620D9CF5A0096F13C /* ALDemoBannerZoneViewController.m in Sources */,
 				1D7912F01BB4813D006C6C60 /* ALCarouselCardState.m in Sources */,
+				DFC492C320D9CB5E0096F13C /* ALDemoRewardedVideosZoneViewController.m in Sources */,
 				1D7912F71BB48166006C6C60 /* UIView+ALActivityIndicator.m in Sources */,
 				1D568BB61BB37BB900DB4849 /* ALDemoRewardedVideosViewController.m in Sources */,
 				1D568BB31BB3792800DB4849 /* ALDemoBaseViewController.m in Sources */,
@@ -617,6 +669,7 @@
 				1D79132E1BB4A8FA006C6C60 /* ALDemoBaseTableViewController.m in Sources */,
 				1D7913021BB48173006C6C60 /* ALCarouselMediaView.m in Sources */,
 				1D09FCB01BB5DCDC00001083 /* ALDemoInterstitialManualLoadingViewController.m in Sources */,
+				DF45849720D9C4AB00DA593F /* ALDemoInterstitalZoneViewController.m in Sources */,
 				1DA2DE081E6D648900FCC9B1 /* ALDemoProgrammaticMRecViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,7 +813,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = X8JXXK4FF5;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -796,7 +849,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = X8JXXK4FF5;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

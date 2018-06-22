@@ -9,7 +9,4 @@
 #import "ALDemoBaseViewController.h"
 
 @interface ALDemoInterstitialManualLoadingViewController : ALDemoBaseViewController
-
-@property (nonatomic, strong) IBOutlet UIBarButtonItem *showButton;
-
 @end

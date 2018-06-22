@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14087.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QYQ-e9-5uQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QYQ-e9-5uQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14075.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -76,6 +76,33 @@
                                             <segue destination="lTK-Oi-Niw" kind="show" id="sXo-g3-tHB"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rootPrototype" textLabel="6Y5-BF-ugB" detailTextLabel="IRp-W0-jND" style="IBUITableViewCellStyleSubtitle" id="he3-Rf-SYi">
+                                        <rect key="frame" x="0.0" y="123" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="he3-Rf-SYi" id="Hwx-G5-MCE">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Zone Integration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Y5-BF-ugB">
+                                                    <rect key="frame" x="16" y="6" width="119.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Create different user experiences of the same ad type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IRp-W0-jND">
+                                                    <rect key="frame" x="16" y="25.5" width="283" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="u8R-na-K2Q" kind="show" id="WcB-8v-cGE"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -85,7 +112,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gga-VD-iwy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="685" y="-1434"/>
+            <point key="canvasLocation" x="471" y="-1441"/>
         </scene>
         <!--Single Instance-->
         <scene sceneID="IcT-sj-Qp7">
@@ -132,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFN-2y-mfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1381" y="-1434"/>
+            <point key="canvasLocation" x="2106" y="-1442"/>
         </scene>
         <!--Manual Loading-->
         <scene sceneID="o3v-S8-Lpr">
@@ -183,7 +210,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAg-YI-cJA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2068" y="-1434"/>
+            <point key="canvasLocation" x="1438" y="-1442"/>
+        </scene>
+        <!--Zone Integration-->
+        <scene sceneID="Vnl-R2-Lxr">
+            <objects>
+                <viewController title="Zone Integration" id="u8R-na-K2Q" customClass="ALDemoInterstitialZoneViewController" customModule="iOS_SDK_Demo_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mxz-aq-VPg"/>
+                        <viewControllerLayoutGuide type="bottom" id="7vW-a7-eoa"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="FzA-BN-X2I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to load ads." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yq-zl-glw">
+                                <rect key="frame" x="103.5" y="321.5" width="168" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Yq-zl-glw" firstAttribute="centerX" secondItem="FzA-BN-X2I" secondAttribute="centerX" id="0WA-0a-y0Y"/>
+                            <constraint firstItem="4Yq-zl-glw" firstAttribute="centerY" secondItem="FzA-BN-X2I" secondAttribute="centerY" id="9Ag-Bt-vdq"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="4Yq-zl-glw" secondAttribute="trailing" id="VFs-Dv-TRr"/>
+                            <constraint firstItem="4Yq-zl-glw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FzA-BN-X2I" secondAttribute="leadingMargin" id="hvt-fq-ee8"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Load" id="VAc-Vx-ros">
+                            <color key="tintColor" red="0.039215686270000001" green="0.51372549020000002" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="loadInterstitial:" destination="u8R-na-K2Q" id="cnO-e0-aj7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="afE-mA-VXt"/>
+                        <barButtonItem enabled="NO" title="Show" id="Smh-NM-HSg">
+                            <color key="tintColor" red="0.039215686270000001" green="0.51372549020000002" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="showInterstitial:" destination="u8R-na-K2Q" id="zK9-75-Sv0"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Zone Integration" id="lbJ-Xd-wCb"/>
+                    <connections>
+                        <outlet property="adStatusLabel" destination="4Yq-zl-glw" id="qtL-Ra-GWk"/>
+                        <outlet property="showButton" destination="Smh-NM-HSg" id="Qs5-aP-GHS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPi-gn-UsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2775" y="-1442"/>
         </scene>
     </scenes>
 </document>
