@@ -178,7 +178,7 @@ static NSString * const TAG = @"ALCarouselMediaView";
     if ( ad )
     {
         // If we get to this point, ad image is pre-cached
-        ALLog(@"Begin refresh media view for slot ID: %@ %@", ad.adIdNumber.stringValue, ad.title);
+        ALLog(@"Begin refresh media view for slot ID: %@ %@", ad.adIdNumber, ad.title);
         
         self.adImageView.userInteractionEnabled = YES;
         
@@ -221,7 +221,7 @@ static NSString * const TAG = @"ALCarouselMediaView";
             // Video is still pre-caching. Will show on top of ad image when pre-cached from carousel view
             else
             {
-                ALLog(@"Video still waiting to be pre-cached for slot (%@)...", ad.adIdNumber.stringValue);
+                ALLog(@"Video still waiting to be pre-cached for slot (%@)...", ad.adIdNumber);
             }
         }
         else
@@ -309,7 +309,7 @@ static NSString * const TAG = @"ALCarouselMediaView";
         // Track the video start if we didn't track it yet
         if ( !self.cardState.wasVideoStartTracked )
         {
-            ALLog(@"Tracking video start for native ad (%@)", self.ad.adIdNumber.stringValue);
+            ALLog(@"Tracking video start for native ad (%@)", self.ad.adIdNumber);
             [self.sdk.postbackService dispatchPostbackAsync: self.ad.videoStartTrackingURL andNotify: nil];
             
             self.cardState.videoStartTracked = YES;
@@ -335,7 +335,7 @@ static NSString * const TAG = @"ALCarouselMediaView";
 
 - (void)playerItemDidReachEnd:(NSNotification *)notification
 {
-    ALLog(@"Video finished playing for native ad (%@)", self.ad.adIdNumber.stringValue);
+    ALLog(@"Video finished playing for native ad (%@)", self.ad.adIdNumber);
     
     self.cardState.lastMediaPlayerPosition = 0.0f;
     self.cardState.videoCompleted          = YES;

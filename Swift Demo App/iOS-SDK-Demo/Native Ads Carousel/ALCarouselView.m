@@ -555,7 +555,7 @@ static NSInteger const kMidCardIndex = 2;
 
 - (void)nativeAdService:(nonnull ALNativeAdService *)service didPrecacheImagesForAd:(nonnull ALNativeAd *)ad
 {
-    ALLog(@"Finished pre-caching images for slot (%@). Rendering...", ad.adIdNumber.stringValue);
+    ALLog(@"Finished pre-caching images for slot (%@). Rendering...", ad.adIdNumber);
     
     const NSUInteger index = [self.carouselView.nativeAds indexOfObject: ad];
     
@@ -578,7 +578,7 @@ static NSInteger const kMidCardIndex = 2;
     }
     else
     {
-        ALLog(@"Finished pre-caching images for ad (%@). Card is not on screen, stashing...", ad.adIdNumber.stringValue);
+        ALLog(@"Finished pre-caching images for ad (%@). Card is not on screen, stashing...", ad.adIdNumber);
     }
 }
 
@@ -592,7 +592,7 @@ static NSInteger const kMidCardIndex = 2;
         // If video is loaded for a currently active ad, render the slot
         if ( index != NSNotFound && cardState.currentlyActive )
         {
-            ALLog(@"Finished pre-caching for slot (%@) with valid video in active card", ad.adIdNumber.stringValue);
+            ALLog(@"Finished pre-caching for slot (%@) with valid video in active card", ad.adIdNumber);
             
             const NSInteger cardIndex = [self cardIndexForAdIndex: index];
             ALCarouselCardView *cardView = self.carouselView.cardViews[cardIndex];
@@ -604,13 +604,13 @@ static NSInteger const kMidCardIndex = 2;
         }
         else
         {
-            ALLog(@"Finished pre-caching video for ad (%@). Card is not on screen, stashing...", ad.adIdNumber.stringValue);
+            ALLog(@"Finished pre-caching video for ad (%@). Card is not on screen, stashing...", ad.adIdNumber);
         }
     }
     else
     {
         // Finished pre-caching for slot without video
-        ALLog(@"Finished pre-caching for ad (%@) without video", ad.adIdNumber.stringValue);
+        ALLog(@"Finished pre-caching for ad (%@) without video", ad.adIdNumber);
     }
     
     [self.carouselView.carouselModel cardStateForNativeAd: ad].precaching = NO;
@@ -621,7 +621,7 @@ static NSInteger const kMidCardIndex = 2;
     // Have activity indicator remain on card
     [self.carouselView.carouselModel cardStateForNativeAd: ad].precaching = YES;
     
-    ALLog(@"Failed to precache images for ad (%@) with error code: %ld", ad.adIdNumber.stringValue, errorCode);
+    ALLog(@"Failed to precache images for ad (%@) with error code: %ld", ad.adIdNumber, errorCode);
 }
 
 - (void)nativeAdService:(nonnull ALNativeAdService *)service didFailToPrecacheVideoForAd:(nonnull ALNativeAd *)ad withError:(NSInteger)errorCode
@@ -629,7 +629,7 @@ static NSInteger const kMidCardIndex = 2;
     // If the slot already has its images pre-cached, it means video failed to pre-cache. Just ignore that
     [self.carouselView.carouselModel cardStateForNativeAd: ad].precaching = NO;
     
-    ALLog(@"Failed to precache video for ad (%@) with error code: %ld", ad.adIdNumber.stringValue, errorCode);
+    ALLog(@"Failed to precache video for ad (%@) with error code: %ld", ad.adIdNumber, errorCode);
 }
 
 #pragma mark - Utility

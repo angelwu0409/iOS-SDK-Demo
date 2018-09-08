@@ -254,7 +254,7 @@ static NSString *const TAG = @"ALCarouselCardView";
     // If there is ad, render
     if ( ad )
     {
-        ALLog(@"Refreshing ad (%@) for card view", ad.adIdNumber.stringValue);
+        ALLog(@"Refreshing ad (%@) for card view", ad.adIdNumber);
         
         self.titleLabel.text       = ad.title;
         self.descriptionLabel.text = ad.descriptionText;
@@ -266,7 +266,7 @@ static NSString *const TAG = @"ALCarouselCardView";
         // If the images are pre-cached, just render them
         if ( [ad isImagePrecached] )
         {
-            ALLog(@"Native ad (%@) is pre-cached. Refreshing image resources", ad.adIdNumber.stringValue);
+            ALLog(@"Native ad (%@) is pre-cached. Refreshing image resources", ad.adIdNumber);
             
 #pragma mark - Populate with appropriate stars asset depending on starRating
             self.appIcon.image = [UIImage imageWithData: [NSData dataWithContentsOfURL: ad.iconURL]]; // Local URL
@@ -313,12 +313,12 @@ static NSString *const TAG = @"ALCarouselCardView";
 {
     if ( self.ad && self.cardState )
     {
-        ALLog(@"Handling displaying of native ad (%@)", self.ad.adIdNumber.stringValue);
+        ALLog(@"Handling displaying of native ad (%@)", self.ad.adIdNumber);
         
         if ( !self.cardState.impressionTracked )
         {
             self.cardState.impressionTracked = YES;
-            ALLog(@"Tracking impression for ad (%@)", self.ad.adIdNumber.stringValue);
+            ALLog(@"Tracking impression for ad (%@)", self.ad.adIdNumber);
             [self.ad trackImpression];
         }
     }

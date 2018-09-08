@@ -31,6 +31,5 @@ class ALDemoBaseViewController: UIViewController
                 label.text = message
             }
         };
-        
     }
 }
