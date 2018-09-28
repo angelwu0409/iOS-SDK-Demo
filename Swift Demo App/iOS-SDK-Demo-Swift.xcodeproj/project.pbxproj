@@ -731,11 +731,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/iOS-SDK-Demo",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../iOS-SDK/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "iOS-SDK-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -764,11 +761,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/iOS-SDK-Demo",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../iOS-SDK/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "iOS-SDK-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
