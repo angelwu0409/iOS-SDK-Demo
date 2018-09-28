@@ -818,15 +818,11 @@
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/iOS-SDK-Demo",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../iOS-SDK/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS-SDK-Demo/iOS-SDK-Demo-ObjC-Prefix.pch";
 				GENERATE_MASTER_OBJECT_FILE = NO;
-				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../../AppLovin-iPhone-SDK/sdk/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "iOS-SDK-Demo/iOS-SDK-Demo-ObjC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -854,15 +850,11 @@
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/iOS-SDK-Demo",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../iOS-SDK/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS-SDK-Demo/iOS-SDK-Demo-ObjC-Prefix.pch";
 				GENERATE_MASTER_OBJECT_FILE = NO;
-				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../../AppLovin-iPhone-SDK/sdk/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "iOS-SDK-Demo/iOS-SDK-Demo-ObjC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
