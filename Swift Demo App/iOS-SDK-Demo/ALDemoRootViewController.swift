@@ -187,7 +187,7 @@ class ALDemoRootViewController: UITableViewController, MFMailComposeViewControll
         let style = NSMutableParagraphStyle()
         style.alignment = .center
         style.minimumLineHeight = 20
-        footer.attributedText = NSAttributedString(string: text, attributes: [NSAttributedStringKey.paragraphStyle : style])
+        footer.attributedText = NSAttributedString(string: text, attributes: [NSAttributedString.Key.paragraphStyle : style])
         
         var frame = footer.frame
         frame.size.height = footer.sizeThatFits(CGSize(width: footer.frame.width, height: CGFloat.greatestFiniteMagnitude)).height + 60
