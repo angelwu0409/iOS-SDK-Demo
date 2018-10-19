@@ -32,19 +32,19 @@
 /**
  *  Initializes a newly allocated carousel view object with the specified frame rectangle.
  */
--(nonnull instancetype) initWithFrame: (CGRect) frame;
+-(instancetype) initWithFrame: (CGRect) frame;
 
 /**
  *  Initializes a newly allocated carousel view object with the specified frame rectangle and sdk.
  */
--(nonnull instancetype) initWithFrame: (CGRect) frame sdk: (nonnull ALSdk *)sdk;
+-(instancetype) initWithFrame: (CGRect) frame sdk: (ALSdk *)sdk;
 
 /**
  *  Initializes a newly allocated carousel view object with the specified frame rectangle, sdk, and native ad(s) to display.
  */
--(nonnull instancetype) initWithFrame: (CGRect) frame sdk: (nonnull ALSdk *)sdk nativeAds: (nullable NSArray*) nativeAds;
+-(instancetype) initWithFrame: (CGRect) frame sdk: (ALSdk *)sdk nativeAds: (nullable NSArray*) nativeAds;
 
 
--(nonnull id) init __attribute__((unavailable("Use initWithFrame: or initWithFrame:sdk: or initWithFrame:sdk:nativeAds:")));
+-(id) init __attribute__((unavailable("Use initWithFrame: or initWithFrame:sdk: or initWithFrame:sdk:nativeAds:")));
 
 @end

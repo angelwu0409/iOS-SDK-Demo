@@ -13,10 +13,10 @@
 @protocol ALCarouselRenderingProtocol <NSObject>
 
 @optional
-- (void)renderViewForNativeAd:(nonnull ALNativeAd *)ad;
+- (void)renderViewForNativeAd:(ALNativeAd *)ad;
 
 @required
-- (void)renderViewForNativeAd:(nonnull ALNativeAd *)ad cardState:(nonnull ALCarouselCardState *)cardState;
+- (void)renderViewForNativeAd:(ALNativeAd *)ad cardState:(ALCarouselCardState *)cardState;
 
 /**
  *  Resets the current card's view properties.

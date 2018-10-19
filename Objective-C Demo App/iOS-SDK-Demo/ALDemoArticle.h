@@ -10,11 +10,11 @@
 
 @interface ALDemoArticle : NSObject
 
-@property (nonatomic,   copy, nonnull) NSString *title;
-@property (nonatomic,   copy, nonnull) NSString *pubDate;
-@property (nonatomic,   copy, nonnull) NSString *creator;
-@property (nonatomic,   copy, nonnull) NSString *articleDescription;
-@property (nonatomic, strong, nonnull) NSURL    *link;
+@property (nonatomic,   copy) NSString *title;
+@property (nonatomic,   copy) NSString *pubDate;
+@property (nonatomic,   copy) NSString *creator;
+@property (nonatomic,   copy) NSString *articleDescription;
+@property (nonatomic, strong) NSURL    *link;
 
 @property (nonatomic, assign) BOOL isAd;
 

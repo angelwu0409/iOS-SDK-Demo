@@ -196,7 +196,7 @@ static NSInteger const kMidCardIndex = 2;
 
 #pragma mark - Native Ad Load Delegate
 
-- (void)nativeAdService:(nonnull ALNativeAdService *)service didLoadAds:(nonnull NSArray *)ads
+- (void)nativeAdService:(ALNativeAdService *)service didLoadAds:(NSArray *)ads
 {
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         
@@ -217,7 +217,7 @@ static NSInteger const kMidCardIndex = 2;
     }];
 }
 
-- (void)nativeAdService:(nonnull ALNativeAdService *)service didFailToLoadAdsWithError:(NSInteger)code
+- (void)nativeAdService:(ALNativeAdService *)service didFailToLoadAdsWithError:(NSInteger)code
 {
     ALLog(@"Native ad service did fail to load native ad with error: %ld", code);
     
@@ -561,7 +561,7 @@ static NSInteger const kMidCardIndex = 2;
 
 #pragma mark - Precache Delegate Methods
 
-- (void)nativeAdService:(nonnull ALNativeAdService *)service didPrecacheImagesForAd:(nonnull ALNativeAd *)ad
+- (void)nativeAdService:(ALNativeAdService *)service didPrecacheImagesForAd:(ALNativeAd *)ad
 {
     ALLog(@"Finished pre-caching images for slot (%@). Rendering...", ad.adIdNumber);
     
@@ -590,7 +590,7 @@ static NSInteger const kMidCardIndex = 2;
     }
 }
 
-- (void)nativeAdService:(nonnull ALNativeAdService *)service didPrecacheVideoForAd:(nonnull ALNativeAd *)ad
+- (void)nativeAdService:(ALNativeAdService *)service didPrecacheVideoForAd:(ALNativeAd *)ad
 {
     if ( ad.videoURL )
     {
@@ -624,7 +624,7 @@ static NSInteger const kMidCardIndex = 2;
     [self.carouselView.carouselModel cardStateForNativeAd: ad].precaching = NO;
 }
 
-- (void)nativeAdService:(nonnull ALNativeAdService *)service didFailToPrecacheImagesForAd:(nonnull ALNativeAd *)ad withError:(NSInteger)errorCode
+- (void)nativeAdService:(ALNativeAdService *)service didFailToPrecacheImagesForAd:(ALNativeAd *)ad withError:(NSInteger)errorCode
 {
     // Have activity indicator remain on card
     [self.carouselView.carouselModel cardStateForNativeAd: ad].precaching = YES;
@@ -632,7 +632,7 @@ static NSInteger const kMidCardIndex = 2;
     ALLog(@"Failed to precache images for ad (%@) with error code: %ld", ad.adIdNumber, errorCode);
 }
 
-- (void)nativeAdService:(nonnull ALNativeAdService *)service didFailToPrecacheVideoForAd:(nonnull ALNativeAd *)ad withError:(NSInteger)errorCode
+- (void)nativeAdService:(ALNativeAdService *)service didFailToPrecacheVideoForAd:(ALNativeAd *)ad withError:(NSInteger)errorCode
 {
     // If the slot already has its images pre-cached, it means video failed to pre-cache. Just ignore that
     [self.carouselView.carouselModel cardStateForNativeAd: ad].precaching = NO;

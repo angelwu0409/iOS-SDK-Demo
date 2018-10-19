@@ -25,7 +25,7 @@
 static void* ALCarouselViewModelKVOContext = &ALCarouselViewModelKVOContext;
 static NSString* kKeypathMuteState = @"muteState";
 
--(nonnull instancetype) initWithNativeAds: (nonnull NSArray *)ads
+-(instancetype) initWithNativeAds: (NSArray *)ads
 {
     self = [super init];
     if ( self )
@@ -115,7 +115,7 @@ static NSString* kKeypathMuteState = @"muteState";
 
 -(void) updateMuteStates: (ALMuteState) newState
 {
-    [self.cardStates enumerateKeysAndObjectsUsingBlock:^(id  __nonnull key, id  __nonnull obj, BOOL * __nonnull stop) {
+    [self.cardStates enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         ALCarouselCardState* cardState = (ALCarouselCardState*) obj;
         [self endObservingCardState: cardState];
         cardState.muteState = newState;
@@ -123,7 +123,7 @@ static NSString* kKeypathMuteState = @"muteState";
     }];
 }
 
-- (ALCarouselCardState *)cardStateForNativeAd:(nonnull ALNativeAd *)ad
+- (ALCarouselCardState *)cardStateForNativeAd:(ALNativeAd *)ad
 {
     NSUInteger index = [self.nativeAds indexOfObject: ad];
     if ( index != NSNotFound )
@@ -159,7 +159,7 @@ static NSString* kKeypathMuteState = @"muteState";
 {
     self.nativeAds = nil;
     
-    [self.cardStates enumerateKeysAndObjectsUsingBlock:^(id  __nonnull key, id  __nonnull obj, BOOL * __nonnull stop) {
+    [self.cardStates enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         ALCarouselCardState* cardState = (ALCarouselCardState*) obj;
         [self endObservingCardState: cardState];
     }];

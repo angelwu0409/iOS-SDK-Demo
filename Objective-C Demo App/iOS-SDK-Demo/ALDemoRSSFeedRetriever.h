@@ -11,9 +11,9 @@
 
 @interface ALDemoRSSFeedRetriever : NSObject
 
-typedef void(^__nonnull ALDemoRSSFeedRetrieverBlock)(NSError *__nullable error, NSArray<ALDemoArticle *> *__nonnull articles);
+typedef void(^__nonnull ALDemoRSSFeedRetrieverBlock)(NSError *__nullable error, NSArray<ALDemoArticle *> *articles);
 
-+ (nonnull ALDemoRSSFeedRetriever *)sharedRetriever;
++ (ALDemoRSSFeedRetriever *)sharedRetriever;
 - (void)startParsingWithCompletion:(ALDemoRSSFeedRetrieverBlock)completion;
 
 @end

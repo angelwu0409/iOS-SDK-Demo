@@ -18,8 +18,8 @@
 @property (strong, nonatomic, readonly) NSArray* __nullable nativeAds;
 @property (assign, nonatomic, readonly) NSUInteger nativeAdsCount;
 
--(nonnull instancetype) initWithNativeAds: (nonnull NSArray *)ads;
--(nullable ALCarouselCardState*) cardStateForNativeAd: (nonnull ALNativeAd*) ad;
+-(instancetype) initWithNativeAds: (NSArray *)ads;
+-(nullable ALCarouselCardState*) cardStateForNativeAd: (ALNativeAd*) ad;
 -(nullable ALCarouselCardState*) cardStateAtNativeAdIndex: (NSUInteger) index;
 -(nullable ALNativeAd*) nativeAdAtIndex: (NSUInteger) index;
 

@@ -22,19 +22,19 @@
 /**
  *  The view containing the ad video or image.
  */
-@property (strong, nonatomic) ALCarouselMediaView* __nonnull  mediaView;
+@property (strong, nonatomic) ALCarouselMediaView *mediaView;
 
 /**
  *  Initializes a newly allocated card view object with the specified sdk
  */
-- (nonnull instancetype) initWithSdk:(nonnull ALSdk *)sdk;
+- (instancetype) initWithSdk:(ALSdk *)sdk;
 
 /**
  *  Redirects to the CTA for the given ad.
  *
  *  @param ad The ad with the CTA URL to redirect to.
  */
-- (void)handleClickForAd:(nonnull ALNativeAd *)ad;
+- (void)handleClickForAd:(ALNativeAd *)ad;
 
 /**
  Call this method when your view is displayed to the user.
@@ -45,7 +45,7 @@
 @property (strong, nonatomic)  UIActivityIndicatorView* __nullable  activityIndicator;
 @property (strong, nonatomic)  UIView*                  __nullable  activityIndicatorOverlay;
 
--(nonnull id) init                        __attribute__((unavailable("Use initWithSdk:parentView:")));
--(nonnull id) initWithFrame:(CGRect)frame __attribute__((unavailable("Use initWithSdk:parentView:")));
+-(id) init                        __attribute__((unavailable("Use initWithSdk:parentView:")));
+-(id) initWithFrame:(CGRect)frame __attribute__((unavailable("Use initWithSdk:parentView:")));
 
 @end

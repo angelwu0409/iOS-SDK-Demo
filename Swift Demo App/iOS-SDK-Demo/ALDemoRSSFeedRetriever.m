@@ -12,14 +12,14 @@
 @property (nonatomic,   copy, nullable) NSString      *currentElementName;
 @property (nonatomic, strong, nullable) ALDemoArticle *currentArticle;
 
-@property (nonatomic, strong, nonnull) NSMutableArray<ALDemoArticle *> *articles;
-@property (nonatomic,   copy, nonnull) ALDemoRSSFeedRetrieverBlock completionBlock;
+@property (nonatomic, strong) NSMutableArray<ALDemoArticle *> *articles;
+@property (nonatomic,   copy) ALDemoRSSFeedRetrieverBlock completionBlock;
 @end
 
 @implementation ALDemoRSSFeedRetriever
 static NSString *const kRSSFeedURL = @"https://blog.applovin.com/feed/";
 
-+ (nonnull ALDemoRSSFeedRetriever *)sharedRetriever
++ (ALDemoRSSFeedRetriever *)sharedRetriever
 {
     static dispatch_once_t pred;
     static ALDemoRSSFeedRetriever *manager = nil;

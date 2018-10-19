@@ -104,7 +104,7 @@
     [ad trackImpressionAndNotify: self];
 }
 
-- (void)postbackService:(nonnull ALPostbackService *)postbackService didExecutePostback:(nonnull NSURL *)postbackURL
+- (void)postbackService:(ALPostbackService *)postbackService didExecutePostback:(NSURL *)postbackURL
 {
     // Callbacks may not happen on main queue
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -113,7 +113,7 @@
     });
 }
 
-- (void)postbackService:(nonnull ALPostbackService *)postbackService didFailToExecutePostback:(nullable NSURL *)postbackURL errorCode:(NSInteger)errorCode
+- (void)postbackService:(ALPostbackService *)postbackService didFailToExecutePostback:(nullable NSURL *)postbackURL errorCode:(NSInteger)errorCode
 {
     // Callbacks may not happen on main queue
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -124,7 +124,7 @@
 
 #pragma mark - Native Ad Load Delegate
 
-- (void)nativeAdService:(nonnull ALNativeAdService *)service didLoadAds:(nonnull NSArray *)ads
+- (void)nativeAdService:(ALNativeAdService *)service didLoadAds:(NSArray *)ads
 {
     [self log: @"Native ad loaded, assets not retrieved yet."];
     
@@ -135,19 +135,19 @@
     });
 }
 
-- (void)nativeAdService:(nonnull ALNativeAdService *)service didFailToLoadAdsWithError:(NSInteger)code
+- (void)nativeAdService:(ALNativeAdService *)service didFailToLoadAdsWithError:(NSInteger)code
 {
     [self log: @"Native ad failed to load with error code %ld", code];
 }
 
 #pragma mark - Native Ad Precache Delegate
 
-- (void)nativeAdService:(nonnull ALNativeAdService *)service didPrecacheImagesForAd:(nonnull ALNativeAd *)ad
+- (void)nativeAdService:(ALNativeAdService *)service didPrecacheImagesForAd:(ALNativeAd *)ad
 {
     [self log: @"Native ad precached images"];
 }
 
-- (void)nativeAdService:(nonnull ALNativeAdService *)service didPrecacheVideoForAd:(nonnull ALNativeAd *)ad
+- (void)nativeAdService:(ALNativeAdService *)service didPrecacheVideoForAd:(ALNativeAd *)ad
 {
     // This delegate method will get called whether an ad actually has a video to precache or not
     [self log: @"Native ad done precaching"];
@@ -159,12 +159,12 @@
     });
 }
 
-- (void)nativeAdService:(nonnull ALNativeAdService *)service didFailToPrecacheImagesForAd:(nonnull ALNativeAd *)ad withError:(NSInteger)errorCode
+- (void)nativeAdService:(ALNativeAdService *)service didFailToPrecacheImagesForAd:(ALNativeAd *)ad withError:(NSInteger)errorCode
 {
     [self log: @"Native ad failed to precache images with error code %ld", errorCode];
 }
 
-- (void)nativeAdService:(nonnull ALNativeAdService *)service didFailToPrecacheVideoForAd:(nonnull ALNativeAd *)ad withError:(NSInteger)errorCode
+- (void)nativeAdService:(ALNativeAdService *)service didFailToPrecacheVideoForAd:(ALNativeAd *)ad withError:(NSInteger)errorCode
 {
     [self log: @"Native ad failed to precache video with error code %ld", errorCode];
 }
