@@ -62,7 +62,7 @@ class ALDemoNativeAdFeedTableViewController: UITableViewController
         return articles.count
     }
     
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return articles[indexPath.row].isAd ? 360 : 280
     }

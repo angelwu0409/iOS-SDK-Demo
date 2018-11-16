@@ -63,7 +63,7 @@ static NSUInteger const kCellTagDescriptionLabel = 4;
     return self.articles.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return self.articles[indexPath.row].isAd ? 360.0f : 280.0f;
 }
