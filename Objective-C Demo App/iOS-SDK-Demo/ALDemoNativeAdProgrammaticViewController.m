@@ -18,6 +18,7 @@
 #endif
 
 @interface ALDemoNativeAdProgrammaticViewController ()<ALNativeAdLoadDelegate, ALNativeAdPrecacheDelegate, ALPostbackDelegate>
+@property (nonatomic, strong) ALNativeAd *cachedNativeAd;
 @property (nonatomic, strong) ALNativeAd *nativeAd;
 @end
 
@@ -65,6 +66,8 @@
 - (IBAction)showNativeAd:(id)sender
 {
     [self log: @"Native ad rendered"];
+    
+    self.nativeAd = self.cachedNativeAd;
     
     self.appIcon.image = [UIImage imageWithData: [NSData dataWithContentsOfURL: self.nativeAd.iconURL]]; // Local URL
     self.titleLabel.text = self.nativeAd.title;
@@ -130,7 +133,7 @@
     
     // Callbacks may not happen on main queue
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.nativeAd = [ads firstObject];
+        self.cachedNativeAd = [ads firstObject];
         self.precacheButton.enabled = YES;
     });
 }
