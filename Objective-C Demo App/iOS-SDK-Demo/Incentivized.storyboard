@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9v0-uw-UkY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9v0-uw-UkY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -99,63 +98,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQq-yB-167">
-                                <rect key="frame" x="41" y="269.5" width="293.5" height="128"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to load ads." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVg-lJ-Ior">
-                                        <rect key="frame" x="0.0" y="0.0" width="293.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foe-aC-L24">
-                                        <rect key="frame" x="0.0" y="34" width="293.5" height="94"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="You must turn ">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="ON">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content"> "Rewarded Videos" in AppLovin dashboard.
-
-Please allow at least 30 minutes for the changes to fully propagate.</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="foe-aC-L24" secondAttribute="trailing" id="D35-9w-U4C"/>
-                                    <constraint firstAttribute="bottom" secondItem="foe-aC-L24" secondAttribute="bottom" id="HXG-sf-9EB"/>
-                                    <constraint firstAttribute="trailing" secondItem="NVg-lJ-Ior" secondAttribute="trailing" id="a4u-gI-ceG"/>
-                                    <constraint firstItem="NVg-lJ-Ior" firstAttribute="top" secondItem="MQq-yB-167" secondAttribute="top" id="fyf-k8-Snh"/>
-                                    <constraint firstItem="NVg-lJ-Ior" firstAttribute="leading" secondItem="MQq-yB-167" secondAttribute="leading" id="haF-f9-kWH"/>
-                                    <constraint firstItem="foe-aC-L24" firstAttribute="leading" secondItem="MQq-yB-167" secondAttribute="leading" id="nIa-9r-Pso"/>
-                                    <constraint firstItem="foe-aC-L24" firstAttribute="top" secondItem="NVg-lJ-Ior" secondAttribute="bottom" constant="10" id="v7w-9Z-4Rq"/>
-                                </constraints>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to load ads." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVg-lJ-Ior">
+                                <rect key="frame" x="8" y="321.5" width="359" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="MQq-yB-167" firstAttribute="centerX" secondItem="rdd-5F-zAq" secondAttribute="centerX" id="EkT-bz-x4B"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="MQq-yB-167" secondAttribute="trailing" id="cFG-XM-BOz"/>
-                            <constraint firstItem="MQq-yB-167" firstAttribute="centerY" secondItem="rdd-5F-zAq" secondAttribute="centerY" id="lns-i9-hcK"/>
-                            <constraint firstItem="MQq-yB-167" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rdd-5F-zAq" secondAttribute="leadingMargin" id="xui-0s-JzE"/>
+                            <constraint firstItem="NVg-lJ-Ior" firstAttribute="centerY" secondItem="rdd-5F-zAq" secondAttribute="centerY" id="63y-UH-pdG"/>
+                            <constraint firstItem="NVg-lJ-Ior" firstAttribute="centerX" secondItem="rdd-5F-zAq" secondAttribute="centerX" id="GiF-kA-efD"/>
+                            <constraint firstItem="NVg-lJ-Ior" firstAttribute="leading" secondItem="rdd-5F-zAq" secondAttribute="leading" constant="8" id="gWA-5k-nzL"/>
+                            <constraint firstAttribute="trailing" secondItem="NVg-lJ-Ior" secondAttribute="trailing" constant="8" id="v6W-97-JcZ"/>
                         </constraints>
                     </view>
                     <toolbarItems>
@@ -196,63 +150,18 @@ Please allow at least 30 minutes for the changes to fully propagate.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qIt-wu-G31">
-                                <rect key="frame" x="41" y="269.5" width="293.5" height="128"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to load ads." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u2-ar-n7c">
-                                        <rect key="frame" x="0.0" y="0.0" width="293.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raS-wr-e0M">
-                                        <rect key="frame" x="0.0" y="34" width="293.5" height="94"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="You must turn ">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="ON">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content"> "Rewarded Videos" in AppLovin dashboard.
-
-Please allow at least 30 minutes for the changes to fully propagate.</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="raS-wr-e0M" secondAttribute="bottom" id="9UB-lM-x4i"/>
-                                    <constraint firstItem="raS-wr-e0M" firstAttribute="leading" secondItem="qIt-wu-G31" secondAttribute="leading" id="BDs-sO-XBY"/>
-                                    <constraint firstItem="5u2-ar-n7c" firstAttribute="top" secondItem="qIt-wu-G31" secondAttribute="top" id="JZp-qm-7hG"/>
-                                    <constraint firstItem="5u2-ar-n7c" firstAttribute="leading" secondItem="qIt-wu-G31" secondAttribute="leading" id="fWm-4q-S4Q"/>
-                                    <constraint firstAttribute="trailing" secondItem="5u2-ar-n7c" secondAttribute="trailing" id="hpa-x4-MaU"/>
-                                    <constraint firstItem="raS-wr-e0M" firstAttribute="top" secondItem="5u2-ar-n7c" secondAttribute="bottom" constant="10" id="iWr-Fe-4ck"/>
-                                    <constraint firstAttribute="trailing" secondItem="raS-wr-e0M" secondAttribute="trailing" id="qtr-ga-np8"/>
-                                </constraints>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to load ads." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u2-ar-n7c">
+                                <rect key="frame" x="103.5" y="321.5" width="168" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qIt-wu-G31" firstAttribute="centerY" secondItem="pvM-1q-F8q" secondAttribute="centerY" id="7cr-rR-qjg"/>
-                            <constraint firstItem="qIt-wu-G31" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pvM-1q-F8q" secondAttribute="leadingMargin" id="IUr-Wj-Xyx"/>
-                            <constraint firstItem="qIt-wu-G31" firstAttribute="centerX" secondItem="pvM-1q-F8q" secondAttribute="centerX" id="gSl-jn-DVI"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="qIt-wu-G31" secondAttribute="trailing" id="sJv-SZ-s4Q"/>
+                            <constraint firstItem="5u2-ar-n7c" firstAttribute="centerY" secondItem="pvM-1q-F8q" secondAttribute="centerY" id="0UX-Df-gBf"/>
+                            <constraint firstItem="5u2-ar-n7c" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pvM-1q-F8q" secondAttribute="leading" constant="8" id="Xfz-Ur-1Rd"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5u2-ar-n7c" secondAttribute="trailing" constant="8" id="k30-7z-9xE"/>
+                            <constraint firstItem="5u2-ar-n7c" firstAttribute="centerX" secondItem="pvM-1q-F8q" secondAttribute="centerX" id="ouj-YC-PA7"/>
                         </constraints>
                     </view>
                     <toolbarItems>
