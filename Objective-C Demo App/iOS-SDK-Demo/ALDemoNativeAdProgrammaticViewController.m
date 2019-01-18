@@ -133,7 +133,7 @@
     
     // Callbacks may not happen on main queue
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.cachedNativeAd = [ads firstObject];
+        self.nativeAd = [ads firstObject];
         self.precacheButton.enabled = YES;
     });
 }
@@ -157,6 +157,7 @@
     
     // Callbacks may not happen on main queue
     dispatch_async(dispatch_get_main_queue(), ^{
+        self.cachedNativeAd = ad;
         self.showButton.enabled = YES;
         self.precacheButton.enabled = NO;
     });
