@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AppLovinSDK
 
 @UIApplicationMain
 class ALDemoAppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,10 +16,12 @@ class ALDemoAppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
-        // Initializing our SDK at launch is very important as it'll start preloading ads in the background.        
-        ALSdk.initializeSdk()
         
-        ALSdk.shared()?.settings.isTestAdsEnabled = true
+        ALSdk.initializeSdk { (configuration: ALSdkConfiguration) in
+            // SDK finished initialization
+        }
+        
+        ALSdk.shared()!.settings.isTestAdsEnabled = true
 
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barTintColor = UIColor(red: 10.0/255.0, green: 131.0/255.0, blue: 170.0/255.0, alpha: 1.0)
@@ -28,5 +31,4 @@ class ALDemoAppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-    
 }
