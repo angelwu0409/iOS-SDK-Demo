@@ -7,12 +7,7 @@
 //
 
 #import "ALDemoInterstitialBasicIntegrationViewController.h"
-
-#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
-    #import <AppLovinSDK/AppLovinSDK.h>
-#else
-    #import "ALInterstitialAd.h"
-#endif
+#import <AppLovinSDK/AppLovinSDK.h>
 
 @interface ALDemoInterstitialBasicIntegrationViewController ()<ALAdLoadDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate>
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *showButton;

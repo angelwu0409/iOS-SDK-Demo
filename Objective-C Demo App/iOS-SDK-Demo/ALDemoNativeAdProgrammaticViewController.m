@@ -7,15 +7,7 @@
 //
 
 #import "ALDemoNativeAdProgrammaticViewController.h"
-
-#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
-    #import <AppLovinSDK/AppLovinSDK.h>
-#else
-    #import "ALSdk.h"
-    #import "ALNativeAd.h"
-    #import "ALNativeAdLoadDelegate.h"
-    #import "ALNativeAdPrecacheDelegate.h"
-#endif
+#import <AppLovinSDK/AppLovinSDK.h>
 
 @interface ALDemoNativeAdProgrammaticViewController ()<ALNativeAdLoadDelegate, ALNativeAdPrecacheDelegate, ALPostbackDelegate>
 @property (nonatomic, strong) ALNativeAd *cachedNativeAd;

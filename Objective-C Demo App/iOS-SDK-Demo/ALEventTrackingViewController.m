@@ -8,13 +8,7 @@
 
 #import "ALEventTrackingViewController.h"
 #import <StoreKit/StoreKit.h>
-
-#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
-    #import <AppLovinSDK/AppLovinSDK.h>
-#else
-    #import "ALSdk.h"
-    #import "ALEventService.h"
-#endif
+#import <AppLovinSDK/AppLovinSDK.h>
 
 @interface ALDemoEvent : NSObject
 

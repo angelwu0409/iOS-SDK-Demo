@@ -7,12 +7,7 @@
 //
 
 #import "ALDemoInterstitialManualLoadingViewController.h"
-
-#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
-    #import <AppLovinSDK/AppLovinSDK.h>
-#else
-    #import "ALInterstitialAd.h"
-#endif
+#import <AppLovinSDK/AppLovinSDK.h>
 
 @interface ALDemoInterstitialManualLoadingViewController()<ALAdLoadDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate>
 @property (nonatomic, strong) ALAd *ad;

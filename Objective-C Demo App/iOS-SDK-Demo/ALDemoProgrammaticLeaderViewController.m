@@ -7,12 +7,7 @@
 //
 
 #import "ALDemoProgrammaticLeaderViewController.h"
-
-#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
 #import <AppLovinSDK/AppLovinSDK.h>
-#else
-#import "ALAdView.h"
-#endif
 
 @interface ALDemoProgrammaticLeaderViewController () <ALAdLoadDelegate, ALAdDisplayDelegate, ALAdViewEventDelegate>
 @property (nonatomic, strong) ALAdView *adView;

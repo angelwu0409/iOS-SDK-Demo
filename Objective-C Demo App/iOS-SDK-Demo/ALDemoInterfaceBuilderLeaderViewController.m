@@ -7,12 +7,7 @@
 //
 
 #import "ALDemoInterfaceBuilderLeaderViewController.h"
-
-#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
 #import <AppLovinSDK/AppLovinSDK.h>
-#else
-#import "ALAdView.h"
-#endif
 
 @interface ALDemoInterfaceBuilderLeaderViewController () <ALAdLoadDelegate, ALAdDisplayDelegate, ALAdViewEventDelegate>
 @property (weak, nonatomic) IBOutlet ALAdView *adView;

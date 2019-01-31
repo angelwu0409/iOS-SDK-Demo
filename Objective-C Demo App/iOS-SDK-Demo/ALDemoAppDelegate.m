@@ -7,12 +7,7 @@
 //
 
 #import "ALDemoAppDelegate.h"
-
-#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
-    #import <AppLovinSDK/AppLovinSDK.h>
-#else
-    #import "ALSdk.h"
-#endif
+#import <AppLovinSDK/AppLovinSDK.h>
 
 @implementation ALDemoAppDelegate
 

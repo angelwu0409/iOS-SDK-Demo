@@ -7,13 +7,7 @@
 //
 
 #import "ALDemoRewardedVideosViewController.h"
-
-#if __has_include(<AppLovinSDK/AppLovinSDK.h>)
-    #import <AppLovinSDK/AppLovinSDK.h>
-#else
-    #import "ALIncentivizedInterstitialAd.h"
-    #import "ALErrorCodes.h"
-#endif
+#import <AppLovinSDK/AppLovinSDK.h>
 
 @interface ALDemoRewardedVideosViewController ()<ALAdLoadDelegate, ALAdRewardDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate>
 @property (nonatomic, strong) ALIncentivizedInterstitialAd *incentivizedInterstitial;
