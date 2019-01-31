@@ -29,7 +29,7 @@ class ALDemoNativeAdFeedTableViewController: UITableViewController
     {
         super.viewDidLoad()
         
-        ALDemoRSSFeedRetriever.shared().startParsing { (error: Error?, articles: [ALDemoArticle]) in
+        ALDemoRSSFeedRetriever.shared()?.startParsing(completion: { (error: Error?, articles: [ALDemoArticle]!) in
             
             DispatchQueue.main.async {
                 
@@ -47,7 +47,7 @@ class ALDemoNativeAdFeedTableViewController: UITableViewController
                 self.articles = articles
                 self.tableView.reloadData()
             }
-        }
+        })
     }
     
     // MARK: Table View Data Source
