@@ -26,10 +26,6 @@ static NSUInteger const kCellTagTitleLabel       = 2;
 static NSUInteger const kCellTagSubtitleLabel    = 3;
 static NSUInteger const kCellTagDescriptionLabel = 4;
 
-//
-// IMPORTANT: Before integrating native ads into your application, please be sure it is turned 'ON' in the Manage Apps section.
-//
-
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad

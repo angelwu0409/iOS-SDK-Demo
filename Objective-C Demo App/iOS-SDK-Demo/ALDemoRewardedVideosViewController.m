@@ -15,18 +15,11 @@
 
 @implementation ALDemoRewardedVideosViewController
 
-//
-// IMPORTANT: Before integrating Rewarded Video into your application, please be sure it is turned 'ON' in the Manage Apps section.
-//
-
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Set an optional user identifier used for S2S callbacks
-    [ALIncentivizedInterstitialAd setUserIdentifier: @"DEMO_USER_IDENTIFIER"];
     
     self.incentivizedInterstitial = [[ALIncentivizedInterstitialAd alloc] initWithSdk: [ALSdk shared]];
 }

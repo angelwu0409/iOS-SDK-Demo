@@ -8,19 +8,8 @@
 
 import UIKit
 
-//
-// IMPORTANT: Before integrating Rewarded Video into your application, please be sure it is turned 'ON' in the Manage Apps section.
-//
 class ALDemoRewardedVideosViewController: ALDemoBaseViewController, ALAdLoadDelegate, ALAdRewardDelegate, ALAdDisplayDelegate, ALAdVideoPlaybackDelegate
 {
-    override func viewDidLoad()
-    {
-        super.viewDidLoad();
-        
-        // Set an optional user identifier used for S2S callbacks
-        ALIncentivizedInterstitialAd.setUserIdentifier("DEMO_USER_IDENTIFIER");
-    }
-    
     @IBAction func showRewardedVideo(_ sender: AnyObject!)
     {
         // You need to preload each rewarded video before it can be displayed

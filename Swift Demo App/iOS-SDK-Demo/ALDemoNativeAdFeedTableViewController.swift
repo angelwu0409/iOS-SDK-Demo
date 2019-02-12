@@ -8,10 +8,6 @@
 
 import UIKit
 
-//
-// IMPORTANT: Before integrating native ads into your application, please be sure it is turned 'ON' in the Manage Apps section.
-//
-
 class ALDemoNativeAdFeedTableViewController: UITableViewController
 {
     let kArticleCellIdentifier = "articleCell"

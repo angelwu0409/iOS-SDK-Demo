@@ -15,10 +15,6 @@
 
 @implementation ALDemoRewardedVideosZoneViewController
 
-//
-// IMPORTANT: Before integrating Rewarded Video into your application, please be sure it is turned 'ON' in the Manage Apps section.
-//
-
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad
