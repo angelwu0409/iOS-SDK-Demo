@@ -21,9 +21,6 @@
 {
     [super viewDidLoad];
     
-    // Set an optional user identifier used for S2S callbacks
-    [ALIncentivizedInterstitialAd setUserIdentifier: @"DEMO_USER_IDENTIFIER"];
-    
     self.incentivizedInterstitial = [[ALIncentivizedInterstitialAd alloc] initWithZoneIdentifier: @"YOUR_ZONE_ID"];
 }
 

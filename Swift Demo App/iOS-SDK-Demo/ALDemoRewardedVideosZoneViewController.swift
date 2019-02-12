@@ -17,9 +17,6 @@ class ALDemoRewardedVideosZoneViewController: ALDemoBaseViewController, ALAdLoad
     {
         super.viewDidLoad();
         
-        // Set an optional user identifier used for S2S callbacks
-        ALIncentivizedInterstitialAd.setUserIdentifier("DEMO_USER_IDENTIFIER");
-        
         incentivizedInterstitial = ALIncentivizedInterstitialAd(zoneIdentifier: "YOUR_ZONE_ID")
     }
     
