@@ -64,9 +64,6 @@
 		2713D02118EDDD0C006218B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2713D01F18EDDD0C006218B2 /* Main.storyboard */; };
 		2713D02618EDDD0C006218B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2713D02518EDDD0C006218B2 /* Images.xcassets */; };
 		63D8DF732072F5FF00EEDC92 /* AppLovinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D8DF722072F5FF00EEDC92 /* AppLovinSDK.framework */; };
-		63F279B320758FEC008BBA88 /* Leaders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F279B220758FEC008BBA88 /* Leaders.storyboard */; };
-		63F279BD2075954D008BBA88 /* ALDemoProgrammaticLeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F279BC2075954D008BBA88 /* ALDemoProgrammaticLeaderViewController.m */; };
-		63F279C0207595F7008BBA88 /* ALDemoInterfaceBuilderLeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F279BF207595F7008BBA88 /* ALDemoInterfaceBuilderLeaderViewController.m */; };
 		DD65BFE01F15AC5F00F60067 /* Interstitials.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFDE1F15AC5F00F60067 /* Interstitials.storyboard */; };
 		DD65BFE21F15AC7800F60067 /* Banners.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFE11F15AC7800F60067 /* Banners.storyboard */; };
 		DD65BFE51F15AC8E00F60067 /* MRecs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65BFE31F15AC8E00F60067 /* MRecs.storyboard */; };
@@ -165,11 +162,6 @@
 		2713D02018EDDD0C006218B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2713D02518EDDD0C006218B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		63D8DF722072F5FF00EEDC92 /* AppLovinSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppLovinSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		63F279B220758FEC008BBA88 /* Leaders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Leaders.storyboard; sourceTree = "<group>"; };
-		63F279BB2075954D008BBA88 /* ALDemoProgrammaticLeaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDemoProgrammaticLeaderViewController.h; sourceTree = "<group>"; };
-		63F279BC2075954D008BBA88 /* ALDemoProgrammaticLeaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDemoProgrammaticLeaderViewController.m; sourceTree = "<group>"; };
-		63F279BE207595F7008BBA88 /* ALDemoInterfaceBuilderLeaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDemoInterfaceBuilderLeaderViewController.h; sourceTree = "<group>"; };
-		63F279BF207595F7008BBA88 /* ALDemoInterfaceBuilderLeaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDemoInterfaceBuilderLeaderViewController.m; sourceTree = "<group>"; };
 		DD65BFDF1F15AC5F00F60067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interstitials.storyboard; sourceTree = "<group>"; };
 		DD65BFE11F15AC7800F60067 /* Banners.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Banners.storyboard; sourceTree = "<group>"; };
 		DD65BFE41F15AC8E00F60067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MRecs.storyboard; sourceTree = "<group>"; };
@@ -449,7 +441,6 @@
 				2713D01F18EDDD0C006218B2 /* Main.storyboard */,
 				DD65BFE31F15AC8E00F60067 /* MRecs.storyboard */,
 				DD65BFE11F15AC7800F60067 /* Banners.storyboard */,
-				63F279B220758FEC008BBA88 /* Leaders.storyboard */,
 				DD65BFDE1F15AC5F00F60067 /* Interstitials.storyboard */,
 				DF45849820D9C73B00DA593F /* Incentivized.storyboard */,
 				1D09FCBB1BB5F21B00001083 /* nav_logo@2x.png */,
@@ -463,7 +454,6 @@
 				DDDBAD0B1EE609A900666518 /* Event Tracking */,
 				1DA2DE041E6D63E800FCC9B1 /* MRecs */,
 				1DA2DDFD1E6D497000FCC9B1 /* Banners */,
-				63F279B120758CF4008BBA88 /* Leaders */,
 				1D568BB01BB3790400DB4849 /* Interstitials */,
 				1D568BBE1BB392C200DB4849 /* Rewarded/Incentivized Videos */,
 				1D568BBF1BB392EA00DB4849 /* Native */,
@@ -485,17 +475,6 @@
 				1D568BBC1BB388F500DB4849 /* ALDemoRootViewController.m */,
 			);
 			name = Components;
-			sourceTree = "<group>";
-		};
-		63F279B120758CF4008BBA88 /* Leaders */ = {
-			isa = PBXGroup;
-			children = (
-				63F279BB2075954D008BBA88 /* ALDemoProgrammaticLeaderViewController.h */,
-				63F279BC2075954D008BBA88 /* ALDemoProgrammaticLeaderViewController.m */,
-				63F279BE207595F7008BBA88 /* ALDemoInterfaceBuilderLeaderViewController.h */,
-				63F279BF207595F7008BBA88 /* ALDemoInterfaceBuilderLeaderViewController.m */,
-			);
-			name = Leaders;
 			sourceTree = "<group>";
 		};
 		DDDBAD0B1EE609A900666518 /* Event Tracking */ = {
@@ -605,7 +584,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63F279B320758FEC008BBA88 /* Leaders.storyboard in Resources */,
 				1D79131D1BB4A837006C6C60 /* Star_Sprite_0.5.png in Resources */,
 				DF45849920D9C73B00DA593F /* Incentivized.storyboard in Resources */,
 				1D7913241BB4A837006C6C60 /* Star_Sprite_4.png in Resources */,
@@ -649,9 +627,7 @@
 				1D568BB31BB3792800DB4849 /* ALDemoBaseViewController.m in Sources */,
 				1D7912EE1BB4813D006C6C60 /* ALNativeAdVideoPlayer.m in Sources */,
 				1D7912EF1BB4813D006C6C60 /* ALNativeAdVideoView.m in Sources */,
-				63F279C0207595F7008BBA88 /* ALDemoInterfaceBuilderLeaderViewController.m in Sources */,
 				1DA2DE031E6D58FC00FCC9B1 /* ALDemoInterfaceBuilderBannerViewController.m in Sources */,
-				63F279BD2075954D008BBA88 /* ALDemoProgrammaticLeaderViewController.m in Sources */,
 				1DDB39AC1BF56181002561A0 /* ALDemoArticle.m in Sources */,
 				2713D01E18EDDD0C006218B2 /* ALDemoAppDelegate.m in Sources */,
 				1D7913011BB48173006C6C60 /* ALCarouselCardView.m in Sources */,
